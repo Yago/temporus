@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>temporus</title>
+    <link href="/src/styles/base.css" rel="stylesheet">
+  </head>
+  <body
+    class="font-mono antialiased bg-black text-neutral-100 text-base"
+    x-data="{
+      lng: 'fr',
+      get currentItem() { return $store.timeline.currentItem },
+    }"
+    x-init="
+      $store.timeline.create();
+      $store.utils.setLng(lng);
+    "
+    x-effect="
+      $store.timeline.destroy();
+      $store.timeline.create();
+      $store.utils.setLng(lng);
+    "
+  >
+    <div
+      id="visualization"
+      class="h-screen w-[calc(100vw-450px)] min-w-[75vw]"
+    ></div>
+
+    <div class="fixed right-0 inset-y-0 w-[450px] max-w-[25vw] overflow-y-auto">
+      <div class="p-4">
+        <h1
+          class="text-2xl font-bold"
+          x-text="currentItem?.content"
+        ></h1>
+        <div
+          x-show="currentItem?.properties?.description"
+          class="text-neutral-300 mt-3"
+          x-html="currentItem?.properties?.description"
+        ></div>
+        <a
+          x-show="currentItem?.properties?.wikiUrl"
+          :href="currentItem?.properties?.wikiUrl"
+          class="inline-block mt-3"
+          target="_blank"
+        >
+          Wikipedia
+          <svg class="icon text-xs">
+            <use href="/public/icons.svg?v1#external"></use>
+          </svg>
+        </a>
+
+      </div>
+    </div>
+
+    <pre id="debug" class="hidden fixed inset-12 bg-neutral-950 text-neutral-100 p-4 rounded-sm"></pre>
+
+    <button
+      @click="$store.timeline.goTo(-200, 200)"
+      class="fixed top-4 right-4 z-10 bg-amber-300 rounded-sm p-3 text-black hidden"
+    >
+      Go to today
+    </button>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

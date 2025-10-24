@@ -1,0 +1,14 @@
+{
+  "geology": {
+    "title": "Échelle des temps géologiques",
+    "label": "Géologie",
+    "description": "L'échelle des temps géologiques est une échelle de temps qui divise la Terre en époques, périodes, époques et âges.",
+    "groups": {
+      "eon": "Éon",
+      "era": "Ère",
+      "period": "Période",
+      "epoch": "Époque",
+      "age": "Age"
+    }
+  }
+}

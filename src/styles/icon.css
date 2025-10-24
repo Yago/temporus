@@ -1,0 +1,17 @@
+@layer base {
+  .icon {
+    @apply
+      inline-flex relative justify-center items-center self-center;
+
+    top: -0.1em;
+    width: 1em;
+    height: 1em;
+    font-size: 1em;
+
+    svg {
+      width: 1em;
+      height: 1em;
+      fill: currentcolor;
+    }
+  }
+}

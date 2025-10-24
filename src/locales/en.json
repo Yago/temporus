@@ -1,0 +1,14 @@
+{
+  "geology": {
+    "title": "Geological time scale",
+    "label": "Geology",
+    "description": "The geological time scale is a time scale that divides the Earth into eons, eras, periods, epochs and ages.",
+    "groups": {
+      "eon": "Eon",
+      "era": "Era",
+      "period": "Period",
+      "epoch": "Epoch",
+      "age": "Age"
+    }
+  }
+}
