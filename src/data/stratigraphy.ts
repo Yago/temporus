@@ -8,6 +8,11 @@ import chart2 from './sources/stratigraphy/chart2.json';
 import chart3 from './sources/stratigraphy/chart3.json';
 import chart4 from './sources/stratigraphy/chart4.json';
 
+const credits = {
+  attribution: 'International Commission on Stratigraphy, December 2024.',
+  url: 'https://stratigraphy.org/chart',
+};
+
 const items: Item[] = [
   {
     id: 'earth',
@@ -18,6 +23,7 @@ const items: Item[] = [
     style: `background-color: oklch(92.3% 0.003 48.717);`,
     properties: {
       description: t('geology.description'),
+      credits,
     },
   },
 ];
@@ -49,6 +55,7 @@ const processChart = (chart: StratygraphyItem) => {
       style: `background-color: ${chart.color};`,
       properties: {
         description: chart.definition,
+        credits,
       },
     });
   }

@@ -29,14 +29,15 @@
     ></div>
 
     <div class="fixed right-0 inset-y-0 w-[450px] max-w-[25vw] overflow-y-auto shadow-[-10px_0_50px_-2px_rgba(0,0,0,0.8)]">
-      <div class="p-5">
+      <div class="p-5 flex flex-col h-full">
         <h1
           class="text-2xl font-bold"
-          x-text="currentItem?.content"
+          x-show="currentItem?.content"
+          x-text="`${currentItem?.content}`"
         ></h1>
         <div
           x-show="currentItem?.properties?.description"
-          class="text-neutral-300 mt-3"
+          class="text-neutral-200 mt-3"
           x-html="currentItem?.properties?.description"
         ></div>
         <a
@@ -51,10 +52,23 @@
           </svg>
         </a>
 
+        <div
+          x-show="currentItem?.properties?.credits"
+          class="text-neutral-500 pt-3 mt-auto text-sm"
+        >
+          <a :href="currentItem?.properties?.credits?.url" target="_blank">
+            <span class="text-base">©</span>
+            <span x-text="currentItem?.properties?.credits?.attribution"></span>
+            <svg class="icon text-xs">
+              <use href="/public/icons.svg?v1#external"></use>
+            </svg>
+          </a>
+        </div>
+        
+        <pre id="debug" class="hidden" x-text="JSON.stringify(currentItem, null, 2)"></pre>
       </div>
     </div>
 
-    <pre id="debug" class="hidden fixed inset-12 bg-neutral-950 text-neutral-100 p-4 rounded-sm"></pre>
 
     <button
       @click="$store.timeline.goTo(-200, 200)"

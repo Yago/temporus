@@ -82,12 +82,7 @@ const timelineStore = {
     if (isNotNil(e.item)) {
       const item = items.find(i => i.id === e.item);
       if (isNotNil(item)) {
-        const result: Item = {
-          ...item,
-          properties: {
-            description: item.properties?.description,
-          },
-        };
+        const result: Item = item;
         await wiki.setLang(lng);
         try {
           const page = await wiki.page(item.content);
