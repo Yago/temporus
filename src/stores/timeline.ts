@@ -82,16 +82,23 @@ const timelineStore = {
     if (isNotNil(e.item)) {
       const item = items.find(i => i.id === e.item);
       if (isNotNil(item)) {
-        await wiki.setLang(lng);
-        const page = await wiki.page(item.content);
-        const summary = await page.summary();
-        this.currentItem = {
+        const result: Item = {
           ...item,
           properties: {
-            description: summary?.extract_html ?? item.properties?.description,
-            wikiUrl: page?.fullurl,
+            description: item.properties?.description,
           },
         };
+        await wiki.setLang(lng);
+        try {
+          const page = await wiki.page(item.content);
+          const summary = await page.summary();
+          if (isNotNil(summary)) {
+            result.properties!.description = summary.extract_html;
+            result.properties!.wikiUrl = page.fullurl;
+          }
+        } finally {
+          this.currentItem = result;
+        }
       }
     }
   },

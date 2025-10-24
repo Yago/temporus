@@ -10,10 +10,10 @@ const formatNumber = (value: number, locale?: string): string | null => {
         decimal: '.',
       },
       abbreviations: {
-        million: 'Mio',
-        billion: 'Mrd',
+        million: 'Ma',
+        billion: 'Ga',
         thousand: 'k',
-        trillion: 'T',
+        trillion: 'Ta',
       },
       ordinal(number: number) {
         return number === 1 ? 'er' : 'ème';
