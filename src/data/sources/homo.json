@@ -1,0 +1,40 @@
+[
+  {
+    "id": "homo",
+    "name": {
+      "fr": "Hominina",
+      "latin": "Hominina",
+      "en": "Hominina"
+    },
+    "wiki": {
+      "fr": "619383",
+      "en": "3157936"
+    },
+    "start": -7000000,
+    "end": 0,
+    "colors": {
+      "background": "oklch(98.7% 0.026 102.212)",
+      "foreground": "#000"
+    },
+    "group": "homo"
+  },
+  {
+    "id": "homo:ardipithecus",
+    "name": {
+      "fr": "Ardipithèques",
+      "latin": "Ardipithecus",
+      "en": "Ardipithecus"
+    },
+    "wiki": {
+      "fr": "210102",
+      "en": "1144"
+    },
+    "start": -6000000,
+    "end": -4400000,
+    "colors": {
+      "background": "oklch(28.6% 0.066 53.813)",
+      "foreground": "#fff"
+    },
+    "group": "homo-early"
+  }
+]

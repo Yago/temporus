@@ -1,5 +1,6 @@
 .vis-text { @apply text-neutral-100!;}
-.vis-nested-group { @apply bg-black!;}
+.vis-nesting-group { @apply pl-3 before:text-[12px]!;}
+.vis-nested-group { @apply bg-black! pl-6!;}
 .vis-inner { @apply pl-2!;}
 .vis-label { @apply pr-4!;}
 
@@ -12,4 +13,5 @@
 }
 
 .vis-item.vis-background { @apply bg-neutral-800/50! text-neutral-100!;}
-.vis-item { @apply relative bg-neutral-950 border-neutral-900! hover:outline-2 outline-white outline-offset-1 hover:z-9999 cursor-pointer active:opacity-80;}
+.vis-item { @apply relative bg-neutral-950 border-neutral-900! hover:outline-2 outline-white outline-offset-1 hover:z-9999 cursor-pointer active:opacity-80 rounded-sm!;}
+.vis-item-content { @apply px-2!;}

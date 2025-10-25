@@ -1,0 +1,16 @@
+{
+  "languages": {
+    "fr": "Français",
+    "en": "English"
+  },
+  "scales": {
+    "earth": {
+      "start": -4600000000,
+      "end": 0
+    },
+    "homo": {
+      "start": -7200000,
+      "end": 0
+    }
+  }
+}

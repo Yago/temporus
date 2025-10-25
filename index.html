@@ -10,72 +10,96 @@
   <body
     class="font-mono antialiased bg-black text-neutral-100 text-base"
     x-data="{
-      lng: 'fr',
       get currentItem() { return $store.timeline.currentItem },
     }"
     x-init="
       $store.timeline.create();
-      $store.utils.setLng(lng);
-    "
-    x-effect="
-      $store.timeline.destroy();
-      $store.timeline.create();
-      $store.utils.setLng(lng);
+      if ($store.utils.getLng() === null) $store.utils.setLng('fr');
     "
   >
+    <!-- Timeline -->
     <div
       id="visualization"
       class="h-screen w-[calc(100vw-450px)] min-w-[75vw]"
     ></div>
 
-    <div class="fixed right-0 inset-y-0 w-[450px] max-w-[25vw] overflow-y-auto shadow-[-10px_0_50px_-2px_rgba(0,0,0,0.8)]">
-      <div class="p-5 flex flex-col h-full">
-        <h1
-          class="text-2xl font-bold"
-          x-show="currentItem?.content"
-          x-text="`${currentItem?.content}`"
-        ></h1>
-        <div
-          x-show="currentItem?.properties?.description"
-          class="text-neutral-200 mt-3"
-          x-html="currentItem?.properties?.description"
-        ></div>
-        <a
-          x-show="currentItem?.properties?.wikiUrl"
-          :href="currentItem?.properties?.wikiUrl"
-          class="inline-block mt-3"
-          target="_blank"
-        >
-          Wikipedia
-          <svg class="icon text-xs">
-            <use href="/public/icons.svg?v1#external"></use>
-          </svg>
-        </a>
+    <!-- Sidebar -->
+    <div class="fixed right-0 inset-y-0 w-[450px] max-w-[25vw] overflow-y-auto shadow-[-10px_0_50px_-2px_rgba(0,0,0,0.8)] border-l border-neutral-800">
+      <div class="flex flex-col h-full">
 
-        <div
-          x-show="currentItem?.properties?.credits"
-          class="text-neutral-500 pt-3 mt-auto text-sm"
-        >
-          <a :href="currentItem?.properties?.credits?.url" target="_blank">
-            <span class="text-base">©</span>
-            <span x-text="currentItem?.properties?.credits?.attribution"></span>
+        <!-- Options bar -->
+        <div class="flex border-b border-neutral-800 gap-4">
+          <select
+            @input="$store.utils.setLng($event.target.value);"
+            :value="$store.utils.getLng()"
+            x-ref="languages"
+            class="bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1sYW5ndWFnZXMtaWNvbiBsdWNpZGUtbGFuZ3VhZ2VzIj48cGF0aCBkPSJtNSA4IDYgNiIvPjxwYXRoIGQ9Im00IDE0IDYtNiAyLTMiLz48cGF0aCBkPSJNMiA1aDEyIi8+PHBhdGggZD0iTTcgMmgxIi8+PHBhdGggZD0ibTIyIDIyLTUtMTAtNSAxMCIvPjxwYXRoIGQ9Ik0xNCAxOGg2Ii8+PC9zdmc+')]"
+            :title="$store.utils.t('settings.languages')"
+          >
+            <template x-for="lngKey in Object.keys(settings.languages)">
+              <option
+                :value="lngKey"
+                x-text="settings.languages[lngKey]"
+                :selected="lngKey === $store.utils.getLng()"
+              ></option>
+            </template>
+          </select>
+          <div class="border-r border-neutral-800"></div>
+          <select
+            @input="$store.timeline.goToScale($event.target.value);"
+            :value="$store.utils.getQuery('scale')"
+            class="bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1ydWxlci1kaW1lbnNpb24tbGluZS1pY29uIGx1Y2lkZS1ydWxlci1kaW1lbnNpb24tbGluZSI+PHBhdGggZD0iTTEyIDE1di0zLjAxNCIvPjxwYXRoIGQ9Ik0xNiAxNXYtMy4wMTQiLz48cGF0aCBkPSJNMjAgNkg0Ii8+PHBhdGggZD0iTTIwIDhWNCIvPjxwYXRoIGQ9Ik00IDhWNCIvPjxwYXRoIGQ9Ik04IDE1di0zLjAxNCIvPjxyZWN0IHg9IjMiIHk9IjEyIiB3aWR0aD0iMTgiIGhlaWdodD0iNyIgcng9IjEiLz48L3N2Zz4=')]"
+            :title="$store.utils.t('settings.scales')"
+          >
+            <template x-for="scale in Object.keys(settings.scales)">
+              <option
+                :value="scale"
+                x-text="$store.utils.t(`scales.${scale}`)"
+                :selected="scale === $store.utils.getQuery('scale')"
+              ></option>
+            </template>
+          </select>
+        </div>
+
+        <!-- Content -->
+        <div class="p-5 h-full flex flex-col">
+          <h1
+            class="text-2xl font-bold"
+            x-html="currentItem?.content ?? $store.utils.t('intro.title')"
+          ></h1>
+          <div
+            class="text-neutral-200 mt-3"
+            x-html="currentItem?.properties?.description ?? $store.utils.t('intro.description')"
+          ></div>
+          <a
+            x-show="currentItem?.properties?.wikiUrl"
+            :href="currentItem?.properties?.wikiUrl"
+            class="inline-block mt-3"
+            target="_blank"
+          >
+            Wikipedia
             <svg class="icon text-xs">
               <use href="/public/icons.svg?v1#external"></use>
             </svg>
           </a>
+  
+          <div
+            x-show="currentItem?.properties?.credits"
+            class="text-neutral-500 pt-3 mt-auto text-sm"
+          >
+            <a :href="currentItem?.properties?.credits?.url" target="_blank">
+              <span class="text-base">©</span>
+              <span x-text="currentItem?.properties?.credits?.attribution"></span>
+              <svg class="icon text-xs">
+                <use href="/public/icons.svg?v1#external"></use>
+              </svg>
+            </a>
+          </div>
+          
+          <pre id="debug" class="hidden" x-text="JSON.stringify(currentItem, null, 2)"></pre>
         </div>
-        
-        <pre id="debug" class="hidden" x-text="JSON.stringify(currentItem, null, 2)"></pre>
       </div>
     </div>
-
-
-    <button
-      @click="$store.timeline.goTo(-200, 200)"
-      class="fixed top-4 right-4 z-10 bg-amber-300 rounded-sm p-3 text-black hidden"
-    >
-      Go to today
-    </button>
 
     <script type="module" src="/src/main.ts"></script>
   </body>
