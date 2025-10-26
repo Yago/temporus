@@ -18,7 +18,7 @@ homo.forEach((item: HomoItem) => {
     group: item.group,
     style: `background-color: ${item.colors.background};color: ${item.colors.foreground};`,
     properties: {
-      wikiId: item.wiki[lng as keyof typeof item.wiki],
+      wikiName: item.wiki[lng as keyof typeof item.wiki],
     },
   });
 });

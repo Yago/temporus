@@ -5,6 +5,7 @@ export type HomoItem = {
     latin: string;
     en: string;
   };
+  cover?: string;
   wiki: {
     fr: string;
     en: string;

@@ -1,7 +1,10 @@
 import numeral from 'numeral';
 
-const formatNumber = (value: number, locale?: string): string | null => {
+import { getLng } from '.';
+
+const formatNumber = (value: number): string | null => {
   if (typeof window === 'undefined') return null;
+  const lng = getLng();
 
   if (numeral.locales.fr === undefined) {
     numeral.register('locale', 'fr', {
@@ -24,7 +27,7 @@ const formatNumber = (value: number, locale?: string): string | null => {
     });
   }
 
-  numeral.locale(locale || 'en');
+  numeral.locale(lng || 'en');
 
   return numeral(+value).format(Math.abs(+value) > 999999 ? '0,0.0 a' : '0,0');
 };

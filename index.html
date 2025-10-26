@@ -24,8 +24,8 @@
     ></div>
 
     <!-- Sidebar -->
-    <div class="fixed right-0 inset-y-0 w-[450px] max-w-[25vw] overflow-y-auto shadow-[-10px_0_50px_-2px_rgba(0,0,0,0.8)] border-l border-neutral-800">
-      <div class="flex flex-col h-full">
+    <div class="fixed right-0 inset-y-0 w-[450px] max-w-[25vw] shadow-[-10px_0_50px_-2px_rgba(0,0,0,0.8)] border-l border-neutral-800">
+      <div class="grid grid-rows-[auto_1fr] h-full">
 
         <!-- Options bar -->
         <div class="flex border-b border-neutral-800 gap-4">
@@ -46,57 +46,78 @@
           </select>
           <div class="border-r border-neutral-800"></div>
           <select
-            @input="$store.timeline.goToScale($event.target.value);"
+            x-ref="scales"
+            @input="$store.timeline.goToScale($event.target.value);setTimeout(() => $refs.scales.value = null, 0);"
             :value="$store.utils.getQuery('scale')"
             class="bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1ydWxlci1kaW1lbnNpb24tbGluZS1pY29uIGx1Y2lkZS1ydWxlci1kaW1lbnNpb24tbGluZSI+PHBhdGggZD0iTTEyIDE1di0zLjAxNCIvPjxwYXRoIGQ9Ik0xNiAxNXYtMy4wMTQiLz48cGF0aCBkPSJNMjAgNkg0Ii8+PHBhdGggZD0iTTIwIDhWNCIvPjxwYXRoIGQ9Ik00IDhWNCIvPjxwYXRoIGQ9Ik04IDE1di0zLjAxNCIvPjxyZWN0IHg9IjMiIHk9IjEyIiB3aWR0aD0iMTgiIGhlaWdodD0iNyIgcng9IjEiLz48L3N2Zz4=')]"
             :title="$store.utils.t('settings.scales')"
           >
+            <option value="" disabled x-text="$store.utils.t('ui.select')"></option>
             <template x-for="scale in Object.keys(settings.scales)">
               <option
                 :value="scale"
                 x-text="$store.utils.t(`scales.${scale}`)"
-                :selected="scale === $store.utils.getQuery('scale')"
               ></option>
             </template>
           </select>
         </div>
 
         <!-- Content -->
-        <div class="p-5 h-full flex flex-col">
-          <h1
-            class="text-2xl font-bold"
-            x-html="currentItem?.content ?? $store.utils.t('intro.title')"
-          ></h1>
-          <div
-            class="text-neutral-200 mt-3"
-            x-html="currentItem?.properties?.description ?? $store.utils.t('intro.description')"
-          ></div>
-          <a
-            x-show="currentItem?.properties?.wikiUrl"
-            :href="currentItem?.properties?.wikiUrl"
-            class="inline-block mt-3"
-            target="_blank"
-          >
-            Wikipedia
-            <svg class="icon text-xs">
-              <use href="/public/icons.svg?v1#external"></use>
-            </svg>
-          </a>
-  
-          <div
-            x-show="currentItem?.properties?.credits"
-            class="text-neutral-500 pt-3 mt-auto text-sm"
-          >
-            <a :href="currentItem?.properties?.credits?.url" target="_blank">
-              <span class="text-base">©</span>
-              <span x-text="currentItem?.properties?.credits?.attribution"></span>
+        <div class="h-full overflow-y-auto">
+          <div class="p-5! flex flex-col">
+            <h1
+              class="text-2xl font-bold"
+              x-html="currentItem?.content ?? $store.utils.t('intro.title')"
+            ></h1>
+
+            <h2
+              class="text-sm"
+              x-show="currentItem?.start && currentItem?.end"
+              x-cloak
+              x-text="`${$store.utils.formatNumber(currentItem.start)} ${$store.utils.t('ui.to')} ${$store.utils.formatNumber(currentItem.end)}`"
+            ></h2>
+
+            <img
+              :src="currentItem?.properties?.cover"
+              :alt="currentItem?.content ?? $store.utils.t('intro.title')"
+              class="my-4 grayscale rounded"
+              x-show="currentItem?.properties?.cover"
+              x-cloak
+            />
+
+            <div
+              class="text-neutral-200 mt-3"
+              x-html="currentItem?.properties?.description ?? $store.utils.t('intro.description')"
+            ></div>
+            <a
+              x-show="currentItem?.properties?.wikiUrl"
+              x-cloak
+              :href="currentItem?.properties?.wikiUrl"
+              class="inline-block mt-3"
+              target="_blank"
+            >
+              Wikipedia
               <svg class="icon text-xs">
                 <use href="/public/icons.svg?v1#external"></use>
               </svg>
             </a>
+    
+            <div
+              x-show="currentItem?.properties?.credits"
+              x-cloak
+              class="text-neutral-500 pt-3 mt-auto text-sm"
+            >
+              <a :href="currentItem?.properties?.credits?.url" target="_blank">
+                <span class="text-base">©</span>
+                <span x-text="currentItem?.properties?.credits?.attribution"></span>
+                <svg class="icon text-xs">
+                  <use href="/public/icons.svg?v1#external"></use>
+                </svg>
+              </a>
+            </div>
+            
+            <pre id="debug" class="hidden" x-text="JSON.stringify(currentItem, null, 2)"></pre>
           </div>
-          
-          <pre id="debug" class="hidden" x-text="JSON.stringify(currentItem, null, 2)"></pre>
         </div>
       </div>
     </div>

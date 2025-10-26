@@ -1,34 +1,38 @@
 {
+  "geology": {
+    "description": "The geological time scale is a time scale that divides the Earth into eons, eras, periods, epochs and ages.",
+    "groups": {
+      "age": "Age",
+      "eon": "Eon",
+      "epoch": "Epoch",
+      "era": "Era",
+      "period": "Period"
+    },
+    "label": "Geology",
+    "title": "Geological time scale"
+  },
+  "homo": {
+    "description": "The Hominina, are generally any species in the related genera of Australopithecus and Paranthropus. They are classified within the Australopithecina subtribe of the Hominini tribe. These related species are sometimes collectively termed australopithecines, australopiths, or homininians. They are the extinct, close relatives of modern humans and, together with the extant genus Homo, comprise the human clade. There is no general agreement to whether australopithecines are closest relatives of modern humans, as it has been argued that they are more closely related to extant African apes. Members of the human clade, i.e. the Hominini after the split from the chimpanzees, are called Hominina.",
+    "groups": {
+      "early": "Early hominins"
+    },
+    "label": "Hominina",
+    "title": "Hominina"
+  },
   "intro": {
-    "title": "Welcome to Temporus",
-    "description": "Temporus is a tool for visualizing historical and geological events."
+    "description": "Temporus is a tool for visualizing historical and geological events.",
+    "title": "Welcome to Temporus"
+  },
+  "scales": {
+    "earth": "Planet Earth",
+    "homo": "Human origins"
   },
   "settings": {
     "languages": "Languages",
     "scales": "Scales"
   },
-  "geology": {
-    "title": "Geological time scale",
-    "label": "Geology",
-    "description": "The geological time scale is a time scale that divides the Earth into eons, eras, periods, epochs and ages.",
-    "groups": {
-      "eon": "Eon",
-      "era": "Era",
-      "period": "Period",
-      "epoch": "Epoch",
-      "age": "Age"
-    }
-  },
-  "homo": {
-    "title": "Hominina",
-    "label": "Hominina",
-    "description": "The Hominina, are generally any species in the related genera of Australopithecus and Paranthropus. They are classified within the Australopithecina subtribe of the Hominini tribe. These related species are sometimes collectively termed australopithecines, australopiths, or homininians. They are the extinct, close relatives of modern humans and, together with the extant genus Homo, comprise the human clade. There is no general agreement to whether australopithecines are closest relatives of modern humans, as it has been argued that they are more closely related to extant African apes. Members of the human clade, i.e. the Hominini after the split from the chimpanzees, are called Hominina.",
-    "groups": {
-      "early": "Early hominins"
-    }
-  },
-  "scales": {
-    "earth": "Planet Earth",
-    "homo": "Human origins"
+  "ui": {
+    "select": "Select something...",
+    "to": "to"
   }
 }

@@ -7,8 +7,8 @@
       "en": "Hominina"
     },
     "wiki": {
-      "fr": "619383",
-      "en": "3157936"
+      "fr": "Hominina",
+      "en": "Australopithecine"
     },
     "start": -7000000,
     "end": 0,
@@ -26,14 +26,14 @@
       "en": "Ardipithecus"
     },
     "wiki": {
-      "fr": "210102",
-      "en": "1144"
+      "fr": "Ardipithèque",
+      "en": "Ardipithecus"
     },
     "start": -6000000,
     "end": -4400000,
     "colors": {
-      "background": "oklch(28.6% 0.066 53.813)",
-      "foreground": "#fff"
+      "background": "oklch(68.1% 0.162 75.834)",
+      "foreground": "#000"
     },
     "group": "homo-early"
   }

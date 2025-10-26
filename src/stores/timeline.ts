@@ -3,10 +3,9 @@ import { isNotNil } from 'ramda';
 import { DataSet } from 'vis-data';
 import { Timeline } from 'vis-timeline';
 import type { TimelineOptions } from 'vis-timeline';
-import wiki from 'wikipedia';
 
 import data from '../data';
-import type { Item } from '../types';
+import type { Item, WikiSummary } from '../types';
 import { formatNumber, getLng, getQuery, setQuery } from '../utils';
 
 import 'vis-timeline/styles/vis-timeline-graph2d.css';
@@ -18,7 +17,6 @@ const timelineStore = {
   currentItem: null as Item | null,
 
   create() {
-    const lng = getLng();
     const container = document.getElementById('visualization');
 
     const options: TimelineOptions = {
@@ -53,9 +51,7 @@ const timelineStore = {
       showMajorLabels: false,
       format: {
         minorLabels(date) {
-          return String(
-            formatNumber(+(date as unknown as Moment).format('x'), lng)
-          );
+          return String(formatNumber(+(date as unknown as Moment).format('x')));
         },
       },
     };
@@ -88,21 +84,13 @@ const timelineStore = {
       if (isNotNil(item)) {
         const result: Item = item;
         try {
-          if (isNotNil(item.properties?.wikiId)) {
-            const response = await fetch(
-              `https://${lng ?? 'fr'}.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro&explaintext&redirects=1&origin=*&pageids=${item.properties.wikiId}`
-            ).then(res => res.json());
-            result.properties!.description =
-              response.query.pages[item.properties.wikiId].extract;
-            result.properties!.wikiUrl = `https://${lng ?? 'fr'}.wikipedia.org/wiki/${response.query.pages[item.properties.wikiId].title}`;
-          } else {
-            await wiki.setLang(lng ?? 'fr');
-            const page = await wiki.page(item.content);
-            const summary = await page.summary();
-            if (isNotNil(summary)) {
-              result.properties!.description = summary.extract_html;
-              result.properties!.wikiUrl = page.fullurl;
-            }
+          const data: WikiSummary = await fetch(
+            `https://${lng ?? 'fr'}.wikipedia.org/api/rest_v1/page/summary/${item.properties?.wikiName ?? item.content}`
+          ).then(res => res.json());
+          if (isNotNil(data)) {
+            result.properties!.description = data.extract_html;
+            result.properties!.wikiUrl = data.content_urls.desktop.page;
+            result.properties!.cover = data.thumbnail?.source ?? undefined;
           }
         } finally {
           this.currentItem = result;

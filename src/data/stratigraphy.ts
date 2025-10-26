@@ -98,6 +98,10 @@ const groups: DataGroup[] = [
     id: 'geology-age',
     content: t('geology.groups.age'),
   },
+  {
+    id: 'geology-other',
+    content: '&nbsp;',
+  },
 ];
 
 export default {
