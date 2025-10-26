@@ -12,12 +12,11 @@
     "title": "Échelle des temps géologiques"
   },
   "homo": {
-    "description": "Les Hominina sont une sous-tribu d'hominidés qui inclut le genre Homo et les genres éteints apparentés, tels que les Australopithèques ou les Paranthropes. Cette sous-tribu rassemble toutes les espèces de la lignée humaine, qui s'est séparée de la lignée des chimpanzés (Panina) il y a au moins 7 millions d'années. Le caractère le plus notable reconnu aux Hominina est la bipédie, alors que les chimpanzés et les gorilles sont quadrupèdes.",
     "groups": {
-      "early": "Premiers homininés"
+      "early": "Premiers hominines"
     },
-    "label": "Hominina",
-    "title": "Hominina"
+    "label": "Hominines",
+    "title": "Hominines"
   },
   "intro": {
     "description": "Temporus est un outil de visualisation des événements historiques et géologiques.",

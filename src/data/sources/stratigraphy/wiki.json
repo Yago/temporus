@@ -1,0 +1,714 @@
+{
+  "ischart:Aquitanian": {
+    "fr": "https://fr.wikipedia.org/wiki/Aquitanien",
+    "en": "https://en.wikipedia.org/wiki/Aquitanian_age"
+  },
+  "ischart:Burdigalian": {
+    "fr": "https://fr.wikipedia.org/wiki/Burdigalien",
+    "en": "https://en.wikipedia.org/wiki/Burdigalian"
+  },
+  "ischart:Langhian": {
+    "fr": "https://fr.wikipedia.org/wiki/Langhien",
+    "en": "https://en.wikipedia.org/wiki/Langhian"
+  },
+  "ischart:Messinian": {
+    "fr": "https://fr.wikipedia.org/wiki/Messinien",
+    "en": "https://en.wikipedia.org/wiki/Messinian"
+  },
+  "ischart:Serravallian": {
+    "fr": "https://fr.wikipedia.org/wiki/Serravallien",
+    "en": "https://en.wikipedia.org/wiki/Serravallian"
+  },
+  "ischart:Tortonian": {
+    "fr": "https://fr.wikipedia.org/wiki/Tortonien",
+    "en": "https://en.wikipedia.org/wiki/Tortonian"
+  },
+  "ischart:Miocene": {
+    "fr": "https://fr.wikipedia.org/wiki/Miocène",
+    "en": "https://en.wikipedia.org/wiki/Miocene"
+  },
+  "ischart:Piacenzian": {
+    "fr": "https://fr.wikipedia.org/wiki/Piacenzien",
+    "en": "https://en.wikipedia.org/wiki/Piacenzian"
+  },
+  "ischart:Zanclean": {
+    "fr": "https://fr.wikipedia.org/wiki/Zancléen",
+    "en": "https://en.wikipedia.org/wiki/Zanclean"
+  },
+  "ischart:Pliocene": {
+    "fr": "https://fr.wikipedia.org/wiki/Pliocène",
+    "en": "https://en.wikipedia.org/wiki/Pliocene"
+  },
+  "ischart:Neogene": {
+    "fr": "https://fr.wikipedia.org/wiki/Néogène",
+    "en": "https://en.wikipedia.org/wiki/Neogene"
+  },
+  "ischart:Bartonian": {
+    "fr": "https://fr.wikipedia.org/wiki/Bartonien",
+    "en": "https://en.wikipedia.org/wiki/Bartonian"
+  },
+  "ischart:Lutetian": {
+    "fr": "https://fr.wikipedia.org/wiki/Lutétien",
+    "en": "https://en.wikipedia.org/wiki/Lutetian"
+  },
+  "ischart:Priabonian": {
+    "fr": "https://fr.wikipedia.org/wiki/Priabonien",
+    "en": "https://en.wikipedia.org/wiki/Priabonian"
+  },
+  "ischart:Ypresian": {
+    "fr": "https://fr.wikipedia.org/wiki/Yprésien",
+    "en": "https://en.wikipedia.org/wiki/Ypresian"
+  },
+  "ischart:Eocene": {
+    "fr": "https://fr.wikipedia.org/wiki/Eocène",
+    "en": "https://en.wikipedia.org/wiki/Eocene"
+  },
+  "ischart:Chattian": {
+    "fr": "https://fr.wikipedia.org/wiki/Chattien",
+    "en": "https://en.wikipedia.org/wiki/Chattian"
+  },
+  "ischart:Rupelian": {
+    "fr": "https://fr.wikipedia.org/wiki/Rupélien",
+    "en": "https://en.wikipedia.org/wiki/Rupelian"
+  },
+  "ischart:Oligocene": {
+    "fr": "https://fr.wikipedia.org/wiki/Oligocène",
+    "en": "https://en.wikipedia.org/wiki/Oligocene"
+  },
+  "ischart:Danian": {
+    "fr": "https://fr.wikipedia.org/wiki/Danien",
+    "en": "https://en.wikipedia.org/wiki/Danian"
+  },
+  "ischart:Selandian": {
+    "fr": "https://fr.wikipedia.org/wiki/Sélandien",
+    "en": "https://en.wikipedia.org/wiki/Selandian"
+  },
+  "ischart:Thanetian": {
+    "fr": "https://fr.wikipedia.org/wiki/Thanétien",
+    "en": "https://en.wikipedia.org/wiki/Thanetian"
+  },
+  "ischart:Paleocene": {
+    "fr": "https://fr.wikipedia.org/wiki/Paléocène",
+    "en": "https://en.wikipedia.org/wiki/Paleocene"
+  },
+  "ischart:Paleogene": {
+    "fr": "https://fr.wikipedia.org/wiki/Paléogène",
+    "en": "https://en.wikipedia.org/wiki/Paleogene"
+  },
+  "ischart:Greenlandian": {
+    "fr": "https://fr.wikipedia.org/wiki/Greenlandien",
+    "en": "https://en.wikipedia.org/wiki/Greenlandian"
+  },
+  "ischart:Meghalayan": {
+    "fr": "https://fr.wikipedia.org/wiki/Meghalayan",
+    "en": "https://en.wikipedia.org/wiki/Meghalayan"
+  },
+  "ischart:Northgrippian": {
+    "fr": "https://fr.wikipedia.org/wiki/Northgrippien",
+    "en": "https://en.wikipedia.org/wiki/Northgrippian"
+  },
+  "ischart:Holocene": {
+    "fr": "https://fr.wikipedia.org/wiki/Holocène",
+    "en": "https://en.wikipedia.org/wiki/Holocene"
+  },
+  "ischart:Calabrian": {
+    "fr": "https://fr.wikipedia.org/wiki/Calabrien",
+    "en": "https://en.wikipedia.org/wiki/Calabrian_stage"
+  },
+  "ischart:Chibanian": {
+    "fr": "https://fr.wikipedia.org/wiki/Chibanien",
+    "en": "https://en.wikipedia.org/wiki/Chibanian"
+  },
+  "ischart:Gelasian": {
+    "fr": "https://fr.wikipedia.org/wiki/Gelasien",
+    "en": "https://en.wikipedia.org/wiki/Gelasian"
+  },
+  "ischart:UpperPleistocene": {
+    "fr": "https://fr.wikipedia.org/wiki/Pléistocène_supérieur",
+    "en": "https://en.wikipedia.org/wiki/Late_Pleistocene"
+  },
+  "ischart:Pleistocene": {
+    "fr": "https://fr.wikipedia.org/wiki/Pléistocène",
+    "en": "https://en.wikipedia.org/wiki/Pleistocene"
+  },
+  "ischart:Quaternary": {
+    "fr": "https://fr.wikipedia.org/wiki/Quaternaire",
+    "en": "https://en.wikipedia.org/wiki/Quaternary"
+  },
+  "ischart:Cenozoic": {
+    "fr": "https://fr.wikipedia.org/wiki/Cénozoïque",
+    "en": "https://en.wikipedia.org/wiki/Cenozoic"
+  },
+  "ischart:Albian": {
+    "fr": "https://fr.wikipedia.org/wiki/Albien",
+    "en": "https://en.wikipedia.org/wiki/Albian"
+  },
+  "ischart:Aptian": {
+    "fr": "https://fr.wikipedia.org/wiki/Aptien",
+    "en": "https://en.wikipedia.org/wiki/Aptian"
+  },
+  "ischart:Barremian": {
+    "fr": "https://fr.wikipedia.org/wiki/Barrémien",
+    "en": "https://en.wikipedia.org/wiki/Barremian"
+  },
+  "ischart:Berriasian": {
+    "fr": "https://fr.wikipedia.org/wiki/Berriasien",
+    "en": "https://en.wikipedia.org/wiki/Berriasian"
+  },
+  "ischart:Hauterivian": {
+    "fr": "https://fr.wikipedia.org/wiki/Hauterivien",
+    "en": "https://en.wikipedia.org/wiki/Hauterivian"
+  },
+  "ischart:Valanginian": {
+    "fr": "https://fr.wikipedia.org/wiki/Valanginien",
+    "en": "https://en.wikipedia.org/wiki/Valanginian"
+  },
+  "ischart:LowerCretaceous": {
+    "fr": "https://fr.wikipedia.org/wiki/Crétacé_inférieur",
+    "en": "https://en.wikipedia.org/wiki/Early_Cretaceous"
+  },
+  "ischart:Campanian": {
+    "fr": "https://fr.wikipedia.org/wiki/Campanien",
+    "en": "https://en.wikipedia.org/wiki/Campanian"
+  },
+  "ischart:Cenomanian": {
+    "fr": "https://fr.wikipedia.org/wiki/Cénomanien",
+    "en": "https://en.wikipedia.org/wiki/Cenomanian"
+  },
+  "ischart:Coniacian": {
+    "fr": "https://fr.wikipedia.org/wiki/Coniacien",
+    "en": "https://en.wikipedia.org/wiki/Coniacian"
+  },
+  "ischart:Maastrichtian": {
+    "fr": "https://fr.wikipedia.org/wiki/Maastrichtien",
+    "en": "https://en.wikipedia.org/wiki/Maastrichtian"
+  },
+  "ischart:Santonian": {
+    "fr": "https://fr.wikipedia.org/wiki/Santonien",
+    "en": "https://en.wikipedia.org/wiki/Santonian"
+  },
+  "ischart:Turonian": {
+    "fr": "https://fr.wikipedia.org/wiki/Turonien",
+    "en": "https://en.wikipedia.org/wiki/Turonian"
+  },
+  "ischart:UpperCretaceous": {
+    "fr": "https://fr.wikipedia.org/wiki/Crétacé_supérieur",
+    "en": "https://en.wikipedia.org/wiki/Late_Cretaceous"
+  },
+  "ischart:Cretaceous": {
+    "fr": "https://fr.wikipedia.org/wiki/Crétacé",
+    "en": "https://en.wikipedia.org/wiki/Cretaceous"
+  },
+  "ischart:Mesozoic": {
+    "fr": "https://fr.wikipedia.org/wiki/Mésozoïque",
+    "en": "https://en.wikipedia.org/wiki/Mesozoic"
+  },
+  "ischart:Phanerozoic": {
+    "fr": "https://fr.wikipedia.org/wiki/Phanérozoïque",
+    "en": "https://en.wikipedia.org/wiki/Phanerozoic"
+  },
+  "ischart:Hettangian": {
+    "fr": "https://fr.wikipedia.org/wiki/Hettangien",
+    "en": "https://en.wikipedia.org/wiki/Hettangian"
+  },
+  "ischart:Pliensbachian": {
+    "fr": "https://fr.wikipedia.org/wiki/Pliensbachien",
+    "en": "https://en.wikipedia.org/wiki/Pliensbachian"
+  },
+  "ischart:Sinemurian": {
+    "fr": "https://fr.wikipedia.org/wiki/Sinémurien",
+    "en": "https://en.wikipedia.org/wiki/Sinemurian"
+  },
+  "ischart:Toarcian": {
+    "fr": "https://fr.wikipedia.org/wiki/Toarcien",
+    "en": "https://en.wikipedia.org/wiki/Toarcian"
+  },
+  "ischart:LowerJurassic": {
+    "fr": "https://fr.wikipedia.org/wiki/Jurassique_inférieur",
+    "en": "https://en.wikipedia.org/wiki/Early_Jurassic"
+  },
+  "ischart:Aalenian": {
+    "fr": "https://fr.wikipedia.org/wiki/Aalénien",
+    "en": "https://en.wikipedia.org/wiki/Aalenian"
+  },
+  "ischart:Bajocian": {
+    "fr": "https://fr.wikipedia.org/wiki/Bajocien",
+    "en": "https://en.wikipedia.org/wiki/Bajocian"
+  },
+  "ischart:Bathonian": {
+    "fr": "https://fr.wikipedia.org/wiki/Bathonien",
+    "en": "https://en.wikipedia.org/wiki/Bathonian"
+  },
+  "ischart:Callovian": {
+    "fr": "https://fr.wikipedia.org/wiki/Callovien",
+    "en": "https://en.wikipedia.org/wiki/Callovian"
+  },
+  "ischart:MiddleJurassic": {
+    "fr": "https://fr.wikipedia.org/wiki/Jurassique_moyen",
+    "en": "https://en.wikipedia.org/wiki/Middle_Jurassic"
+  },
+  "ischart:Kimmeridgian": {
+    "fr": "https://fr.wikipedia.org/wiki/Kimméridgien",
+    "en": "https://en.wikipedia.org/wiki/Kimmeridgian"
+  },
+  "ischart:Oxfordian": {
+    "fr": "https://fr.wikipedia.org/wiki/Oxfordien",
+    "en": "https://en.wikipedia.org/wiki/Oxfordian_age"
+  },
+  "ischart:Tithonian": {
+    "fr": "https://fr.wikipedia.org/wiki/Tithonien",
+    "en": "https://en.wikipedia.org/wiki/Tithonian"
+  },
+  "ischart:UpperJurassic": {
+    "fr": "https://fr.wikipedia.org/wiki/Late_Jurassic",
+    "en": "https://en.wikipedia.org/wiki/Late_Jurassic"
+  },
+  "ischart:Jurassic": {
+    "fr": "https://fr.wikipedia.org/wiki/Jurassique",
+    "en": "https://en.wikipedia.org/wiki/Jurassic"
+  },
+  "ischart:Induan": {
+    "fr": "https://fr.wikipedia.org/wiki/Induen",
+    "en": "https://en.wikipedia.org/wiki/Induan"
+  },
+  "ischart:Olenekian": {
+    "fr": "https://fr.wikipedia.org/wiki/Olénékien",
+    "en": "https://en.wikipedia.org/wiki/Olenekian"
+  },
+  "ischart:LowerTriassic": {
+    "fr": "https://fr.wikipedia.org/wiki/Trias_inférieur",
+    "en": "https://en.wikipedia.org/wiki/Early_Triassic"
+  },
+  "ischart:Anisian": {
+    "fr": "https://fr.wikipedia.org/wiki/Anisien",
+    "en": "https://en.wikipedia.org/wiki/Anisian"
+  },
+  "ischart:Ladinian": {
+    "fr": "https://fr.wikipedia.org/wiki/Ladinien",
+    "en": "https://en.wikipedia.org/wiki/Ladinian"
+  },
+  "ischart:MiddleTriassic": {
+    "fr": "https://fr.wikipedia.org/wiki/Trias_moyen",
+    "en": "https://en.wikipedia.org/wiki/Middle_Triassic"
+  },
+  "ischart:Carnian": {
+    "fr": "https://fr.wikipedia.org/wiki/Carnien",
+    "en": "https://en.wikipedia.org/wiki/Carnian"
+  },
+  "ischart:Norian": {
+    "fr": "https://fr.wikipedia.org/wiki/Norien",
+    "en": "https://en.wikipedia.org/wiki/Norian"
+  },
+  "ischart:Rhaetian": {
+    "fr": "https://fr.wikipedia.org/wiki/Rhétien",
+    "en": "https://en.wikipedia.org/wiki/Rhaetian"
+  },
+  "ischart:UpperTriassic": {
+    "fr": "https://fr.wikipedia.org/wiki/Trias_supérieur",
+    "en": "https://en.wikipedia.org/wiki/Late_Triassic"
+  },
+  "ischart:Triassic": {
+    "fr": "https://fr.wikipedia.org/wiki/Trias",
+    "en": "https://en.wikipedia.org/wiki/Triassic"
+  },
+  "ischart:Tournaisian": {
+    "fr": "https://fr.wikipedia.org/wiki/Tournaisien",
+    "en": "https://en.wikipedia.org/wiki/Tournaisian"
+  },
+  "ischart:LowerMississippian": {
+    "fr": "https://fr.wikipedia.org/wiki/Tournaisien",
+    "en": "https://en.wikipedia.org/wiki/Tournaisian"
+  },
+  "ischart:Visean": {
+    "fr": "https://fr.wikipedia.org/wiki/Viséen",
+    "en": "https://en.wikipedia.org/wiki/Visean"
+  },
+  "ischart:MiddleMississippian": {
+    "fr": "https://fr.wikipedia.org/wiki/Viséen",
+    "en": "https://en.wikipedia.org/wiki/Viséan"
+  },
+  "ischart:Serpukhovian": {
+    "fr": "https://fr.wikipedia.org/wiki/Serpukhovien",
+    "en": "https://en.wikipedia.org/wiki/Serpukhovian"
+  },
+  "ischart:UpperMississippian": {
+    "fr": "https://fr.wikipedia.org/wiki/Serpukhovien",
+    "en": "https://en.wikipedia.org/wiki/Serpukhovian"
+  },
+  "ischart:Mississippian": {
+    "fr": "https://fr.wikipedia.org/wiki/Mississippien",
+    "en": "https://en.wikipedia.org/wiki/Mississippian_(geology)"
+  },
+  "ischart:Bashkirian": {
+    "fr": "https://fr.wikipedia.org/wiki/Bashkirien",
+    "en": "https://en.wikipedia.org/wiki/Bashkirian"
+  },
+  "ischart:LowerPennsylvanian": {
+    "fr": "https://fr.wikipedia.org/wiki/Bashkirien",
+    "en": "https://en.wikipedia.org/wiki/Bashkirian"
+  },
+  "ischart:Moscovian": {
+    "fr": "https://fr.wikipedia.org/wiki/Moscovien",
+    "en": "https://en.wikipedia.org/wiki/Moscovian_age"
+  },
+  "ischart:MiddlePennsylvanian": {
+    "fr": "https://fr.wikipedia.org/wiki/Moscovien",
+    "en": "https://en.wikipedia.org/wiki/Moscovian_age"
+  },
+  "ischart:Gzhelian": {
+    "fr": "https://fr.wikipedia.org/wiki/Gzhélien",
+    "en": "https://en.wikipedia.org/wiki/Gzhelian"
+  },
+  "ischart:Kasimovian": {
+    "fr": "https://fr.wikipedia.org/wiki/Kasimovien",
+    "en": "https://en.wikipedia.org/wiki/Kasimovian"
+  },
+  "ischart:UpperPennsylvanian": {
+    "fr": "https://fr.wikipedia.org/wiki/Pennsylvanien",
+    "en": "https://en.wikipedia.org/wiki/Pennsylvanian_(geology)"
+  },
+  "ischart:Pennsylvanian": {
+    "fr": "https://fr.wikipedia.org/wiki/Pennsylvanien",
+    "en": "https://en.wikipedia.org/wiki/Pennsylvanian"
+  },
+  "ischart:Carboniferous": {
+    "fr": "https://fr.wikipedia.org/wiki/Carbonifère",
+    "en": "https://en.wikipedia.org/wiki/Carboniferous"
+  },
+  "ischart:Artinskian": {
+    "fr": "https://fr.wikipedia.org/wiki/Artinskien",
+    "en": "https://en.wikipedia.org/wiki/Artinskian"
+  },
+  "ischart:Asselian": {
+    "fr": "https://fr.wikipedia.org/wiki/Assélien",
+    "en": "https://en.wikipedia.org/wiki/Asselian"
+  },
+  "ischart:Kungurian": {
+    "fr": "https://fr.wikipedia.org/wiki/Kungurien",
+    "en": "https://en.wikipedia.org/wiki/Kungurian"
+  },
+  "ischart:Sakmarian": {
+    "fr": "https://fr.wikipedia.org/wiki/Sakmarien",
+    "en": "https://en.wikipedia.org/wiki/Sakmarian"
+  },
+  "ischart:Cisuralian": {
+    "fr": "https://fr.wikipedia.org/wiki/Cisuralien",
+    "en": "https://en.wikipedia.org/wiki/Cisuralian"
+  },
+  "ischart:Capitanian": {
+    "fr": "https://fr.wikipedia.org/wiki/Capitanien",
+    "en": "https://en.wikipedia.org/wiki/Capitanian"
+  },
+  "ischart:Roadian": {
+    "fr": "https://fr.wikipedia.org/wiki/Roadien",
+    "en": "https://en.wikipedia.org/wiki/Roadian"
+  },
+  "ischart:Wordian": {
+    "fr": "https://fr.wikipedia.org/wiki/Wordien",
+    "en": "https://en.wikipedia.org/wiki/Wordian"
+  },
+  "ischart:Guadalupian": {
+    "fr": "https://fr.wikipedia.org/wiki/Guadalupéen",
+    "en": "https://en.wikipedia.org/wiki/Guadalupian"
+  },
+  "ischart:Changhsingian": {
+    "fr": "https://fr.wikipedia.org/wiki/Changhsingien",
+    "en": "https://en.wikipedia.org/wiki/Changhsingian"
+  },
+  "ischart:Wuchiapingian": {
+    "fr": "https://fr.wikipedia.org/wiki/Wuchiapingien",
+    "en": "https://en.wikipedia.org/wiki/Wuchiapingian"
+  },
+  "ischart:Lopingian": {
+    "fr": "https://fr.wikipedia.org/wiki/Lopingien",
+    "en": "https://en.wikipedia.org/wiki/Lopingian"
+  },
+  "ischart:Permian": {
+    "fr": "https://fr.wikipedia.org/wiki/Permien",
+    "en": "https://en.wikipedia.org/wiki/Permian"
+  },
+  "ischart:Paleozoic": {
+    "fr": "https://fr.wikipedia.org/wiki/Paléozoïque",
+    "en": "https://en.wikipedia.org/wiki/Paleozoic"
+  },
+  "ischart:CambrianStage3": {
+    "fr": "https://fr.wikipedia.org/wiki/Étage_3",
+    "en": "https://en.wikipedia.org/wiki/Cambrian_Stage_3"
+  },
+  "ischart:CambrianStage4": {
+    "fr": "https://fr.wikipedia.org/wiki/Étage_4",
+    "en": "https://en.wikipedia.org/wiki/Cambrian_Stage_4"
+  },
+  "ischart:CambrianSeries2": {
+    "fr": "https://fr.wikipedia.org/wiki/Cambrien_inférieur",
+    "en": "https://en.wikipedia.org/wiki/Cambrian_Series_2"
+  },
+  "ischart:CambrianStage10": {
+    "fr": "https://fr.wikipedia.org/wiki/Étage_10",
+    "en": "https://en.wikipedia.org/wiki/Cambrian_Stage_10"
+  },
+  "ischart:Jiangshanian": {
+    "fr": "https://fr.wikipedia.org/wiki/Jiangshanien",
+    "en": "https://en.wikipedia.org/wiki/Jiangshanian"
+  },
+  "ischart:Paibian": {
+    "fr": "https://fr.wikipedia.org/wiki/Paibien",
+    "en": "https://en.wikipedia.org/wiki/Paibian"
+  },
+  "ischart:Furongian": {
+    "fr": "https://fr.wikipedia.org/wiki/Furongien",
+    "en": "https://en.wikipedia.org/wiki/Furongian"
+  },
+  "ischart:Drumian": {
+    "fr": "https://fr.wikipedia.org/wiki/Drumien",
+    "en": "https://en.wikipedia.org/wiki/Drumian"
+  },
+  "ischart:Guzhangian": {
+    "fr": "https://fr.wikipedia.org/wiki/Guzhangien",
+    "en": "https://en.wikipedia.org/wiki/Guzhangian"
+  },
+  "ischart:Wuliuan": {
+    "fr": "https://fr.wikipedia.org/wiki/Wuliuen",
+    "en": "https://en.wikipedia.org/wiki/Wuliuan"
+  },
+  "ischart:Miaolingian": {
+    "fr": "https://fr.wikipedia.org/wiki/Miaolingien",
+    "en": "https://en.wikipedia.org/wiki/Miaolingian"
+  },
+  "ischart:CambrianStage2": {
+    "fr": "https://fr.wikipedia.org/wiki/Étage_2",
+    "en": "https://en.wikipedia.org/wiki/Cambrian_Stage_2"
+  },
+  "ischart:Fortunian": {
+    "fr": "https://fr.wikipedia.org/wiki/Fortunien",
+    "en": "https://en.wikipedia.org/wiki/Fortunian"
+  },
+  "ischart:Terreneuvian": {
+    "fr": "https://fr.wikipedia.org/wiki/Terreneuvien",
+    "en": "https://en.wikipedia.org/wiki/Terreneuvian"
+  },
+  "ischart:Cambrian": {
+    "fr": "https://fr.wikipedia.org/wiki/Cambrien",
+    "en": "https://en.wikipedia.org/wiki/Cambrian"
+  },
+  "ischart:Emsian": {
+    "fr": "https://fr.wikipedia.org/wiki/Emsien",
+    "en": "https://en.wikipedia.org/wiki/Emsian"
+  },
+  "ischart:Lochkovian": {
+    "fr": "https://fr.wikipedia.org/wiki/Lochkovien",
+    "en": "https://en.wikipedia.org/wiki/Lochkovian"
+  },
+  "ischart:Pragian": {
+    "fr": "https://fr.wikipedia.org/wiki/Praguien",
+    "en": "https://en.wikipedia.org/wiki/Pragian"
+  },
+  "ischart:LowerDevonian": {
+    "fr": "https://fr.wikipedia.org/wiki/Dévonien_inférieur",
+    "en": "https://en.wikipedia.org/wiki/Early_Devonian"
+  },
+  "ischart:Eifelian": {
+    "fr": "https://fr.wikipedia.org/wiki/Eifélien",
+    "en": "https://en.wikipedia.org/wiki/Eifelian"
+  },
+  "ischart:Givetian": {
+    "fr": "https://fr.wikipedia.org/wiki/Givétien",
+    "en": "https://en.wikipedia.org/wiki/Givetian"
+  },
+  "ischart:MiddleDevonian": {
+    "fr": "https://fr.wikipedia.org/wiki/Dévonien_moyen",
+    "en": "https://en.wikipedia.org/wiki/Middle_Devonian"
+  },
+  "ischart:Famennian": {
+    "fr": "https://fr.wikipedia.org/wiki/Famennien",
+    "en": "https://en.wikipedia.org/wiki/Famennian"
+  },
+  "ischart:Frasnian": {
+    "fr": "https://fr.wikipedia.org/wiki/Frasnien",
+    "en": "https://en.wikipedia.org/wiki/Frasnian"
+  },
+  "ischart:UpperDevonian": {
+    "fr": "https://fr.wikipedia.org/wiki/Dévonien_supérieur",
+    "en": "https://en.wikipedia.org/wiki/Devonian"
+  },
+  "ischart:Devonian": {
+    "fr": "https://fr.wikipedia.org/wiki/Dévonien",
+    "en": "https://en.wikipedia.org/wiki/Devonian"
+  },
+  "ischart:Floian": {
+    "fr": "https://fr.wikipedia.org/wiki/Floien",
+    "en": "https://en.wikipedia.org/wiki/Floian"
+  },
+  "ischart:Tremadocian": {
+    "fr": "https://fr.wikipedia.org/wiki/Trémadocien",
+    "en": "https://en.wikipedia.org/wiki/Tremadocian"
+  },
+  "ischart:LowerOrdovician": {
+    "fr": "https://fr.wikipedia.org/wiki/Ordovicien_inférieur",
+    "en": "https://en.wikipedia.org/wiki/Early_Ordovician"
+  },
+  "ischart:Dapingian": {
+    "fr": "https://fr.wikipedia.org/wiki/Dapingien",
+    "en": "https://en.wikipedia.org/wiki/Dapingian"
+  },
+  "ischart:Darriwilian": {
+    "fr": "https://fr.wikipedia.org/wiki/Darriwilien",
+    "en": "https://en.wikipedia.org/wiki/Darriwilian"
+  },
+  "ischart:MiddleOrdovician": {
+    "fr": "https://fr.wikipedia.org/wiki/Ordovicien_moyen",
+    "en": "https://en.wikipedia.org/wiki/Ordovician"
+  },
+  "ischart:Hirnantian": {
+    "fr": "https://fr.wikipedia.org/wiki/Hirnantien",
+    "en": "https://en.wikipedia.org/wiki/Hirnantian"
+  },
+  "ischart:Katian": {
+    "fr": "https://fr.wikipedia.org/wiki/Katien",
+    "en": "https://en.wikipedia.org/wiki/Katian"
+  },
+  "ischart:Sandbian": {
+    "fr": "https://fr.wikipedia.org/wiki/Sandbien",
+    "en": "https://en.wikipedia.org/wiki/Sandbian"
+  },
+  "ischart:UpperOrdovician": {
+    "fr": "https://fr.wikipedia.org/wiki/Ordovicien_supérieur",
+    "en": "https://en.wikipedia.org/wiki/Late_Ordovician"
+  },
+  "ischart:Ordovician": {
+    "fr": "https://fr.wikipedia.org/wiki/Ordovicien",
+    "en": "https://en.wikipedia.org/wiki/Ordovician"
+  },
+  "ischart:Aeronian": {
+    "fr": "https://fr.wikipedia.org/wiki/Aéronien",
+    "en": "https://en.wikipedia.org/wiki/Aeronian"
+  },
+  "ischart:Rhuddanian": {
+    "fr": "https://fr.wikipedia.org/wiki/Rhuddanien",
+    "en": "https://en.wikipedia.org/wiki/Rhuddanian"
+  },
+  "ischart:Telychian": {
+    "fr": "https://fr.wikipedia.org/wiki/Télychien",
+    "en": "https://en.wikipedia.org/wiki/Telychian"
+  },
+  "ischart:Llandovery": {
+    "fr": "https://fr.wikipedia.org/wiki/Llandovery_(série)",
+    "en": "https://en.wikipedia.org/wiki/Llandovery_Epoch"
+  },
+  "ischart:Gorstian": {
+    "fr": "https://fr.wikipedia.org/wiki/Gorstien",
+    "en": "https://en.wikipedia.org/wiki/Gorstian"
+  },
+  "ischart:Ludfordian": {
+    "fr": "https://fr.wikipedia.org/wiki/Ludfordien",
+    "en": "https://en.wikipedia.org/wiki/Ludfordian"
+  },
+  "ischart:Ludlow": {
+    "fr": "https://fr.wikipedia.org/wiki/Ludlow_(série)",
+    "en": "https://en.wikipedia.org/wiki/Ludlow_Epoch"
+  },
+  "ischart:Pridoli": {
+    "fr": "https://fr.wikipedia.org/wiki/Pridoli_(série)",
+    "en": "https://en.wikipedia.org/wiki/Pridoli_Epoch"
+  },
+  "ischart:Homerian": {
+    "fr": "https://fr.wikipedia.org/wiki/Homérien",
+    "en": "https://en.wikipedia.org/wiki/Homerian"
+  },
+  "ischart:Sheinwoodian": {
+    "fr": "https://fr.wikipedia.org/wiki/Sheinwoodien",
+    "en": "https://en.wikipedia.org/wiki/Sheinwoodian"
+  },
+  "ischart:Wenlock": {
+    "fr": "https://fr.wikipedia.org/wiki/Wenlock_(série)",
+    "en": "https://en.wikipedia.org/wiki/Wenlock_Epoch"
+  },
+  "ischart:Silurian": {
+    "fr": "https://fr.wikipedia.org/wiki/Silurien",
+    "en": "https://en.wikipedia.org/wiki/Silurian"
+  },
+  "ischart:Eoarchean": {
+    "fr": "https://fr.wikipedia.org/wiki/Éoarchéen",
+    "en": "https://en.wikipedia.org/wiki/Eoarchean"
+  },
+  "ischart:Mesoarchean": {
+    "fr": "https://fr.wikipedia.org/wiki/Mésoarchéen",
+    "en": "https://en.wikipedia.org/wiki/Mesoarchean"
+  },
+  "ischart:Neoarchean": {
+    "fr": "https://fr.wikipedia.org/wiki/Néoarchéen",
+    "en": "https://en.wikipedia.org/wiki/Neoarchean"
+  },
+  "ischart:Paleoarchean": {
+    "fr": "https://fr.wikipedia.org/wiki/Paléoarchéen",
+    "en": "https://en.wikipedia.org/wiki/Paleoarchean"
+  },
+  "ischart:Archean": {
+    "fr": "https://fr.wikipedia.org/wiki/Archéen",
+    "en": "https://en.wikipedia.org/wiki/Archean"
+  },
+  "ischart:Hadean": {
+    "fr": "https://fr.wikipedia.org/wiki/Hadéen",
+    "en": "https://en.wikipedia.org/wiki/Hadean"
+  },
+  "ischart:Calymmian": {
+    "fr": "https://fr.wikipedia.org/wiki/Calymmien",
+    "en": "https://en.wikipedia.org/wiki/Calymmian"
+  },
+  "ischart:Ectasian": {
+    "fr": "https://fr.wikipedia.org/wiki/Ectasien",
+    "en": "https://en.wikipedia.org/wiki/Ectasian"
+  },
+  "ischart:Stenian": {
+    "fr": "https://fr.wikipedia.org/wiki/Sténien",
+    "en": "https://en.wikipedia.org/wiki/Stenian"
+  },
+  "ischart:Mesoproterozoic": {
+    "fr": "https://fr.wikipedia.org/wiki/Mésoprotérozoïque",
+    "en": "https://en.wikipedia.org/wiki/Mesoproterozoic"
+  },
+  "ischart:Cryogenian": {
+    "fr": "https://fr.wikipedia.org/wiki/Cryogénien",
+    "en": "https://en.wikipedia.org/wiki/Cryogenian"
+  },
+  "ischart:Ediacaran": {
+    "fr": "https://fr.wikipedia.org/wiki/Édiacarien",
+    "en": "https://en.wikipedia.org/wiki/Ediacaran"
+  },
+  "ischart:Tonian": {
+    "fr": "https://fr.wikipedia.org/wiki/Tonien",
+    "en": "https://en.wikipedia.org/wiki/Tonian"
+  },
+  "ischart:Neoproterozoic": {
+    "fr": "https://fr.wikipedia.org/wiki/Néoprotérozoïque",
+    "en": "https://en.wikipedia.org/wiki/Neoproterozoic"
+  },
+  "ischart:Orosirian": {
+    "fr": "https://fr.wikipedia.org/wiki/Orosirien",
+    "en": "https://en.wikipedia.org/wiki/Orosirian"
+  },
+  "ischart:Rhyacian": {
+    "fr": "https://fr.wikipedia.org/wiki/Rhyacien",
+    "en": "https://en.wikipedia.org/wiki/Rhyacian"
+  },
+  "ischart:Siderian": {
+    "fr": "https://fr.wikipedia.org/wiki/Sidérien",
+    "en": "https://en.wikipedia.org/wiki/Siderian"
+  },
+  "ischart:Statherian": {
+    "fr": "https://fr.wikipedia.org/wiki/Stathérien",
+    "en": "https://en.wikipedia.org/wiki/Statherian"
+  },
+  "ischart:Paleoproterozoic": {
+    "fr": "https://fr.wikipedia.org/wiki/Paléoprotérozoïque",
+    "en": "https://en.wikipedia.org/wiki/Paleoproterozoic"
+  },
+  "ischart:Proterozoic": {
+    "fr": "https://fr.wikipedia.org/wiki/Protérozoïque",
+    "en": "https://en.wikipedia.org/wiki/Proterozoic"
+  },
+  "ischart:Precambrian": {
+    "fr": "https://fr.wikipedia.org/wiki/Précambrien",
+    "en": "https://en.wikipedia.org/wiki/Precambrian"
+  }
+}

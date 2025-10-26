@@ -78,6 +78,7 @@ const timelineStore = {
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   async onItemClick(e: any) {
+    console.log(e);
     const lng = getLng();
     if (isNotNil(e.item)) {
       const item = items.find(i => i.id === e.item);

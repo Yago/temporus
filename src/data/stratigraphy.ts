@@ -7,6 +7,15 @@ import chart1 from './sources/stratigraphy/chart1.json';
 import chart2 from './sources/stratigraphy/chart2.json';
 import chart3 from './sources/stratigraphy/chart3.json';
 import chart4 from './sources/stratigraphy/chart4.json';
+import wiki from './sources/stratigraphy/wiki.json';
+
+const wikiList: Record<
+  string,
+  {
+    fr: string;
+    en: string;
+  }
+> = {};
 
 const credits = {
   attribution: 'International Commission on Stratigraphy, December 2024.',
@@ -56,6 +65,11 @@ const processChart = (chart: StratygraphyItem) => {
       properties: {
         description: chart.definition,
         credits,
+        wikiName: (wiki as Record<string, Record<string, string>>)[chart.id][
+          lng as keyof typeof wiki
+        ]
+          .split('/wiki/')
+          .at(-1),
       },
     });
   }
