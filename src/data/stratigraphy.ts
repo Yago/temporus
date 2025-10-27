@@ -60,8 +60,8 @@ const processChart = (chart: StratygraphyItem) => {
         wikiName: (wiki as Record<string, Record<string, string>>)[chart.id][
           lng as keyof typeof wiki
         ]
-          .split('/wiki/')
-          .at(-1),
+          ?.split('/wiki/')
+          ?.at(-1),
       },
     });
   }
