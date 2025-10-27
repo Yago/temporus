@@ -11,7 +11,7 @@ import { formatNumber, getLng, getQuery, setQuery } from '../utils';
 
 import 'vis-timeline/styles/vis-timeline-graph2d.css';
 
-const { items, groups, markers } = data;
+const { items, groups } = data;
 
 const timelineStore = {
   timeline: null as Timeline | null,
