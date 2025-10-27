@@ -1,3 +1,7 @@
+.vis-timeline * {
+  @apply max-lg:text-xs!;
+}
+
 .vis-text { @apply text-neutral-100!;}
 .vis-nesting-group { @apply pl-3 before:text-[12px]!;}
 .vis-nested-group { @apply bg-black! pl-6! border-t-0! border-r-0!;}

@@ -27,7 +27,7 @@
 
     <!-- Sidebar -->
     <div
-      class="fixed right-4 lg:right-0 bottom-0 max-lg:h-[92vh] lg:inset-y-0 w-[calc(100%-32px)] md:w-1/3 lg:w-[450px] lg:max-w-[25vw] bg-black shadow-[-10px_0_50px_-2px_rgba(0,0,0,0.8)] border-l max-lg:border border-neutral-800 transition-transform duration-500 rounded-t-lg"
+      class="fixed right-4 lg:right-0 bottom-0 max-lg:h-[92svh] lg:inset-y-0 w-[calc(100%-32px)] md:w-[350px] lg:w-[450px] lg:max-w-[25vw] bg-black shadow-[-10px_0_50px_-2px_rgba(0,0,0,0.8)] border-l max-lg:border border-neutral-800 transition-transform duration-500 rounded-t-lg"
       :class="!$store.timeline.sidebarOpen && mobile && 'translate-y-[calc(100%-50px)]'"
     >
       <div class="grid grid-rows-[auto_1fr] h-full">
@@ -68,7 +68,7 @@
 
         <!-- Content -->
         <div class="h-full overflow-y-auto">
-          <div class="p-5! flex flex-col">
+          <div class="p-4! lg:p-5! flex flex-col">
             <h1
               class="text-lg lg:text-2xl font-bold"
               x-html="currentItem?.content ?? $store.utils.t('intro.title')"
