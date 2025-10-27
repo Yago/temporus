@@ -4,7 +4,7 @@
     "name": {
       "fr": "Hominines",
       "latin": "Hominina",
-      "en": "Australopithecines"
+      "en": "Hominina"
     },
     "wiki": {
       "fr": "Hominina",
@@ -19,22 +19,129 @@
     "group": "homo"
   },
   {
-    "id": "homo:ardipithecus",
+    "id": "homo:sahelanthropus_tchadensis",
     "name": {
-      "fr": "Ardipithèques",
-      "latin": "Ardipithecus",
-      "en": "Ardipithecus"
+      "fr": "Sahelanthropus tchadensis",
+      "en": "Sahelanthropus tchadensis"
     },
     "wiki": {
-      "fr": "Ardipithèque",
-      "en": "Ardipithecus"
+      "fr": "Sahelanthropus_tchadensis",
+      "en": "Sahelanthropus"
     },
-    "start": -6000000,
-    "end": -4400000,
+    "start": -7000000,
+    "end": -6500000,
     "colors": {
       "background": "oklch(68.1% 0.162 75.834)",
       "foreground": "#000"
     },
     "group": "homo-early"
+  },
+  {
+    "id": "homo:orrorin_tugenensis",
+    "name": {
+      "fr": "Orrorin tugenensis",
+      "en": "Orrorin tugenensis"
+    },
+    "wiki": {
+      "fr": "Orrorin_tugenensis",
+      "en": "Orrorin"
+    },
+    "start": -6000000,
+    "end": -5500000,
+    "colors": {
+      "background": "oklch(68.1% 0.162 75.834)",
+      "foreground": "#000"
+    },
+    "group": "homo-early"
+  },
+  {
+    "id": "homo:ardipithecus_kadabba",
+    "name": {
+      "fr": "Ardipithecus kadabba",
+      "en": "Ardipithecus kadabba"
+    },
+    "wiki": {
+      "fr": "Ardipithecus_kadabba",
+      "en": "Ardipithecus_kadabba"
+    },
+    "start": -6300000,
+    "end": -5200000,
+    "colors": {
+      "background": "oklch(68.1% 0.162 75.834)",
+      "foreground": "#000"
+    },
+    "group": "homo-early"
+  },
+  {
+    "id": "homo:ardipithecus_ramidus",
+    "name": {
+      "fr": "Ardipithecus ramidus",
+      "en": "Ardipithecus ramidus"
+    },
+    "wiki": {
+      "fr": "Ardipithecus_ramidus",
+      "en": "Ardipithecus_ramidus"
+    },
+    "start": -4500000,
+    "end": -4300000,
+    "colors": {
+      "background": "oklch(68.1% 0.162 75.834)",
+      "foreground": "#000"
+    },
+    "group": "homo-early"
+  },
+  {
+    "id": "homo:australopithecus_anamensis",
+    "name": {
+      "fr": "Australopithecus anamensis",
+      "en": "Australopithecus anamensis"
+    },
+    "wiki": {
+      "fr": "Australopithecus_anamensis",
+      "en": "Australopithecus_anamensis"
+    },
+    "start": -4200000,
+    "end": -3800000,
+    "colors": {
+      "background": "oklch(68.1% 0.162 75.834)",
+      "foreground": "#000"
+    },
+    "group": "homo-australopithecus"
+  },
+  {
+    "id": "homo:australopithecus_afarensis",
+    "name": {
+      "fr": "Australopithecus afarensis",
+      "en": "Australopithecus afarensis"
+    },
+    "wiki": {
+      "fr": "Australopithecus_afarensis",
+      "en": "Australopithecus_afarensis"
+    },
+    "start": -4100000,
+    "end": -3000000,
+    "colors": {
+      "background": "oklch(68.1% 0.162 75.834)",
+      "foreground": "#000"
+    },
+    "group": "homo-australopithecus"
+  },
+  {
+    "id": "homo:",
+    "name": {
+      "fr": "",
+      "en": ""
+    },
+    "wiki": {
+      "fr": "",
+      "en": ""
+    },
+    "start": 0,
+    "end": 0,
+    "colors": {
+      "background": "oklch(68.1% 0.162 75.834)",
+      "foreground": "#000"
+    },
+    "group": "homo-australopithecus"
   }
 ]

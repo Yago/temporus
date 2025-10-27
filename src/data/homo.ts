@@ -12,7 +12,7 @@ const items: Item[] = [];
 homo.forEach((item: HomoItem) => {
   items.push({
     id: item.id,
-    content: `${item.name[lng as keyof typeof item.name]} <i>(${item.name.latin})</i>`,
+    content: `${item.name[lng as keyof typeof item.name]} ${item.name.latin ? `<i>(${item.name.latin})</i>` : ''}`,
     start: item.start,
     end: item.end,
     group: item.group,
@@ -27,11 +27,15 @@ const groups: DataGroup[] = [
   {
     id: 'homo',
     content: t('homo.label'),
-    nestedGroups: ['homo-early'],
+    nestedGroups: ['homo-early', 'homo-australopithecus'],
   },
   {
     id: 'homo-early',
     content: t('homo.groups.early'),
+  },
+  {
+    id: 'homo-australopithecus',
+    content: t('homo.groups.australopithecus'),
   },
 ];
 

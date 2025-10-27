@@ -13,10 +13,11 @@
   },
   "homo": {
     "groups": {
-      "early": "Early hominins"
+      "early": "Early hominins",
+      "australopithecus": "Australopithèques"
     },
-    "label": "Australopithecines",
-    "title": "Australopithecines"
+    "label": "Hominina",
+    "title": "Hominina"
   },
   "intro": {
     "description": "Temporus is a tool for visualizing historical and geological events.",

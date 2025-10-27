@@ -15,6 +15,7 @@ const { items, groups } = data;
 const timelineStore = {
   timeline: null as Timeline | null,
   currentItem: null as Item | null,
+  sidebarOpen: false,
 
   create() {
     const container = document.getElementById('visualization');
@@ -78,9 +79,9 @@ const timelineStore = {
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   async onItemClick(e: any) {
-    console.log(e);
     const lng = getLng();
     if (isNotNil(e.item)) {
+      this.toggleSidebar(true);
       const item = items.find(i => i.id === e.item);
       if (isNotNil(item)) {
         const result: Item = item;
@@ -118,6 +119,10 @@ const timelineStore = {
         this.timeline.setWindow(scale.start, scale.end);
       }
     }
+  },
+
+  toggleSidebar(state?: boolean) {
+    this.sidebarOpen = state ?? !this.sidebarOpen;
   },
 };
 

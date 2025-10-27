@@ -2,7 +2,7 @@ export type HomoItem = {
   id: string;
   name: {
     fr: string;
-    latin: string;
+    latin?: string;
     en: string;
   };
   cover?: string;

@@ -13,7 +13,8 @@
   },
   "homo": {
     "groups": {
-      "early": "Premiers hominines"
+      "early": "Premiers hominines",
+      "australopithecus": "Australopithèques"
     },
     "label": "Hominines",
     "title": "Hominines"
