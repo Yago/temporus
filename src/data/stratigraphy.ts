@@ -9,14 +9,6 @@ import chart3 from './sources/stratigraphy/chart3.json';
 import chart4 from './sources/stratigraphy/chart4.json';
 import wiki from './sources/stratigraphy/wiki.json';
 
-const wikiList: Record<
-  string,
-  {
-    fr: string;
-    en: string;
-  }
-> = {};
-
 const credits = {
   attribution: 'International Commission on Stratigraphy, December 2024.',
   url: 'https://stratigraphy.org/chart',
