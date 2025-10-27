@@ -25,6 +25,7 @@ const items: Item[] = [
     properties: {
       description: t('geology.description'),
       credits,
+      wikiName: t('geology.wikiName'),
     },
   },
 ];
@@ -53,7 +54,7 @@ const processChart = (chart: StratygraphyItem) => {
           : Array.isArray(chart.rank)
             ? `geology-${(chart.rank[0] as string).split('/rank/')[1].toLocaleLowerCase()}`
             : 'geology',
-      style: `background-color: ${chart.color};`,
+      style: `background-color: ${chart.color};border-color: #000;`,
       properties: {
         description: chart.definition,
         credits,
@@ -105,7 +106,7 @@ const groups: DataGroup[] = [
     content: t('geology.groups.age'),
   },
   {
-    id: 'geology-other',
+    id: 'geology-bottom',
     content: '&nbsp;',
   },
 ];

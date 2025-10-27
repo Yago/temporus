@@ -31,7 +31,7 @@
     "start": -7000000,
     "end": -6500000,
     "colors": {
-      "background": "oklch(68.1% 0.162 75.834)",
+      "background": "oklch(55.4% 0.135 66.442)",
       "foreground": "#000"
     },
     "group": "homo-early"
@@ -49,7 +49,7 @@
     "start": -6000000,
     "end": -5500000,
     "colors": {
-      "background": "oklch(68.1% 0.162 75.834)",
+      "background": "oklch(55.4% 0.135 66.442)",
       "foreground": "#000"
     },
     "group": "homo-early"
@@ -67,7 +67,7 @@
     "start": -6300000,
     "end": -5200000,
     "colors": {
-      "background": "oklch(68.1% 0.162 75.834)",
+      "background": "oklch(55.4% 0.135 66.442)",
       "foreground": "#000"
     },
     "group": "homo-early"
@@ -85,7 +85,25 @@
     "start": -4500000,
     "end": -4300000,
     "colors": {
-      "background": "oklch(68.1% 0.162 75.834)",
+      "background": "oklch(55.4% 0.135 66.442)",
+      "foreground": "#000"
+    },
+    "group": "homo-early"
+  },
+  {
+    "id": "homo:kenyanthropus_platyops",
+    "name": {
+      "fr": "Kenyanthropus platyops",
+      "en": "Kenyanthropus platyops"
+    },
+    "wiki": {
+      "fr": "Kenyanthropus",
+      "en": "Kenyanthropus"
+    },
+    "start": -3500000,
+    "end": -3200000,
+    "colors": {
+      "background": "oklch(55.4% 0.135 66.442)",
       "foreground": "#000"
     },
     "group": "homo-early"
@@ -103,7 +121,7 @@
     "start": -4200000,
     "end": -3800000,
     "colors": {
-      "background": "oklch(68.1% 0.162 75.834)",
+      "background": "oklch(79.5% 0.184 86.047)",
       "foreground": "#000"
     },
     "group": "homo-australopithecus"
@@ -121,27 +139,423 @@
     "start": -4100000,
     "end": -3000000,
     "colors": {
-      "background": "oklch(68.1% 0.162 75.834)",
+      "background": "oklch(79.5% 0.184 86.047)",
       "foreground": "#000"
     },
     "group": "homo-australopithecus"
   },
   {
-    "id": "homo:",
+    "id": "homo:australopithecus_bahrelghazali",
     "name": {
-      "fr": "",
-      "en": ""
+      "fr": "Australopithecus bahrelghazali",
+      "en": "Australopithecus bahrelghazali"
     },
     "wiki": {
-      "fr": "",
-      "en": ""
+      "fr": "Australopithecus_bahrelghazali",
+      "en": "Australopithecus_bahrelghazali"
     },
-    "start": 0,
-    "end": 0,
+    "start": -3500000,
+    "end": -3000000,
     "colors": {
-      "background": "oklch(68.1% 0.162 75.834)",
+      "background": "oklch(79.5% 0.184 86.047)",
       "foreground": "#000"
     },
     "group": "homo-australopithecus"
+  },
+  {
+    "id": "homo:australopithecus_deyiremeda",
+    "name": {
+      "fr": "Australopithecus deyiremeda",
+      "en": "Australopithecus deyiremeda"
+    },
+    "wiki": {
+      "fr": "Australopithecus_deyiremeda",
+      "en": "Australopithecus_deyiremeda"
+    },
+    "start": -3500000,
+    "end": -3300000,
+    "colors": {
+      "background": "oklch(79.5% 0.184 86.047)",
+      "foreground": "#000"
+    },
+    "group": "homo-australopithecus"
+  },
+  {
+    "id": "homo:australopithecus_africanus",
+    "name": {
+      "fr": "Australopithecus africanus",
+      "en": "Australopithecus africanus"
+    },
+    "wiki": {
+      "fr": "Australopithecus_africanus",
+      "en": "Australopithecus_africanus"
+    },
+    "start": -4000000,
+    "end": -2500000,
+    "colors": {
+      "background": "oklch(79.5% 0.184 86.047)",
+      "foreground": "#000"
+    },
+    "group": "homo-australopithecus"
+  },
+  {
+    "id": "homo:australopithecus_garhi",
+    "name": {
+      "fr": "Australopithecus garhi",
+      "en": "Australopithecus garhi"
+    },
+    "wiki": {
+      "fr": "Australopithecus_garhi",
+      "en": "Australopithecus_garhi"
+    },
+    "start": -2600000,
+    "end": -2500000,
+    "colors": {
+      "background": "oklch(79.5% 0.184 86.047)",
+      "foreground": "#000"
+    },
+    "group": "homo-australopithecus"
+  },
+  {
+    "id": "homo:australopithecus_sediba",
+    "name": {
+      "fr": "Australopithecus sediba",
+      "en": "Australopithecus sediba"
+    },
+    "wiki": {
+      "fr": "Australopithecus_sediba",
+      "en": "Australopithecus_sediba"
+    },
+    "start": -2000000,
+    "end": -1900000,
+    "colors": {
+      "background": "oklch(79.5% 0.184 86.047)",
+      "foreground": "#000"
+    },
+    "group": "homo-australopithecus"
+  },
+  {
+    "id": "homo:paranthropus_aethiopicus",
+    "name": {
+      "fr": "Paranthropus aethiopicus",
+      "en": "Paranthropus aethiopicus"
+    },
+    "wiki": {
+      "fr": "Paranthropus_aethiopicus",
+      "en": "Paranthropus_aethiopicus"
+    },
+    "start": -2700000,
+    "end": -2300000,
+    "colors": {
+      "background": "oklch(90.5% 0.182 98.111)",
+      "foreground": "#000"
+    },
+    "group": "homo-paranthropus"
+  },
+  {
+    "id": "homo:paranthropus_robustus",
+    "name": {
+      "fr": "Paranthropus robustus",
+      "en": "Paranthropus robustus"
+    },
+    "wiki": {
+      "fr": "Paranthropus_robustus",
+      "en": "Paranthropus_robustus"
+    },
+    "start": -2200000,
+    "end": -1500000,
+    "colors": {
+      "background": "oklch(90.5% 0.182 98.111)",
+      "foreground": "#000"
+    },
+    "group": "homo-paranthropus"
+  },
+  {
+    "id": "homo:paranthropus_boisei",
+    "name": {
+      "fr": "Paranthropus boisei",
+      "en": "Paranthropus boisei"
+    },
+    "wiki": {
+      "fr": "Paranthropus_boisei",
+      "en": "Paranthropus_boisei"
+    },
+    "start": -2200000,
+    "end": -1200000,
+    "colors": {
+      "background": "oklch(90.5% 0.182 98.111)",
+      "foreground": "#000"
+    },
+    "group": "homo-paranthropus"
+  },
+  {
+    "id": "homo:homo_rudolfensis",
+    "name": {
+      "fr": "Homo rudolfensis",
+      "en": "Homo rudolfensis"
+    },
+    "wiki": {
+      "fr": "Homo_rudolfensis",
+      "en": "Homo_rudolfensis"
+    },
+    "start": -2400000,
+    "end": -1600000,
+    "colors": {
+      "background": "oklch(97.3% 0.071 103.193)",
+      "foreground": "#000"
+    },
+    "group": "homo-homo"
+  },
+  {
+    "id": "homo:homo_habilis",
+    "name": {
+      "fr": "Homo habilis",
+      "en": "Homo habilis"
+    },
+    "wiki": {
+      "fr": "Homo_habilis",
+      "en": "Homo_habilis"
+    },
+    "start": -2400000,
+    "end": -1400000,
+    "colors": {
+      "background": "oklch(97.3% 0.071 103.193)",
+      "foreground": "#000"
+    },
+    "group": "homo-homo"
+  },
+  {
+    "id": "homo:homo_ergaster",
+    "name": {
+      "fr": "Homo ergaster",
+      "en": "Homo ergaster"
+    },
+    "wiki": {
+      "fr": "Homo_ergaster",
+      "en": "Homo_ergaster"
+    },
+    "start": -1900000,
+    "end": -1500000,
+    "colors": {
+      "background": "oklch(97.3% 0.071 103.193)",
+      "foreground": "#000"
+    },
+    "group": "homo-homo"
+  },
+  {
+    "id": "homo:out_of_africa",
+    "name": {
+      "fr": "Première sortie d'Afrique",
+      "en": "First out of Africa"
+    },
+    "description": {
+      "fr": "La première sortie d'Afrique a eu lieu il y a environ 2 millions d'années.",
+      "en": "The first out of Africa event occurred approximately 2 million years ago."
+    },
+    "start": -2000000,
+    "type": "point",
+    "colors": {
+      "border": "oklch(98.7% 0.026 102.212)"
+    },
+    "group": "homo-homo"
+  },
+  {
+    "id": "homo:homo_erectus",
+    "name": {
+      "fr": "Homo erectus",
+      "en": "Homo erectus"
+    },
+    "wiki": {
+      "fr": "Homo_erectus",
+      "en": "Homo_erectus"
+    },
+    "start": -1800000,
+    "end": -300000,
+    "colors": {
+      "background": "oklch(97.3% 0.071 103.193)",
+      "foreground": "#000"
+    },
+    "group": "homo-homo"
+  },
+  {
+    "id": "homo:homo_floresiensis",
+    "name": {
+      "fr": "Homo floresiensis",
+      "en": "Homo floresiensis"
+    },
+    "wiki": {
+      "fr": "Homme_de_Florès",
+      "en": "Homo_floresiensis"
+    },
+    "start": -190000,
+    "end": -50000,
+    "colors": {
+      "background": "oklch(97.3% 0.071 103.193)",
+      "foreground": "#000"
+    },
+    "group": "homo-homo"
+  },
+  {
+    "id": "homo:homo_antecessor",
+    "name": {
+      "fr": "Homo antecessor",
+      "en": "Homo antecessor"
+    },
+    "wiki": {
+      "fr": "Homo_antecessor",
+      "en": "Homo_antecessor"
+    },
+    "start": -1200000,
+    "end": -700000,
+    "colors": {
+      "background": "oklch(97.3% 0.071 103.193)",
+      "foreground": "#000"
+    },
+    "group": "homo-homo"
+  },
+  {
+    "id": "homo:homo_heidelbergensis",
+    "name": {
+      "fr": "Homo heidelbergensis",
+      "en": "Homo heidelbergensis"
+    },
+    "wiki": {
+      "fr": "Homo_heidelbergensis",
+      "en": "Homo_heidelbergensis"
+    },
+    "start": -600000,
+    "end": -200000,
+    "colors": {
+      "background": "oklch(97.3% 0.071 103.193)",
+      "foreground": "#000"
+    },
+    "group": "homo-homo"
+  },
+  {
+    "id": "homo:homo_neanderthalensis",
+    "name": {
+      "fr": "Homme de Néandertal",
+      "latin": "Homo neanderthalensis",
+      "en": "Neanderthal"
+    },
+    "wiki": {
+      "fr": "Homme_de_Néandertal",
+      "en": "Neanderthal"
+    },
+    "start": -430000,
+    "end": -30000,
+    "colors": {
+      "background": "oklch(97.3% 0.071 103.193)",
+      "foreground": "#000"
+    },
+    "group": "homo-homo"
+  },
+  {
+    "id": "homo:homo_rhodesiensis",
+    "name": {
+      "fr": "Homo rhodesiensis",
+      "en": "Homo rhodesiensis"
+    },
+    "wiki": {
+      "fr": "Homo_rhodesiensis",
+      "en": "Homo_rhodesiensis"
+    },
+    "start": -500000,
+    "end": -200000,
+    "colors": {
+      "background": "oklch(97.3% 0.071 103.193)",
+      "foreground": "#000"
+    },
+    "group": "homo-homo"
+  },
+  {
+    "id": "homo:homo_luzonensis",
+    "name": {
+      "fr": "Homo luzonensis",
+      "en": "Homo luzonensis"
+    },
+    "wiki": {
+      "fr": "Homo_luzonensis",
+      "en": "Homo_luzonensis"
+    },
+    "start": -60000,
+    "end": -50000,
+    "colors": {
+      "background": "oklch(97.3% 0.071 103.193)",
+      "foreground": "#000"
+    },
+    "group": "homo-homo"
+  },
+  {
+    "id": "homo:homo_sapiens",
+    "name": {
+      "fr": "Homo sapiens",
+      "en": "Homo sapiens"
+    },
+    "wiki": {
+      "fr": "Homo_sapiens",
+      "en": "Human"
+    },
+    "start": -300000,
+    "end": 0,
+    "colors": {
+      "background": "oklch(82.8% 0.111 230.318)",
+      "foreground": "#000"
+    },
+    "group": "homo-homo"
+  },
+  {
+    "id": "homo:out_of_africa_2",
+    "name": {
+      "fr": "Sortie d'Afrique<br />de Homo sapiens",
+      "en": "Out of Africa<br />of Homo sapiens"
+    },
+    "wiki": {
+      "fr": "Origine_africaine_de_l%27Homme_moderne",
+      "en": "Recent_African_origin_of_modern_humans"
+    },
+    "start": -100000,
+    "type": "point",
+    "colors": {
+      "border": "oklch(82.8% 0.111 230.318)"
+    },
+    "group": "homo-homo"
+  },
+  {
+    "id": "homo:homo_naledi",
+    "name": {
+      "fr": "Homo naledi",
+      "en": "Homo naledi"
+    },
+    "wiki": {
+      "fr": "Homo_naledi",
+      "en": "Homo_naledi"
+    },
+    "start": -335000,
+    "end": -236000,
+    "colors": {
+      "background": "oklch(97.3% 0.071 103.193)",
+      "foreground": "#000"
+    },
+    "group": "homo-homo"
+  },
+  {
+    "id": "homo:homo_denisovensis",
+    "name": {
+      "fr": "Homme de Denisova",
+      "latin": "Homo denisovensis",
+      "en": "Denisovan"
+    },
+    "wiki": {
+      "fr": "Homme_de_Denisova",
+      "en": "Denisovan"
+    },
+    "start": -200000,
+    "end": -40000,
+    "colors": {
+      "background": "oklch(97.3% 0.071 103.193)",
+      "foreground": "#000"
+    },
+    "group": "homo-homo"
   }
 ]

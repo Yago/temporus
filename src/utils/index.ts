@@ -5,3 +5,4 @@ export { default as setLng } from './setLng';
 export { default as setQuery } from './setQuery';
 export { default as formatNumber } from './formatNumber';
 export { default as t } from './translate';
+export { default as order } from './order';

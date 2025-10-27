@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import type { Moment } from 'moment';
 import { isNotNil } from 'ramda';
 import { DataSet } from 'vis-data';
@@ -10,12 +11,13 @@ import { formatNumber, getLng, getQuery, setQuery } from '../utils';
 
 import 'vis-timeline/styles/vis-timeline-graph2d.css';
 
-const { items, groups } = data;
+const { items, groups, markers } = data;
 
 const timelineStore = {
   timeline: null as Timeline | null,
   currentItem: null as Item | null,
-  sidebarOpen: false,
+  sidebarOpen: true,
+  fullscreen: false,
 
   create() {
     const container = document.getElementById('visualization');
@@ -66,18 +68,37 @@ const timelineStore = {
 
     this.timeline.on('rangechange', range => this.onRangeChange(range));
     this.timeline.on('click', e => this.onItemClick(e));
+
+    // Add keyboard controls and fullscreen toggle
+    document.addEventListener('keydown', e => {
+      if (e.key === 'ArrowLeft') {
+        this.move(0.5);
+      } else if (e.key === 'ArrowRight') {
+        this.move(-0.5);
+      } else if (e.key === 'ArrowUp') {
+        this.zoomIn(1);
+      } else if (e.key === 'ArrowDown') {
+        this.zoomOut(1);
+      } else if (e.key === 'f') {
+        if (this.fullscreen) {
+          this.exitFullscreen();
+        } else {
+          this.launchFullscreen();
+        }
+        this.fullscreen = !this.fullscreen;
+      }
+    });
   },
 
   onRangeChange(range: { end: number; start: number }) {
     const viewport = range.end - range.start;
     const filteredItems = items.filter(item => {
       const itemRange = +item.end! - +item.start!;
-      return itemRange > viewport / 1000;
+      return item.type === 'point' || itemRange > viewport / 1000;
     });
     this.timeline!.setItems(new DataSet(filteredItems));
   },
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   async onItemClick(e: any) {
     const lng = getLng();
     if (isNotNil(e.item)) {
@@ -85,16 +106,20 @@ const timelineStore = {
       const item = items.find(i => i.id === e.item);
       if (isNotNil(item)) {
         const result: Item = item;
-        try {
-          const data: WikiSummary = await fetch(
-            `https://${lng ?? 'fr'}.wikipedia.org/api/rest_v1/page/summary/${item.properties?.wikiName ?? item.content}`
-          ).then(res => res.json());
-          if (isNotNil(data)) {
-            result.properties!.description = data.extract_html;
-            result.properties!.wikiUrl = data.content_urls.desktop.page;
-            result.properties!.cover = data.thumbnail?.source ?? undefined;
+        if (isNotNil(item.properties?.wikiName)) {
+          try {
+            const data: WikiSummary = await fetch(
+              `https://${lng ?? 'fr'}.wikipedia.org/api/rest_v1/page/summary/${item.properties?.wikiName ?? item.content}`
+            ).then(res => res.json());
+            if (isNotNil(data)) {
+              result.properties!.description = data.extract_html;
+              result.properties!.wikiUrl = data.content_urls.desktop.page;
+              result.properties!.cover = data.thumbnail?.source ?? undefined;
+            }
+          } finally {
+            this.currentItem = result;
           }
-        } finally {
+        } else {
           this.currentItem = result;
         }
       }
@@ -123,6 +148,62 @@ const timelineStore = {
 
   toggleSidebar(state?: boolean) {
     this.sidebarOpen = state ?? !this.sidebarOpen;
+  },
+
+  move(percentage: number) {
+    if (isNotNil(this.timeline)) {
+      const range = this.timeline.getWindow();
+      const interval = Number(range.end) - Number(range.start);
+
+      this.timeline?.setWindow(
+        Number(range.start) - interval * percentage,
+        Number(range.end) - interval * percentage
+      );
+    }
+  },
+
+  zoomIn(percentage: number) {
+    if (isNotNil(this.timeline)) {
+      this.timeline.zoomIn(percentage);
+    }
+  },
+
+  zoomOut(percentage: number) {
+    if (isNotNil(this.timeline)) {
+      this.timeline.zoomOut(percentage);
+    }
+  },
+
+  launchFullscreen() {
+    const elem = document.documentElement as HTMLElement & {
+      webkitRequestFullscreen?: () => Promise<void>;
+      msRequestFullscreen?: () => Promise<void>;
+      mozRequestFullScreen?: () => Promise<void>;
+    };
+
+    if (elem.requestFullscreen) {
+      elem.requestFullscreen();
+    } else if (elem.webkitRequestFullscreen) {
+      elem.webkitRequestFullscreen();
+    } else if (elem.msRequestFullscreen) {
+      elem.msRequestFullscreen();
+    } else if (elem.mozRequestFullScreen) {
+      elem.mozRequestFullScreen();
+    }
+  },
+
+  exitFullscreen() {
+    if (document.exitFullscreen) {
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      } else if ((document as any).webkitExitFullscreen) {
+        (document as any).webkitExitFullscreen();
+      } else if ((document as any).msExitFullscreen) {
+        (document as any).msExitFullscreen();
+      } else if ((document as any).mozCancelFullScreen) {
+        (document as any).mozCancelFullScreen();
+      }
+    }
   },
 };
 

@@ -1,9 +1,9 @@
 .vis-timeline * {
-  @apply max-lg:text-xs!;
+  @apply max-lg:text-xs! 2xl:text-[16px]!;
 }
 
 .vis-text { @apply text-neutral-100!;}
-.vis-nesting-group { @apply pl-3 before:text-[12px]!;}
+.vis-nesting-group { @apply pl-3 before:text-[12px]! border-l!;}
 .vis-nested-group { @apply bg-black! pl-6! border-t-0! border-r-0!;}
 .vis-inner { @apply pl-2!;}
 .vis-label { @apply pr-4!;}
@@ -17,5 +17,10 @@
 }
 
 .vis-item.vis-background { @apply bg-neutral-800/50! text-neutral-100!;}
-.vis-item { @apply relative bg-neutral-950 border-neutral-900! hover:outline-2 outline-white outline-offset-1 hover:z-9999 cursor-pointer active:opacity-80 rounded-sm!;}
+.vis-item { @apply relative bg-neutral-950 border-neutral-900 hover:outline-2 outline-white outline-offset-1 hover:z-9999 cursor-pointer active:opacity-80 rounded-sm!;}
 .vis-item-content { @apply px-2!;}
+
+.vis-point { @apply border-0! hover:outline-0 bg-transparent! hover:opacity-80! transition-opacity!; }
+.vis-dot {
+  @apply border-inherit!;
+}
