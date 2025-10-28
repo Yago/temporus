@@ -1,26 +1,17 @@
 export type HomoItem = {
   id: string;
   type?: string;
-  name: {
-    fr: string;
-    latin?: string;
-    en: string;
-  };
-  description?: {
-    fr: string;
-    en: string;
-  };
-  cover?: string;
-  wiki?: {
-    fr: string;
-    en: string;
-  };
+  name_fr?: string;
+  name_en?: string;
+  name_latin?: string;
+  description_fr?: string;
+  description_en?: string;
+  wiki_fr?: string;
+  wiki_en?: string;
+  background?: string;
+  foreground?: string;
+  border?: string;
   start: number;
   end?: number;
-  colors: {
-    background?: string;
-    foreground?: string;
-    border?: string;
-  };
   group: string;
 };

@@ -1,8 +1,9 @@
+import { isNotEmpty, isNotNil } from 'ramda';
 import type { DataGroup } from 'vis-timeline';
 
 import type { HomoItem, Item } from '../types';
 import { getLng, t } from '../utils';
-import homo from './sources/homo.json';
+import homo from './sources/homo.csv';
 
 const lng = getLng();
 
@@ -12,19 +13,20 @@ const items: Item[] = [];
 homo.forEach((item: HomoItem) => {
   items.push({
     id: item.id,
-    content: `${item.name[lng as keyof typeof item.name]} ${item.name.latin ? `<i>(${item.name.latin})</i>` : ''}`,
-    start: item.start,
-    end: item.end,
+    content: `${item[`name_${lng}` as keyof HomoItem]} ${item.name_latin ? `<i>(${item.name_latin})</i>` : ''}`,
+    start: +item.start,
+    end: item.end ? +item.end : undefined,
     group: item.group,
     subgroup: item.id,
     type: item.type,
-    style: `background-color: ${item.colors.background ?? '#000'};color: ${item.colors.foreground ?? '#fff'};border-color: ${item.colors.border ?? '#000'};`,
+    style: `background-color: ${isNotNil(item.background) && isNotEmpty(item.background) ? item.background : '#000'};color: ${isNotNil(item.foreground) && isNotEmpty(item.foreground) ? item.foreground : '#fff'};border-color: ${isNotNil(item.border) && isNotEmpty(item.border) ? item.border : '#000'};`,
     properties: {
-      wikiName: item.wiki
-        ? item.wiki[lng as keyof typeof item.wiki]
-        : undefined,
+      wikiName:
+        isNotNil(item.wiki_fr) || isNotNil(item.wiki_en)
+          ? (item[`wiki_${lng}` as keyof HomoItem] as string)
+          : undefined,
       description:
-        item.description?.[lng as keyof typeof item.description] ?? undefined,
+        (item[`description_${lng}` as keyof HomoItem] as string) ?? undefined,
     },
   });
 });
