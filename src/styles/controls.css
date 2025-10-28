@@ -1,7 +1,7 @@
 .controls select {
-  @apply w-full h-12 bg-no-repeat bg-center text-[0px] bg-size-[18px] outline-none focus:z-9999 relative marker:pr-10 cursor-pointer hover:bg-neutral-900 border-r border-neutral-800 appearance-none focus:outline-white focus:outline-2 outline-white outline-offset-1 transition-colors;
+  @apply w-full h-12 bg-no-repeat bg-center text-[0px] bg-size-[18px] outline-none focus:z-9999 relative marker:pr-10 cursor-pointer hover:bg-neutral-900 border-r border-neutral-800 appearance-none focus:outline-2 outline-neutral-700 outline-offset-1 transition-colors;
 }
 
 .controls button {
-  @apply w-full h-12 hover:bg-neutral-900 cursor-pointer border-r border-neutral-800 focus:outline-2 outline-white outline-offset-1 transition-colors;
+  @apply w-full h-12 hover:bg-neutral-900 cursor-pointer border-r border-neutral-800 focus:outline-2 outline-neutral-700 outline-offset-1 transition-colors;
 }

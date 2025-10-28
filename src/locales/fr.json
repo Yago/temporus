@@ -23,7 +23,7 @@
     "title": "Hominines"
   },
   "intro": {
-    "description": "Temporus est un outil <a href=\"https://github.com/Yago/temporus\" target=\"_blank\">open-source</a> de visualisation des événements historiques et géologiques à différentes échelles temporelles pour apprécier la complexité et l'évolution de la planète Terre et de l'humanité (aussi courte soit elle en comparaison).<h2>Pour controler la <i>timeline</i></h2><table><tr><th>Action</th><th>Clavier</th><th>Souris</th></tr><tr><td>Déplacer la timeline vers la gauche</td><td>←</td><td>⇧ + mollette</td></tr><tr><td>Déplacer la timeline vers la droite</td><td>→</td><td>⇧ + mollette</td></tr><tr><td>Zoomer</td><td>↑</td><td>ctrl + mollette</td></tr><tr><td>Dézoomer</td><td>↓</td><td>ctrl + mollette</td></tr><tr><td>Activer le mode plein écran</td><td>f</td><td></td></tr></table>",
+    "description": "Temporus est un outil <a href=\"https://github.com/Yago/temporus\" target=\"_blank\">open-source</a> de visualisation des événements historiques et géologiques à différentes échelles temporelles pour apprécier la complexité et l'évolution de la planète Terre et de l'humanité (aussi courte soit elle en comparaison).<h2>Pour controler la <i>timeline</i></h2><table><tr><th>Action</th><th>Clavier</th><th>Souris</th></tr><tr><td>Déplacer la timeline vers la gauche</td><td>←</td><td>⇧ + mollette</td></tr><tr><td>Déplacer la timeline vers la droite</td><td>→</td><td>⇧ + mollette</td></tr><tr><td>Zoomer</td><td>↑</td><td>ctrl + mollette</td></tr><tr><td>Dézoomer</td><td>↓</td><td>ctrl + mollette</td></tr><tr><td>Activer le mode plein écran</td><td>f</td><td></td></tr><tr><td>Ouvrir la recherche</td><td>s</td><td></td></tr></table>",
     "title": "Bienvenue dans Temporus"
   },
   "scales": {

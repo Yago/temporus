@@ -17,7 +17,9 @@ const timelineStore = {
   timeline: null as Timeline | null,
   currentItem: null as Item | null,
   sidebarOpen: true,
+  searchOpen: false,
   fullscreen: false,
+  searchResults: [] as Item[],
 
   create() {
     const container = document.getElementById('visualization');
@@ -67,10 +69,20 @@ const timelineStore = {
     );
 
     this.timeline.on('rangechange', range => this.onRangeChange(range));
-    this.timeline.on('click', e => this.onItemClick(e));
+    this.timeline.on('click', e => {
+      if (e?.item) this.onItemClick(e.item);
+      this.highlightItems([e?.item]);
+    });
 
     // Add keyboard controls and fullscreen toggle
     document.addEventListener('keydown', e => {
+      const id = (e.target as HTMLElement).id;
+      if (id === 'searchInput') {
+        if (e.key === 'Escape') {
+          this.searchOpen = false;
+        }
+        return;
+      }
       if (e.key === 'ArrowLeft') {
         this.move(0.5);
       } else if (e.key === 'ArrowRight') {
@@ -86,6 +98,11 @@ const timelineStore = {
           this.launchFullscreen();
         }
         this.fullscreen = !this.fullscreen;
+      } else if (e.key === 's') {
+        this.searchOpen = !this.searchOpen;
+        if (this.searchOpen) {
+          setTimeout(() => document.getElementById('searchInput')?.focus(), 0);
+        }
       }
     });
   },
@@ -99,30 +116,42 @@ const timelineStore = {
     this.timeline!.setItems(new DataSet(filteredItems));
   },
 
-  async onItemClick(e: any) {
+  async onItemClick(id: string) {
     const lng = getLng();
-    if (isNotNil(e.item)) {
-      this.toggleSidebar(true);
-      const item = items.find(i => i.id === e.item);
-      if (isNotNil(item)) {
-        const result: Item = item;
-        if (isNotNil(item.properties?.wikiName)) {
-          try {
-            const data: WikiSummary = await fetch(
-              `https://${lng ?? 'fr'}.wikipedia.org/api/rest_v1/page/summary/${item.properties?.wikiName ?? item.content}`
-            ).then(res => res.json());
-            if (isNotNil(data)) {
-              result.properties!.description = data.extract_html;
-              result.properties!.wikiUrl = data.content_urls.desktop.page;
-              result.properties!.cover = data.thumbnail?.source ?? undefined;
-            }
-          } finally {
-            this.currentItem = result;
+    this.toggleSidebar(true);
+    this.searchOpen = false;
+    const item = items.find(i => i.id === id);
+    if (isNotNil(item)) {
+      const result: Item = item;
+      if (isNotNil(item.properties?.wikiName)) {
+        try {
+          const data: WikiSummary = await fetch(
+            `https://${lng ?? 'fr'}.wikipedia.org/api/rest_v1/page/summary/${item.properties?.wikiName ?? item.content}`
+          ).then(res => res.json());
+          if (isNotNil(data)) {
+            result.properties!.description = data.extract_html;
+            result.properties!.wikiUrl = data.content_urls.desktop.page;
+            result.properties!.cover = data.thumbnail?.source ?? undefined;
           }
-        } else {
+        } finally {
           this.currentItem = result;
         }
+      } else {
+        this.currentItem = result;
       }
+    }
+  },
+
+  highlightItems(ids: string[]) {
+    if (isNotNil(this.timeline)) {
+      const styledItems = items.map(i => {
+        i.className = ids.includes(i.id as string)
+          ? `bg-white! text-black! border-black! outline-2 outline-dashed outline-offset-4 outline-white z-10!`
+          : undefined;
+        return i;
+      });
+      this.timeline.setItems(new DataSet(styledItems));
+      this.timeline.redraw();
     }
   },
 
@@ -143,6 +172,18 @@ const timelineStore = {
         setQuery('scale', slug);
         this.timeline.setWindow(scale.start, scale.end);
       }
+    }
+  },
+
+  focus(elements: string[]) {
+    if (isNotNil(this.timeline)) {
+      this.timeline.focus(elements);
+    }
+  },
+
+  select(elements: string[]) {
+    if (isNotNil(this.timeline)) {
+      this.timeline.setSelection(elements);
     }
   },
 
@@ -203,6 +244,17 @@ const timelineStore = {
       } else if ((document as any).mozCancelFullScreen) {
         (document as any).mozCancelFullScreen();
       }
+    }
+  },
+
+  search(keyword: string) {
+    if (keyword.length > 2) {
+      const results = items.filter(item =>
+        item.content.toLowerCase().includes(keyword.toLowerCase())
+      );
+      this.searchResults = results;
+    } else {
+      this.searchResults = [];
     }
   },
 };

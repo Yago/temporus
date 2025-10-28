@@ -23,7 +23,7 @@
     "title": "Hominina"
   },
   "intro": {
-    "description": "Temporus is an <a href=\"https://github.com/Yago/temporus\" target=\"_blank\">open-source</a> tool for visualizing historical and geological events at different time scales to appreciate the complexity and evolution of the Earth and humanity (also short as it is in comparison).<h2>To control the <i>timeline</i></h2><table><tr><th>Action</th><th>Keyboard</th><th>Mouse</th></tr><tr><td>Move the timeline to the left</td><td>←</td><td>⇧ + mouse wheel</td></tr><tr><td>Move the timeline to the right</td><td>→</td><td>⇧ + mouse wheel</td></tr><tr><td>Zoom in</td><td>↑</td><td>ctrl + mouse wheel</td></tr><tr><td>Zoom out</td><td>↓</td><td>ctrl + mouse wheel</td></tr><tr><td>Enter full screen mode</td><td>f</td><td></td></tr></table>",
+    "description": "Temporus is an <a href=\"https://github.com/Yago/temporus\" target=\"_blank\">open-source</a> tool for visualizing historical and geological events at different time scales to appreciate the complexity and evolution of the Earth and humanity (also short as it is in comparison).<h2>To control the <i>timeline</i></h2><table><tr><th>Action</th><th>Keyboard</th><th>Mouse</th></tr><tr><td>Move the timeline to the left</td><td>←</td><td>⇧ + mouse wheel</td></tr><tr><td>Move the timeline to the right</td><td>→</td><td>⇧ + mouse wheel</td></tr><tr><td>Zoom in</td><td>↑</td><td>ctrl + mouse wheel</td></tr><tr><td>Zoom out</td><td>↓</td><td>ctrl + mouse wheel</td></tr><tr><td>Enter full screen mode</td><td>f</td><td></td></tr><tr><td>Open the search</td><td>s</td><td></td></tr></table>",
     "title": "Welcome to Temporus"
   },
   "scales": {
