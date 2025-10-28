@@ -35,11 +35,13 @@ const timelineStore = {
       max: 200000000,
       min: -6000000000,
       start:
-        settings.scales[getQuery('scale') as keyof typeof settings.scales]
-          ?.start ?? undefined,
+        window.settings.scales[
+          getQuery('scale') as keyof typeof window.settings.scales
+        ]?.start ?? undefined,
       end:
-        settings.scales[getQuery('scale') as keyof typeof settings.scales]
-          ?.end ?? undefined,
+        window.settings.scales[
+          getQuery('scale') as keyof typeof window.settings.scales
+        ]?.end ?? undefined,
       // zoomMax: 31536000000000000,
       // zoomMin: 10,
       orientation: {

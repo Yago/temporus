@@ -3,6 +3,8 @@ import type { DataGroup } from 'vis-timeline';
 
 import type { HomoItem, Item } from '../types';
 import { getLng, t } from '../utils';
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 import homo from './sources/homo.csv';
 
 const lng = getLng();
