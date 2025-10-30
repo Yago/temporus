@@ -1,13 +1,13 @@
 import { isNotNil } from 'ramda';
 import type { DataGroup } from 'vis-timeline';
 
-import type { CSVItem, Item, StratygraphyItem } from '../types';
-import { getLng, t } from '../utils';
-import chart1 from './sources/stratigraphy/chart1.json';
-import chart2 from './sources/stratigraphy/chart2.json';
-import chart3 from './sources/stratigraphy/chart3.json';
-import chart4 from './sources/stratigraphy/chart4.json';
-import wiki from './sources/stratigraphy/wiki.json';
+import type { CSVItem, Item, StratygraphyItem } from '../../../types';
+import { getLng, t } from '../../../utils';
+import chart1 from './chart1.json';
+import chart2 from './chart2.json';
+import chart3 from './chart3.json';
+import chart4 from './chart4.json';
+import wiki from './wiki.json';
 
 const credits = {
   attribution: 'International Commission on Stratigraphy, December 2024.',

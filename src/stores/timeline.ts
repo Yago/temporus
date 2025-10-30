@@ -160,7 +160,7 @@ const timelineStore = {
     const lng = getLng();
     this.toggleSidebar(true);
     this.searchOpen = false;
-    const item = items.find(i => i.id === id);
+    const item = data.items.find(i => i.id === id);
     if (isNotNil(item)) {
       const result: Item = item;
       if (isNotNil(item.properties?.wikiName)) {
@@ -327,7 +327,7 @@ const timelineStore = {
 
   search(keyword: string) {
     if (keyword.length > 2) {
-      const results = items.filter(item =>
+      const results = data.items.filter((item: Item) =>
         item.content.toLowerCase().includes(keyword.toLowerCase())
       );
       this.searchResults = results;
