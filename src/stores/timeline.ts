@@ -1,19 +1,19 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import type { Moment } from 'moment';
-import { isNotNil } from 'ramda';
+import { isNotNil, move } from 'ramda';
 import { DataSet } from 'vis-data';
 import { Timeline } from 'vis-timeline';
 import type { TimelineOptions } from 'vis-timeline';
 
 import data from '../data';
-import type { Item, WikiSummary } from '../types';
+import type { Group, Item, WikiSummary } from '../types';
 import { formatNumber, getLng, getQuery, setQuery } from '../utils';
 
 import 'vis-timeline/styles/vis-timeline-graph2d.css';
 
-const { items, groups } = data;
-
 const timelineStore = {
+  items: new DataSet(data.items),
+  groups: data.groups,
   timeline: null as Timeline | null,
   currentItem: null as Item | null,
   sidebarOpen: true,
@@ -61,12 +61,48 @@ const timelineStore = {
           return String(formatNumber(+(date as unknown as Moment).format('x')));
         },
       },
+      groupTemplate: group => {
+        if (group.nestedGroups?.length === undefined || group.id === 'hidden') {
+          return group.content;
+        }
+        const parentsAmount = this.groups.filter(
+          g => g.nestedGroups !== undefined && g.previousPosition === undefined
+        ).length;
+        const id = this.groups.findIndex(g => g.id === group.id);
+        const isHidden = group.previousPosition !== undefined;
+        const container = document.createElement('div');
+        container.classList.add('flex', 'w-full', 'gap-1', 'items-center');
+
+        const label = document.createElement('span');
+        label.innerHTML = group.content + ' ';
+        label.classList.add('pr-2');
+        label.classList.add('mr-auto');
+        container.append(label);
+
+        const up = document.createElement('button');
+        up.innerHTML = '↑';
+        up.addEventListener('click', () => this.moveGroup(group, 'up'));
+        if (id > 0 && !isHidden) container.append(up);
+
+        const down = document.createElement('button');
+        down.innerHTML = '↓';
+        down.addEventListener('click', () => this.moveGroup(group, 'down'));
+        if (id < parentsAmount - 1 && !isHidden) container.append(down);
+
+        const hide = document.createElement('button');
+        hide.innerHTML = isHidden ? '+' : '×';
+        hide.style.fontSize = '18px';
+        hide.addEventListener('click', () => this.toggleGroupVisibility(group));
+        container.append(hide);
+
+        return container;
+      },
     };
 
     this.timeline = new Timeline(
       container as HTMLElement,
-      new DataSet(items),
-      new DataSet(groups),
+      this.items,
+      new DataSet(this.groups),
       options
     );
 
@@ -110,12 +146,14 @@ const timelineStore = {
   },
 
   onRangeChange(range: { end: number; start: number }) {
-    const viewport = range.end - range.start;
-    const filteredItems = items.filter(item => {
-      const itemRange = +item.end! - +item.start!;
-      return item.type === 'point' || itemRange > viewport / 1000;
-    });
-    this.timeline!.setItems(new DataSet(filteredItems));
+    if (isNotNil(this.timeline)) {
+      const viewport = range.end - range.start;
+      const filteredItems = data.items.filter(item => {
+        const itemRange = +item.end! - +item.start!;
+        return item.type === 'point' || itemRange > viewport / 1000;
+      });
+      this.timeline.setItems(new DataSet(filteredItems));
+    }
   },
 
   async onItemClick(id: string) {
@@ -146,7 +184,7 @@ const timelineStore = {
 
   highlightItems(ids: string[]) {
     if (isNotNil(this.timeline)) {
-      const styledItems = items.map(i => {
+      const styledItems = data.items.map(i => {
         i.className = ids.includes(i.id as string)
           ? `bg-white! text-black! border-black! outline-2 outline-dashed outline-offset-4 outline-white z-10!`
           : undefined;
@@ -154,6 +192,44 @@ const timelineStore = {
       });
       this.timeline.setItems(new DataSet(styledItems));
       this.timeline.redraw();
+    }
+  },
+
+  moveGroup(group: Group, direction: 'up' | 'down') {
+    if (isNotNil(this.timeline)) {
+      const id = this.groups.findIndex(g => g.id === group.id);
+      this.groups = move(id, id + (direction === 'up' ? -1 : 1), this.groups);
+      // Dirty hack to avoid nested groups being toggle
+      this.timeline.setGroups([]);
+      setTimeout(() => this.timeline!.setGroups(new DataSet(this.groups)), 10);
+    }
+  },
+
+  toggleGroupVisibility(group: Group) {
+    if (isNotNil(this.timeline)) {
+      const isHidden = group.previousPosition !== undefined;
+      const parentsAmount = this.groups.filter(
+        g => g.nestedGroups !== undefined && g.previousPosition === undefined
+      ).length;
+      const id = this.groups.findIndex(g => g.id === group.id);
+      this.groups = move(
+        id,
+        isHidden ? group.previousPosition! : parentsAmount - 1,
+        this.groups
+      ).map(g => {
+        if (g.id === group.id) {
+          return {
+            ...g,
+            showNested: false,
+            style: isHidden ? undefined : 'opacity: 0.4;',
+            previousPosition: isHidden ? undefined : id,
+          };
+        }
+        return g;
+      });
+      // Dirty hack to avoid nested groups being toggle
+      this.timeline.setGroups([]);
+      setTimeout(() => this.timeline!.setGroups(new DataSet(this.groups)), 10);
     }
   },
 

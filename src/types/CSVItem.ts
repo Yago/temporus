@@ -1,4 +1,4 @@
-export type HomoItem = {
+export type CSVItem = {
   id: string;
   type?: string;
   name_fr?: string;

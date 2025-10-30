@@ -1,26 +1,35 @@
 {
-  "geology": {
-    "description": "The geological time scale is a time scale that divides the Earth into eons, eras, periods, epochs and ages.",
-    "groups": {
-      "age": "Age",
-      "eon": "Eon",
-      "epoch": "Epoch",
-      "era": "Era",
-      "period": "Period"
+  "groups": {
+    "geology": {
+      "description": "The geological time scale is a time scale that divides the Earth into eons, eras, periods, epochs and ages.",
+      "groups": {
+        "age": "Ages",
+        "eon": "Eons",
+        "epoch": "Epochs",
+        "era": "Eras",
+        "period": "Periods",
+        "sub-period": "Subperiods",
+        "super-eon": "Supereons"
+      },
+      "label": "Geology"
     },
-    "label": "Geology",
-    "title": "Geological time scale",
-    "wikiName": "Geologic_time_scale"
-  },
-  "homo": {
-    "groups": {
-      "early": "Early hominins",
-      "australopithecus": "Australopithèques",
-      "paranthropus": "Paranthropus",
-      "homo": "Homo"
+    "homo": {
+      "groups": {
+        "australopithecus": "Australopithèques",
+        "early": "Early hominins",
+        "homo": "Homo",
+        "paranthropus": "Paranthropus"
+      },
+      "label": "Hominina"
     },
-    "label": "Hominina",
-    "title": "Hominina"
+    "periods": {
+      "groups": {
+        "age": "Ages",
+        "great-period": "Great periods",
+        "period": "Periods"
+      },
+      "label": "Periods"
+    }
   },
   "intro": {
     "description": "Temporus is an <a href=\"https://github.com/Yago/temporus\" target=\"_blank\">open-source</a> tool for visualizing historical and geological events at different time scales to appreciate the complexity and evolution of the Earth and humanity (also short as it is in comparison).<h2>To control the <i>timeline</i></h2><table><tr><th>Action</th><th>Keyboard</th><th>Mouse</th></tr><tr><td>Move the timeline to the left</td><td>←</td><td>⇧ + mouse wheel</td></tr><tr><td>Move the timeline to the right</td><td>→</td><td>⇧ + mouse wheel</td></tr><tr><td>Zoom in</td><td>↑</td><td>ctrl + mouse wheel</td></tr><tr><td>Zoom out</td><td>↓</td><td>ctrl + mouse wheel</td></tr><tr><td>Enter full screen mode</td><td>f</td><td></td></tr><tr><td>Open the search</td><td>s</td><td></td></tr></table>",

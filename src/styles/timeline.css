@@ -5,8 +5,10 @@
 .vis-text { @apply text-neutral-100!;}
 .vis-nesting-group { @apply pl-3 before:text-[12px]! border-l!;}
 .vis-nested-group { @apply bg-black! pl-6! border-t-0! border-r-0!;}
-.vis-inner { @apply pl-2!;}
-.vis-label { @apply pr-4!;}
+.vis-inner { @apply pl-2! w-full pr-0!;}
+.vis-nesting-group .vis-inner { @apply w-[calc(100%-15px)]!;}
+.vis-inner button { @apply size-5 flex items-center justify-center opacity-20 border border-neutral-800 rounded-xs hover:bg-neutral-900 hover:opacity-100 cursor-pointer transition-all;}
+.vis-label { @apply pr-2! transition-opacity! hover:opacity-100!;}
 
 .vis-timeline,
 .vis-group,

@@ -1,6 +1,6 @@
-const getLng = (): string | null => {
+const getLng = (): string => {
   const url = new URL(window.location.href);
-  return url.searchParams.get('l') ?? null;
+  return url.searchParams.get('l') ?? 'fr';
 };
 
 export default getLng;

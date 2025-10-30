@@ -1,14 +1,16 @@
-import type { DataGroup } from 'vis-timeline';
-
-import type { Item } from '../types';
+import type { Group, Item } from '../types';
 import homo from './homo';
+import periods from './periods';
 import stratigraphy from './stratigraphy';
 
-const items: Item[] = [...stratigraphy.items, ...homo.items].map(i => ({
-  ...i,
-  end: i.end === 0 ? new Date().getFullYear() : i.end,
-}));
-const groups: DataGroup[] = [...stratigraphy.groups, ...homo.groups];
+const items: Item[] = [...stratigraphy.items, ...periods.items, ...homo.items];
+const parents: Group[] = [stratigraphy.parent, periods.parent, homo.parent];
+const groups: Group[] = [
+  ...parents,
+  ...stratigraphy.groups,
+  ...periods.groups,
+  ...homo.groups,
+];
 const spacingGroups = [
   {
     id: 'spacing-bottom',
@@ -22,7 +24,7 @@ const spacingGroups = [
 
 const data: {
   items: Item[];
-  groups: DataGroup[];
+  groups: Group[];
 } = {
   items,
   groups: window.innerWidth < 1024 ? [...groups, ...spacingGroups] : groups,
