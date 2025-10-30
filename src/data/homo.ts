@@ -17,7 +17,6 @@ const parent: Group = {
     'homo-paranthropus',
     'homo-homo',
   ],
-  showNested: false,
 };
 
 const groups: Group[] = [

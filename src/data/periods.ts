@@ -11,21 +11,13 @@ const items: Item[] = periods.map((item: CSVItem) => formatCsvItem(item, lng));
 const parent: Group = {
   id: 'periods',
   content: t('groups.periods.label'),
-  nestedGroups: ['periods-great-period', 'periods-period', 'periods-age'],
+  nestedGroups: ['periods-europe'],
 };
 
 const groups: Group[] = [
   {
-    id: 'periods-great-period',
-    content: t('groups.periods.groups.great-period'),
-  },
-  {
-    id: 'periods-period',
-    content: t('groups.periods.groups.period'),
-  },
-  {
-    id: 'periods-age',
-    content: t('groups.periods.groups.age'),
+    id: 'periods-europe',
+    content: t('groups.periods.groups.europe'),
   },
 ];
 

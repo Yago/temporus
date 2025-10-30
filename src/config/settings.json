@@ -6,15 +6,18 @@
   "scales": {
     "earth": {
       "start": -4600000000,
-      "end": 2025
+      "end": 2025,
+      "groups": ["geology", "periods", "homo"]
     },
     "homo": {
       "start": -7200000,
-      "end": 2025
+      "end": 2025,
+      "groups": ["geology", "periods", "homo"]
     },
     "sapiens": {
       "start": -300000,
-      "end": 2025
+      "end": 2025,
+      "groups": ["geology", "periods", "homo"]
     }
   }
 }

@@ -6,6 +6,7 @@ export type Settings = {
     [key: string]: {
       start: number;
       end: number;
+      groups?: string[];
     };
   };
 };

@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import type { Moment } from 'moment';
-import { isNotNil, move } from 'ramda';
+import { equals, isNotNil, move } from 'ramda';
 import { DataSet } from 'vis-data';
 import { Timeline } from 'vis-timeline';
 import type { TimelineOptions } from 'vis-timeline';
@@ -10,6 +10,11 @@ import type { Group, Item, WikiSummary } from '../types';
 import { formatNumber, getLng, getQuery, setQuery } from '../utils';
 
 import 'vis-timeline/styles/vis-timeline-graph2d.css';
+
+const getScale = () =>
+  window.settings.scales[
+    getQuery('scale') as keyof typeof window.settings.scales
+  ];
 
 const timelineStore = {
   items: new DataSet(data.items),
@@ -34,14 +39,8 @@ const timelineStore = {
       height: '100vh',
       max: 200000000,
       min: -6000000000,
-      start:
-        window.settings.scales[
-          getQuery('scale') as keyof typeof window.settings.scales
-        ]?.start ?? undefined,
-      end:
-        window.settings.scales[
-          getQuery('scale') as keyof typeof window.settings.scales
-        ]?.end ?? undefined,
+      start: getScale()?.start ?? undefined,
+      end: getScale()?.end ?? undefined,
       // zoomMax: 31536000000000000,
       // zoomMin: 10,
       orientation: {
@@ -62,15 +61,15 @@ const timelineStore = {
         },
       },
       groupTemplate: group => {
-        if (group.nestedGroups?.length === undefined || group.id === 'hidden') {
-          return group.content;
-        }
+        if (group.nestedGroups?.length === undefined) return group.content;
         const parentsAmount = this.groups.filter(
           g => g.nestedGroups !== undefined && g.previousPosition === undefined
         ).length;
         const id = this.groups.findIndex(g => g.id === group.id);
         const isHidden = group.previousPosition !== undefined;
         const container = document.createElement('div');
+        // Strange fix to avoid huge height on click
+        container.addEventListener('click', e => e.stopPropagation());
         container.classList.add('flex', 'w-full', 'gap-1', 'items-center');
 
         const label = document.createElement('span');
@@ -105,6 +104,9 @@ const timelineStore = {
       new DataSet(this.groups),
       options
     );
+
+    this.setScaleGroupVisibility();
+    this.refresh();
 
     this.timeline.on('rangechange', range => this.onRangeChange(range));
     this.timeline.on('click', e => {
@@ -143,6 +145,16 @@ const timelineStore = {
         }
       }
     });
+  },
+
+  refresh() {
+    if (isNotNil(this.timeline)) {
+      const initialRange = this.timeline.getWindow();
+      this.onRangeChange({
+        end: +initialRange.end,
+        start: +initialRange.start,
+      });
+    }
   },
 
   onRangeChange(range: { end: number; start: number }) {
@@ -201,7 +213,10 @@ const timelineStore = {
       this.groups = move(id, id + (direction === 'up' ? -1 : 1), this.groups);
       // Dirty hack to avoid nested groups being toggle
       this.timeline.setGroups([]);
-      setTimeout(() => this.timeline!.setGroups(new DataSet(this.groups)), 10);
+      setTimeout(() => {
+        this.timeline!.setGroups(new DataSet(this.groups));
+        this.refresh();
+      }, 0);
     }
   },
 
@@ -229,7 +244,44 @@ const timelineStore = {
       });
       // Dirty hack to avoid nested groups being toggle
       this.timeline.setGroups([]);
-      setTimeout(() => this.timeline!.setGroups(new DataSet(this.groups)), 10);
+      setTimeout(() => {
+        this.timeline!.setGroups(new DataSet(this.groups));
+        this.refresh();
+      }, 0);
+    }
+  },
+
+  setScaleGroupVisibility() {
+    if (isNotNil(this.timeline)) {
+      const parents = this.groups.filter(g => g.nestedGroups !== undefined);
+      parents?.forEach(group => {
+        const isVisible = getScale()?.groups?.includes(group.id as string);
+        const currentIndex = this.groups.findIndex(g => g.id === group.id);
+        const originalIndex = data.groups.findIndex(g => g.id === group.id);
+        const visibleIndex = getScale()?.groups?.indexOf(group.id as string);
+        const lastIndex = parents.length - 1;
+        this.groups = move(
+          currentIndex,
+          isVisible ? visibleIndex! : lastIndex,
+          this.groups
+        ).map(g => {
+          if (g.id === group.id) {
+            return {
+              ...g,
+              showNested: isVisible,
+              style: isVisible ? undefined : 'opacity: 0.4;',
+              previousPosition: isVisible ? undefined : originalIndex,
+            };
+          }
+          return g;
+        });
+      });
+      // Dirty hack to avoid nested groups being toggle
+      this.timeline.setGroups([]);
+      setTimeout(() => {
+        this.timeline!.setGroups(new DataSet(this.groups));
+        this.refresh();
+      }, 0);
     }
   },
 
@@ -245,10 +297,15 @@ const timelineStore = {
 
   goToScale(slug: string) {
     if (isNotNil(this.timeline)) {
+      const previousScale = getScale();
       const scale = window.settings.scales[slug];
       if (isNotNil(scale)) {
         setQuery('scale', slug);
         this.timeline.setWindow(scale.start, scale.end);
+
+        if (!equals(previousScale.groups, scale.groups)) {
+          this.setScaleGroupVisibility();
+        }
       }
     }
   },

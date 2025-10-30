@@ -24,9 +24,7 @@
     },
     "periods": {
       "groups": {
-        "age": "Âge",
-        "great-period": "Grande période",
-        "period": "Période"
+        "europe": "Europe"
       },
       "label": "Histoire"
     }

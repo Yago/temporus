@@ -65,7 +65,11 @@
           </button>
           <select
             x-ref="scales"
-            @input="$store.timeline.goToScale($event.target.value);setTimeout(() => $refs.scales.value = null, 0);$event.target.blur();"
+            @input="
+              $store.timeline.goToScale($event.target.value);
+              setTimeout(() => $refs.scales.value = null, 0);
+              $event.target.blur();
+            "
             class="bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1ydWxlci1kaW1lbnNpb24tbGluZS1pY29uIGx1Y2lkZS1ydWxlci1kaW1lbnNpb24tbGluZSI+PHBhdGggZD0iTTEyIDE1di0zLjAxNCIvPjxwYXRoIGQ9Ik0xNiAxNXYtMy4wMTQiLz48cGF0aCBkPSJNMjAgNkg0Ii8+PHBhdGggZD0iTTIwIDhWNCIvPjxwYXRoIGQ9Ik00IDhWNCIvPjxwYXRoIGQ9Ik04IDE1di0zLjAxNCIvPjxyZWN0IHg9IjMiIHk9IjEyIiB3aWR0aD0iMTgiIGhlaWdodD0iNyIgcng9IjEiLz48L3N2Zz4=')]"
             :title="$store.utils.t('settings.scales')"
           >
