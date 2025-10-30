@@ -216,7 +216,7 @@ const timelineStore = {
       setTimeout(() => {
         this.timeline!.setGroups(new DataSet(this.groups));
         this.refresh();
-      }, 0);
+      }, 10);
     }
   },
 
