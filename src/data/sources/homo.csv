@@ -21,7 +21,7 @@ homo:homo_ergaster,homo-homo,-1900000,-1500000,Homo ergaster,Homo ergaster,,Homo
 homo:out_of_africa,homo-homo,-2000000,,Première sortie d'Afrique,First out of Africa,,,,La première sortie d'Afrique a eu lieu il y a environ 2 millions d'années.,The first out of Africa event occurred approximately 2 million years ago.,point,,,oklch(98.7% 0.026 102.212)
 homo:homo_erectus,homo-homo,-1800000,-300000,Homo erectus,Homo erectus,,Homo_erectus,Homo_erectus,,,,oklch(97.3% 0.071 103.193),#000,
 homo:homo_floresiensis,homo-homo,-190000,-50000,Homo floresiensis,Homo floresiensis,,Homme_de_Florès,Homo_floresiensis,,,,oklch(97.3% 0.071 103.193),#000,
-homo:homo_antecessor,homo-homo,-1200000,-700000,Homo antecessor,Homo antecessor,,Homo_antecessor,Homo_antecessor,,,,oklch(97.3% 0.071 103.193),#000,
+homo:homo_antecessor,homo-homo,-1400000,-700000,Homo antecessor,Homo antecessor,,Homo_antecessor,Homo_antecessor,,,,oklch(97.3% 0.071 103.193),#000,
 homo:homo_heidelbergensis,homo-homo,-600000,-200000,Homo heidelbergensis,Homo heidelbergensis,,Homo_heidelbergensis,Homo_heidelbergensis,,,,oklch(97.3% 0.071 103.193),#000,
 homo:homo_neanderthalensis,homo-homo,-430000,-30000,Homme de Néandertal,Neanderthal,Homo neanderthalensis,Homme_de_Néandertal,Neanderthal,,,,oklch(97.3% 0.071 103.193),#000,
 homo:homo_rhodesiensis,homo-homo,-500000,-200000,Homo rhodesiensis,Homo rhodesiensis,,Homo_rhodesiensis,Homo_rhodesiensis,,,,oklch(97.3% 0.071 103.193),#000,

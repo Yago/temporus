@@ -127,6 +127,8 @@ const timelineStore = {
         this.move(0.5);
       } else if (e.key === 'ArrowRight') {
         this.move(-0.5);
+      } else if (e.key === '0') {
+        this.goTo(-3000, +new Date().getFullYear() + 5000);
       } else if (e.key === 'ArrowUp') {
         this.zoomIn(1);
       } else if (e.key === 'ArrowDown') {
@@ -203,7 +205,7 @@ const timelineStore = {
         return i;
       });
       this.timeline.setItems(new DataSet(styledItems));
-      this.timeline.redraw();
+      this.refresh();
     }
   },
 

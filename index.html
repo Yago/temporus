@@ -26,13 +26,17 @@
       <div
         id="visualization"
         class="h-screen w-full lg:w-[calc(100vw-450px)] lg:min-w-[70vw]"
+        :aria-label="$store.utils.t('a11y.timeline')"
       ></div>
 
       <button
         class="absolute max-md:top-1 md:bottom-9 max-lg:left-3 lg:right-3 size-4 md:size-6 border border-neutral-200 rounded-full lg:z-10 text-xs md:text-sm font-bold cursor-pointer bg-black hover:bg-neutral-800 transition-all opacity-0"
         :class="currentItem !== null && 'opacity-100'"
         @click="$store.timeline.currentItem = null;$store.timeline.toggleSidebar(true);"
-      >?</button>
+      >
+        <span class="sr-only">{{ $store.utils.t('a11y.about') }}</span>
+        ?
+      </button>
     </div>
 
     <!-- Sidebar -->
@@ -44,21 +48,25 @@
         <!-- Options bar -->
         <div class="flex border-y border-neutral-800 items-center controls max-lg:rounded-t-lg">
           <button @click="$store.timeline.move(0.5)">
+            <span class="sr-only">{{ $store.utils.t('a11y.move-left') }}</span>
             <svg class="icon size-4">
               <use href="/public/icons.svg?v1#chevron-left"></use>
             </svg>
           </button>
           <button @click="$store.timeline.move(-0.5)">
+            <span class="sr-only">{{ $store.utils.t('a11y.move-right') }}</span>
             <svg class="icon size-4">
               <use href="/public/icons.svg?v1#chevron-right"></use>
             </svg>
           </button>
           <button @click="$store.timeline.zoomOut(1)">
+            <span class="sr-only">{{ $store.utils.t('a11y.zoom-out') }}</span>
             <svg class="icon size-4">
               <use href="/public/icons.svg?v1#zoom-out"></use>
             </svg>
           </button>
           <button @click="$store.timeline.zoomIn(1)">
+            <span class="sr-only">{{ $store.utils.t('a11y.zoom-in') }}</span>
             <svg class="icon size-4">
               <use href="/public/icons.svg?v1#zoom-in"></use>
             </svg>
@@ -72,6 +80,7 @@
             "
             class="bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1ydWxlci1kaW1lbnNpb24tbGluZS1pY29uIGx1Y2lkZS1ydWxlci1kaW1lbnNpb24tbGluZSI+PHBhdGggZD0iTTEyIDE1di0zLjAxNCIvPjxwYXRoIGQ9Ik0xNiAxNXYtMy4wMTQiLz48cGF0aCBkPSJNMjAgNkg0Ii8+PHBhdGggZD0iTTIwIDhWNCIvPjxwYXRoIGQ9Ik00IDhWNCIvPjxwYXRoIGQ9Ik04IDE1di0zLjAxNCIvPjxyZWN0IHg9IjMiIHk9IjEyIiB3aWR0aD0iMTgiIGhlaWdodD0iNyIgcng9IjEiLz48L3N2Zz4=')]"
             :title="$store.utils.t('settings.scales')"
+            :aria-label="$store.utils.t('a11y.scales')"
           >
             <option
               value=""
@@ -91,6 +100,7 @@
             $store.timeline.toggleSidebar($store.timeline.searchOpen);
             if ($store.timeline.searchOpen) setTimeout(() => $refs.searchInput.focus(), 0);
           ">
+            <span class="sr-only">{{ $store.timeline.searchOpen ? $store.utils.t('a11y.close-search') : $store.utils.t('a11y.search') }}</span>
             <svg class="icon size-4" x-show="!$store.timeline.searchOpen">
               <use href="/public/icons.svg?v1#search"></use>
             </svg>
@@ -104,6 +114,7 @@
             x-show="!$store.timeline.fullscreen"
             x-cloak
           >
+            <span class="sr-only">{{ $store.utils.t('a11y.full-screen') }}</span>
             <svg class="icon size-4">
               <use href="/public/icons.svg?v1#fullscreen-in"></use>
             </svg>
@@ -114,6 +125,7 @@
             x-show="$store.timeline.fullscreen"
             x-cloak
           >
+            <span class="sr-only">{{ $store.utils.t('a11y.exit-full-screen') }}</span>
             <svg class="icon size-4">
               <use href="/public/icons.svg?v1#fullscreen-out"></use>
             </svg>
@@ -124,6 +136,7 @@
             x-ref="languages"
             class="bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1sYW5ndWFnZXMtaWNvbiBsdWNpZGUtbGFuZ3VhZ2VzIj48cGF0aCBkPSJtNSA4IDYgNiIvPjxwYXRoIGQ9Im00IDE0IDYtNiAyLTMiLz48cGF0aCBkPSJNMiA1aDEyIi8+PHBhdGggZD0iTTcgMmgxIi8+PHBhdGggZD0ibTIyIDIyLTUtMTAtNSAxMCIvPjxwYXRoIGQ9Ik0xNCAxOGg2Ii8+PC9zdmc+')] border-r-0!"
             :title="$store.utils.t('settings.languages')"
+            :aria-label="$store.utils.t('a11y.languages')"
           >
             <template x-for="lngKey in Object.keys(settings.languages)">
               <option
@@ -160,7 +173,7 @@
 
             <div
               class="max-lg:text-sm text-neutral-200 mt-3 content"
-              x-html="currentItem?.properties?.description ?? $store.utils.t('intro.description')"
+              x-html="currentItem !== null ? currentItem?.properties?.description ?? '' : $store.utils.t('intro.description')"
             ></div>
 
             <a
@@ -204,6 +217,7 @@
                 type="search"
                 class="w-full border border-neutral-800 text-base text-white px-3 py-2 rounded-xs focus:outline-0 focus:border-neutral-200 transition-colors hover:bg-neutral-900"
                 placeholder="Recherche..."
+                :aria-label="$store.utils.t('a11y.search-input')"
                 @input="$store.timeline.search($event.target.value)"
               />
             </div>
@@ -235,6 +249,7 @@
         class="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-6 bg-neutral-200 text-black rounded-t-full"
         @click="$store.timeline.toggleSidebar()"
       >
+        <span class="sr-only">{{ $store.utils.t('a11y.toggle-sidebar') }}</span>
         <svg
           class="icon top-0 size-5"
           :class="$store.timeline.sidebarOpen && 'rotate-180'"
