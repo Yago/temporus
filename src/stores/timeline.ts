@@ -7,7 +7,7 @@ import type { TimelineOptions } from 'vis-timeline';
 
 import data from '../data';
 import type { Group, Item, WikiSummary } from '../types';
-import { formatNumber, getLng, getQuery, setQuery } from '../utils';
+import { formatNumber, getQuery, setQuery } from '../utils';
 
 import 'vis-timeline/styles/vis-timeline-graph2d.css';
 
