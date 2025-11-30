@@ -16,6 +16,19 @@
     "toggle-sidebar": "Open/Close the sidebar"
   },
   "groups": {
+    "cultures": {
+      "label": "Cultures",
+      "groups": {
+        "africa": "Africa",
+        "asia": "Asia",
+        "europe": "Europe",
+        "middle-america": "Middle America",
+        "middle-east": "Middle East",
+        "north-america": "North America",
+        "oceania": "Oceania",
+        "south-america": "South America"
+      }
+    },
     "geology": {
       "description": "The geological time scale is a time scale that divides the Earth into eons, eras, periods, epochs and ages.",
       "groups": {
@@ -56,7 +69,8 @@
   "scales": {
     "earth": "Planet Earth",
     "homo": "Human origins",
-    "sapiens": "Homo sapiens"
+    "sapiens": "Homo sapiens",
+    "cultures": "Cultures"
   },
   "settings": {
     "languages": "Languages",

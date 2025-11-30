@@ -1,32 +1,33 @@
-id,group,start,end,name_fr,name_en,name_latin,wiki_fr,wiki_en,description_fr,description_en,type,background,foreground,border
-homo,homo,-7000000,0,Hominines,Hominina,Hominina,Hominina,Australopithecine,,,,oklch(98.7% 0.026 102.212),#000,
-homo:sahelanthropus_tchadensis,homo-early,-7000000,-6500000,Sahelanthropus tchadensis,Sahelanthropus tchadensis,,Sahelanthropus_tchadensis,Sahelanthropus,,,,oklch(55.4% 0.135 66.442),#000,
-homo:orrorin_tugenensis,homo-early,-6000000,-5500000,Orrorin tugenensis,Orrorin tugenensis,,Orrorin_tugenensis,Orrorin,,,,oklch(55.4% 0.135 66.442),#000,
-homo:ardipithecus_kadabba,homo-early,-6300000,-5200000,Ardipithecus kadabba,Ardipithecus kadabba,,Ardipithecus_kadabba,Ardipithecus_kadabba,,,,oklch(55.4% 0.135 66.442),#000,
-homo:ardipithecus_ramidus,homo-early,-4500000,-4300000,Ardipithecus ramidus,Ardipithecus ramidus,,Ardipithecus_ramidus,Ardipithecus_ramidus,,,,oklch(55.4% 0.135 66.442),#000,
-homo:kenyanthropus_platyops,homo-early,-3500000,-3200000,Kenyanthropus platyops,Kenyanthropus platyops,,Kenyanthropus,Kenyanthropus,,,,oklch(55.4% 0.135 66.442),#000,
-homo:australopithecus_anamensis,homo-australopithecus,-4200000,-3800000,Australopithecus anamensis,Australopithecus anamensis,,Australopithecus_anamensis,Australopithecus_anamensis,,,,oklch(79.5% 0.184 86.047),#000,
-homo:australopithecus_afarensis,homo-australopithecus,-4100000,-3000000,Australopithecus afarensis,Australopithecus afarensis,,Australopithecus_afarensis,Australopithecus_afarensis,,,,oklch(79.5% 0.184 86.047),#000,
-homo:australopithecus_bahrelghazali,homo-australopithecus,-3500000,-3000000,Australopithecus bahrelghazali,Australopithecus bahrelghazali,,Australopithecus_bahrelghazali,Australopithecus_bahrelghazali,,,,oklch(79.5% 0.184 86.047),#000,
-homo:australopithecus_deyiremeda,homo-australopithecus,-3500000,-3300000,Australopithecus deyiremeda,Australopithecus deyiremeda,,Australopithecus_deyiremeda,Australopithecus_deyiremeda,,,,oklch(79.5% 0.184 86.047),#000,
-homo:australopithecus_africanus,homo-australopithecus,-4000000,-2500000,Australopithecus africanus,Australopithecus africanus,,Australopithecus_africanus,Australopithecus_africanus,,,,oklch(79.5% 0.184 86.047),#000,
-homo:australopithecus_garhi,homo-australopithecus,-2600000,-2500000,Australopithecus garhi,Australopithecus garhi,,Australopithecus_garhi,Australopithecus_garhi,,,,oklch(79.5% 0.184 86.047),#000,
-homo:australopithecus_sediba,homo-australopithecus,-2000000,-1900000,Australopithecus sediba,Australopithecus sediba,,Australopithecus_sediba,Australopithecus_sediba,,,,oklch(79.5% 0.184 86.047),#000,
-homo:paranthropus_aethiopicus,homo-paranthropus,-2700000,-2300000,Paranthropus aethiopicus,Paranthropus aethiopicus,,Paranthropus_aethiopicus,Paranthropus_aethiopicus,,,,oklch(90.5% 0.182 98.111),#000,
-homo:paranthropus_robustus,homo-paranthropus,-2200000,-1500000,Paranthropus robustus,Paranthropus robustus,,Paranthropus_robustus,Paranthropus_robustus,,,,oklch(90.5% 0.182 98.111),#000,
-homo:paranthropus_boisei,homo-paranthropus,-2200000,-1200000,Paranthropus boisei,Paranthropus boisei,,Paranthropus_boisei,Paranthropus_boisei,,,,oklch(90.5% 0.182 98.111),#000,
-homo:homo_rudolfensis,homo-homo,-2400000,-1600000,Homo rudolfensis,Homo rudolfensis,,Homo_rudolfensis,Homo_rudolfensis,,,,oklch(97.3% 0.071 103.193),#000,
-homo:homo_habilis,homo-homo,-2400000,-1400000,Homo habilis,Homo habilis,,Homo_habilis,Homo_habilis,,,,oklch(97.3% 0.071 103.193),#000,
-homo:homo_ergaster,homo-homo,-1900000,-1500000,Homo ergaster,Homo ergaster,,Homo_ergaster,Homo_ergaster,,,,oklch(97.3% 0.071 103.193),#000,
-homo:out_of_africa,homo-homo,-2000000,,Première sortie d'Afrique,First out of Africa,,,,La première sortie d'Afrique a eu lieu il y a environ 2 millions d'années.,The first out of Africa event occurred approximately 2 million years ago.,point,,,oklch(98.7% 0.026 102.212)
-homo:homo_erectus,homo-homo,-1800000,-300000,Homo erectus,Homo erectus,,Homo_erectus,Homo_erectus,,,,oklch(97.3% 0.071 103.193),#000,
-homo:homo_floresiensis,homo-homo,-190000,-50000,Homo floresiensis,Homo floresiensis,,Homme_de_Florès,Homo_floresiensis,,,,oklch(97.3% 0.071 103.193),#000,
-homo:homo_antecessor,homo-homo,-1400000,-700000,Homo antecessor,Homo antecessor,,Homo_antecessor,Homo_antecessor,,,,oklch(97.3% 0.071 103.193),#000,
-homo:homo_heidelbergensis,homo-homo,-600000,-200000,Homo heidelbergensis,Homo heidelbergensis,,Homo_heidelbergensis,Homo_heidelbergensis,,,,oklch(97.3% 0.071 103.193),#000,
-homo:homo_neanderthalensis,homo-homo,-430000,-30000,Homme de Néandertal,Neanderthal,Homo neanderthalensis,Homme_de_Néandertal,Neanderthal,,,,oklch(97.3% 0.071 103.193),#000,
-homo:homo_rhodesiensis,homo-homo,-500000,-200000,Homo rhodesiensis,Homo rhodesiensis,,Homo_rhodesiensis,Homo_rhodesiensis,,,,oklch(97.3% 0.071 103.193),#000,
-homo:homo_luzonensis,homo-homo,-60000,-50000,Homo luzonensis,Homo luzonensis,,Homo_luzonensis,Homo_luzonensis,,,,oklch(97.3% 0.071 103.193),#000,
-homo:homo_sapiens,homo-homo,-300000,0,Homo sapiens,Homo sapiens,,Homo_sapiens,Human,,,,oklch(82.8% 0.111 230.318),#000,
-homo:out_of_africa_2,homo-homo,-100000,,Sortie d'Afrique<br />de Homo sapiens,Out of Africa<br />of Homo sapiens,,Origine_africaine_de_l%27Homme_moderne,Recent_African_origin_of_modern_humans,,,point,,,oklch(82.8% 0.111 230.318)
-homo:homo_naledi,homo-homo,-335000,-236000,Homo naledi,Homo naledi,,Homo_naledi,Homo_naledi,,,,oklch(97.3% 0.071 103.193),#000,
-homo:homo_denisovensis,homo-homo,-200000,-40000,Homme de Denisova,Denisovan,Homo denisovensis,Homme_de_Denisova,Denisovan,,,,oklch(97.3% 0.071 103.193),#000,
+id,group,start,end,name_fr,name_en,name_latin,wiki_fr,wiki_en,description_fr,description_en,type,background,foreground,"border"
+homo,homo,-7000000,0,Hominines,Hominina,Hominina,https://fr.wikipedia.org/wiki/Hominina,https://en.wikipedia.org/wiki/Australopithecine,,,,oklch(98.7% 0.026 102.212),#000,""
+homo:sahelanthropus_tchadensis,homo-early,-7000000,-6500000,Sahelanthropus tchadensis,Sahelanthropus tchadensis,,https://fr.wikipedia.org/wiki/Sahelanthropus_tchadensis,https://en.wikipedia.org/wiki/Sahelanthropus,,,,oklch(55.4% 0.135 66.442),#000,""
+homo:orrorin_tugenensis,homo-early,-6000000,-5500000,Orrorin tugenensis,Orrorin tugenensis,,https://fr.wikipedia.org/wiki/Orrorin_tugenensis,https://en.wikipedia.org/wiki/Orrorin,,,,oklch(55.4% 0.135 66.442),#000,""
+homo:ardipithecus_kadabba,homo-early,-6300000,-5200000,Ardipithecus kadabba,Ardipithecus kadabba,,https://fr.wikipedia.org/wiki/Ardipithecus_kadabba,https://en.wikipedia.org/wiki/Ardipithecus_kadabba,,,,oklch(55.4% 0.135 66.442),#000,""
+homo:ardipithecus_ramidus,homo-early,-4500000,-4300000,Ardipithecus ramidus,Ardipithecus ramidus,,https://fr.wikipedia.org/wiki/Ardipithecus_ramidus,https://en.wikipedia.org/wiki/Ardipithecus_ramidus,,,,oklch(55.4% 0.135 66.442),#000,""
+homo:kenyanthropus_platyops,homo-early,-3500000,-3200000,Kenyanthropus platyops,Kenyanthropus platyops,,https://fr.wikipedia.org/wiki/Kenyanthropus,https://en.wikipedia.org/wiki/Kenyanthropus,,,,oklch(55.4% 0.135 66.442),#000,""
+homo:australopithecus_anamensis,homo-australopithecus,-4200000,-3800000,Australopithecus anamensis,Australopithecus anamensis,,https://fr.wikipedia.org/wiki/Australopithecus_anamensis,https://en.wikipedia.org/wiki/Australopithecus_anamensis,,,,oklch(79.5% 0.184 86.047),#000,""
+homo:australopithecus_afarensis,homo-australopithecus,-4100000,-3000000,Australopithecus afarensis,Australopithecus afarensis,,https://fr.wikipedia.org/wiki/Australopithecus_afarensis,https://en.wikipedia.org/wiki/Australopithecus_afarensis,,,,oklch(79.5% 0.184 86.047),#000,""
+homo:australopithecus_bahrelghazali,homo-australopithecus,-3500000,-3000000,Australopithecus bahrelghazali,Australopithecus bahrelghazali,,https://fr.wikipedia.org/wiki/Australopithecus_bahrelghazali,https://en.wikipedia.org/wiki/Australopithecus_bahrelghazali,,,,oklch(79.5% 0.184 86.047),#000,""
+homo:australopithecus_deyiremeda,homo-australopithecus,-3500000,-3300000,Australopithecus deyiremeda,Australopithecus deyiremeda,,https://fr.wikipedia.org/wiki/Australopithecus_deyiremeda,https://en.wikipedia.org/wiki/Australopithecus_deyiremeda,,,,oklch(79.5% 0.184 86.047),#000,""
+homo:australopithecus_africanus,homo-australopithecus,-4000000,-2500000,Australopithecus africanus,Australopithecus africanus,,https://fr.wikipedia.org/wiki/Australopithecus_africanus,https://en.wikipedia.org/wiki/Australopithecus_africanus,,,,oklch(79.5% 0.184 86.047),#000,""
+homo:australopithecus_garhi,homo-australopithecus,-2600000,-2500000,Australopithecus garhi,Australopithecus garhi,,https://fr.wikipedia.org/wiki/Australopithecus_garhi,https://en.wikipedia.org/wiki/Australopithecus_garhi,,,,oklch(79.5% 0.184 86.047),#000,""
+homo:australopithecus_sediba,homo-australopithecus,-2000000,-1900000,Australopithecus sediba,Australopithecus sediba,,https://fr.wikipedia.org/wiki/Australopithecus_sediba,https://en.wikipedia.org/wiki/Australopithecus_sediba,,,,oklch(79.5% 0.184 86.047),#000,""
+homo:paranthropus_aethiopicus,homo-paranthropus,-2700000,-2300000,Paranthropus aethiopicus,Paranthropus aethiopicus,,https://fr.wikipedia.org/wiki/Paranthropus_aethiopicus,https://en.wikipedia.org/wiki/Paranthropus_aethiopicus,,,,oklch(90.5% 0.182 98.111),#000,""
+homo:paranthropus_robustus,homo-paranthropus,-2200000,-1500000,Paranthropus robustus,Paranthropus robustus,,https://fr.wikipedia.org/wiki/Paranthropus_robustus,https://en.wikipedia.org/wiki/Paranthropus_robustus,,,,oklch(90.5% 0.182 98.111),#000,""
+homo:paranthropus_boisei,homo-paranthropus,-2200000,-1200000,Paranthropus boisei,Paranthropus boisei,,https://fr.wikipedia.org/wiki/Paranthropus_boisei,https://en.wikipedia.org/wiki/Paranthropus_boisei,,,,oklch(90.5% 0.182 98.111),#000,""
+homo:homo_rudolfensis,homo-homo,-2400000,-1600000,Homo rudolfensis,Homo rudolfensis,,https://fr.wikipedia.org/wiki/Homo_rudolfensis,https://en.wikipedia.org/wiki/Homo_rudolfensis,,,,oklch(97.3% 0.071 103.193),#000,""
+homo:homo_habilis,homo-homo,-2400000,-1400000,Homo habilis,Homo habilis,,https://fr.wikipedia.org/wiki/Homo_habilis,https://en.wikipedia.org/wiki/Homo_habilis,,,,oklch(97.3% 0.071 103.193),#000,""
+homo:homo_ergaster,homo-homo,-1900000,-1500000,Homo ergaster,Homo ergaster,,https://fr.wikipedia.org/wiki/Homo_ergaster,https://en.wikipedia.org/wiki/Homo_ergaster,,,,oklch(97.3% 0.071 103.193),#000,""
+homo:out_of_africa,homo-homo,-2000000,,Première sortie d'Afrique,First out of Africa,,,,La première sortie d'Afrique a eu lieu il y a environ 2 millions d'années.,The first out of Africa event occurred approximately 2 million years ago.,point,,,"oklch(98.7% 0.026 102.212)"
+homo:homo_erectus,homo-homo,-1800000,-300000,Homo erectus,Homo erectus,,https://fr.wikipedia.org/wiki/Homo_erectus,https://en.wikipedia.org/wiki/Homo_erectus,,,,oklch(97.3% 0.071 103.193),#000,""
+homo:homo_floresiensis,homo-homo,-190000,-50000,Homo floresiensis,Homo floresiensis,,https://fr.wikipedia.org/wiki/Homme_de_Florès,https://en.wikipedia.org/wiki/Homo_floresiensis,,,,oklch(97.3% 0.071 103.193),#000,""
+homo:homo_antecessor,homo-homo,-1400000,-700000,Homo antecessor,Homo antecessor,,https://fr.wikipedia.org/wiki/Homo_antecessor,https://en.wikipedia.org/wiki/Homo_antecessor,,,,oklch(97.3% 0.071 103.193),#000,""
+homo:homo_heidelbergensis,homo-homo,-600000,-200000,Homo heidelbergensis,Homo heidelbergensis,,https://fr.wikipedia.org/wiki/Homo_heidelbergensis,https://en.wikipedia.org/wiki/Homo_heidelbergensis,,,,oklch(97.3% 0.071 103.193),#000,""
+homo:homo_neanderthalensis,homo-homo,-430000,-30000,Homme de Néandertal,Neanderthal,Homo neanderthalensis,https://fr.wikipedia.org/wiki/Homme_de_Néandertal,https://en.wikipedia.org/wiki/Neanderthal,,,,oklch(97.3% 0.071 103.193),#000,""
+homo:homo_rhodesiensis,homo-homo,-500000,-200000,Homo rhodesiensis,Homo rhodesiensis,,https://fr.wikipedia.org/wiki/Homo_rhodesiensis,https://en.wikipedia.org/wiki/Homo_rhodesiensis,,,,oklch(97.3% 0.071 103.193),#000,""
+homo:homo_luzonensis,homo-homo,-60000,-50000,Homo luzonensis,Homo luzonensis,,https://fr.wikipedia.org/wiki/Homo_luzonensis,https://en.wikipedia.org/wiki/Homo_luzonensis,,,,oklch(97.3% 0.071 103.193),#000,""
+homo:homo_sapiens,homo-homo,-300000,0,Homo sapiens,Homo sapiens,,https://fr.wikipedia.org/wiki/Homo_sapiens,https://en.wikipedia.org/wiki/Human,,,,oklch(82.8% 0.111 230.318),#000,""
+homo:out_of_africa_2,homo-homo,-100000,,Sortie d'Afrique<br />de Homo sapiens,Out of Africa<br />of Homo sapiens,,https://fr.wikipedia.org/wiki/Origine_africaine_de_l%27Homme_moderne,https://en.wikipedia.org/wiki/Recent_African_origin_of_modern_humans,,,point,,,"oklch(82.8% 0.111 230.318)"
+homo:homo_naledi,homo-homo,-335000,-236000,Homo naledi,Homo naledi,,https://fr.wikipedia.org/wiki/Homo_naledi,https://en.wikipedia.org/wiki/Homo_naledi,,,,oklch(97.3% 0.071 103.193),#000,""
+homo:homo_denisovensis,homo-homo,-200000,-40000,Homme de Denisova,Denisovan,Homo denisovensis,https://fr.wikipedia.org/wiki/Homme_de_Denisova,https://en.wikipedia.org/wiki/Denisovan,,,,oklch(97.3% 0.071 103.193),#000,"
+"

@@ -16,6 +16,19 @@
     "toggle-sidebar": "Ouvrir/Fermer la sidebar"
   },
   "groups": {
+    "cultures": {
+      "label": "Cultures",
+      "groups": {
+        "africa": "Afrique",
+        "asia": "Asie",
+        "europe": "Europe",
+        "middle-america": "Amérique du Sud",
+        "middle-east": "Moyen-Orient",
+        "north-america": "Amérique du Nord",
+        "oceania": "Océanie",
+        "south-america": "Amérique du Sud"
+      }
+    },
     "geology": {
       "description": "L'échelle des temps géologiques est une échelle de temps qui divise la Terre en époques, périodes, époques et âges.",
       "groups": {
@@ -56,7 +69,8 @@
   "scales": {
     "earth": "Planète Terre",
     "homo": "Origines humaines",
-    "sapiens": "Homo sapiens"
+    "sapiens": "Homo sapiens",
+    "cultures": "Cultures"
   },
   "settings": {
     "languages": "Langues",

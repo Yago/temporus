@@ -18,6 +18,11 @@
       "start": -300000,
       "end": 2025,
       "groups": ["geology", "periods", "homo"]
+    },
+    "cultures": {
+      "start": -10000,
+      "end": 2025,
+      "groups": ["cultures", "cultures-neolithic"]
     }
   }
 }

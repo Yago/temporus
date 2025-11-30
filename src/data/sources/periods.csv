@@ -1,71 +1,72 @@
-id,group,start,end,name_fr,name_en,wiki_fr,wiki_en,type,background,foreground,border
+id,group,start,end,name_fr,name_en,wiki_fr,wiki_en,type,background,foreground,"border"
 period:lower_paleolithic,periods,-3300000,-300000,Paléolithique inférieur,"Lower Paleolithic
-",Paléolithique_inférieur,Lower_Paleolithic,,oklch(60.9% 0.126 221.723),,
-period:middle_paleolithic,periods,-300000,-45000,Paléolithique moyen,Middle Paleolithic,Paléolithique_moyen,Middle_Paleolithic,,oklch(71.5% 0.143 215.221),,
-period:upper_paleolithic,periods,-45000,-14000,Paléolithique supérieur,Upper Paleolithic,Paléolithique_supérieur,Upper_Paleolithic,,oklch(78.9% 0.154 211.53),,
-period:epipalaeolithic,periods,-14000,-12000,Épipaléolithique,Epipalaeolithic,Épipaléolithique,Epipalaeolithic,,oklch(86.5% 0.127 207.078),,
-period:mesolithic,periods,-12000,-5000,Mésolithique,Mesolithic,Mésolithique,Mesolithic,,oklch(76.5% 0.177 163.223),,
-period:neolithic,periods,-5000,-3200,Néolithique,Neolithic,Néolithique,Neolithic,,oklch(84.1% 0.238 128.85),,
-period:bronze_age,periods,-3200,-1200,Âge du bronze,Bronze Age,Âge_du_bronze,Bronze_Age,,oklch(85.2% 0.199 91.936),,
-period:iron_age,periods,-1200,-50,Âge du fer,Iron Age,Âge_du_fer,Iron_Age,,oklch(82.8% 0.189 84.429),,
-period:antiquity,periods,-50,500,Antiquité,Antiquity,Antiquité,Ancient_history,,oklch(75% 0.183 55.934),,
-period:middle-ages,periods,500,1500,Moyen Âge,Middle Ages,Moyen_Âge,Middle_Ages,,oklch(70.4% 0.191 22.216),,
-period:early_modern_period,periods,1500,1760,Époque moderne,Early modern period,Époque_moderne,Early_modern_period,,oklch(71.8% 0.202 349.761),,
-period:industrial_revolution,periods,1760,1970,Révolution industrielle,Industrial Revolution,Révolution_industrielle,Industrial_Revolution,,oklch(74% 0.238 322.16),,
+",https://fr.wikipedia.org/wiki/Paléolithique_inférieur,https://en.wikipedia.org/wiki/Lower_Paleolithic,,oklch(60.9% 0.126 221.723),,""
+period:middle_paleolithic,periods,-300000,-45000,Paléolithique moyen,Middle Paleolithic,https://fr.wikipedia.org/wiki/Paléolithique_moyen,https://en.wikipedia.org/wiki/Middle_Paleolithic,,oklch(71.5% 0.143 215.221),,""
+period:upper_paleolithic,periods,-45000,-14000,Paléolithique supérieur,Upper Paleolithic,https://fr.wikipedia.org/wiki/Paléolithique_supérieur,https://en.wikipedia.org/wiki/Upper_Paleolithic,,oklch(78.9% 0.154 211.53),,""
+period:epipalaeolithic,periods,-14000,-12000,Épipaléolithique,Epipalaeolithic,https://fr.wikipedia.org/wiki/Épipaléolithique,https://en.wikipedia.org/wiki/Epipalaeolithic,,oklch(86.5% 0.127 207.078),,""
+period:mesolithic,periods,-12000,-5000,Mésolithique,Mesolithic,https://fr.wikipedia.org/wiki/Mésolithique,https://en.wikipedia.org/wiki/Mesolithic,,oklch(76.5% 0.177 163.223),,""
+period:neolithic,periods,-5000,-3200,Néolithique,Neolithic,https://fr.wikipedia.org/wiki/Néolithique,https://en.wikipedia.org/wiki/Neolithic,,oklch(84.1% 0.238 128.85),,""
+period:bronze_age,periods,-3200,-1200,Âge du bronze,Bronze Age,https://fr.wikipedia.org/wiki/Âge_du_bronze,https://en.wikipedia.org/wiki/Bronze_Age,,oklch(85.2% 0.199 91.936),,""
+period:iron_age,periods,-1200,-50,Âge du fer,Iron Age,https://fr.wikipedia.org/wiki/Âge_du_fer,https://en.wikipedia.org/wiki/Iron_Age,,oklch(82.8% 0.189 84.429),,""
+period:antiquity,periods,-50,500,Antiquité,Antiquity,https://fr.wikipedia.org/wiki/Antiquité,https://en.wikipedia.org/wiki/Ancient_history,,oklch(75% 0.183 55.934),,""
+period:middle-ages,periods,500,1500,Moyen Âge,Middle Ages,https://fr.wikipedia.org/wiki/Moyen_Âge,https://en.wikipedia.org/wiki/Middle_Ages,,oklch(70.4% 0.191 22.216),,""
+period:early_modern_period,periods,1500,1760,Époque moderne,Early modern period,https://fr.wikipedia.org/wiki/Époque_moderne,https://en.wikipedia.org/wiki/Early_modern_period,,oklch(71.8% 0.202 349.761),,""
+period:industrial_revolution,periods,1760,1970,Révolution industrielle,Industrial Revolution,https://fr.wikipedia.org/wiki/Révolution_industrielle,https://en.wikipedia.org/wiki/Industrial_Revolution,,oklch(74% 0.238 322.16),,""
 period:information_age,periods,1970,2025,Ère de l'information,"Information Age
-",Ère_de_l%27information,Information_Age,,oklch(70.2% 0.183 293.541),,
-period:out_of_africa,periods,-2000000,,Première sortie d'Afrique,First out of Africa,,,point,,,oklch(98.7% 0.026 102.212)
-period:fire,periods,-1700000,,Domestication du feu,Control of fire,Domestication_du_feu,Control_of_fire_by_early_humans,point,,,oklch(98.7% 0.026 102.212)
-period:out_of_africa_homo,periods,-100000,,Sortie d'Afrique,Out of Africa,Origine_africaine_de_l%27Homme_moderne,Recent_African_origin_of_modern_humans,point,,,oklch(82.8% 0.111 230.318)
-period:america_arrival,periods,-20000,,Peuplement de l'Amérique,Peopling of the Americas,Premier_peuplement_de_l'Amérique,Peopling_of_the_Americas,point,,,oklch(82.8% 0.111 230.318)
-period:wheel,periods,-3500,,Invention de la roue,Invention of the wheel,Roue,Wheel,point,,,oklch(98.7% 0.026 102.212)
-period:writing,periods,-3400,,Inventions de l'écriture,Invention of writing,Histoire_de_l%27écriture,History_of_writing,point,,,oklch(98.7% 0.026 102.212)
-period:america_discovery,periods,1492,,Débarquement en Amérique,Landing in America,écouverte_et_exploration_de_l%27Amérique,Voyages_of_Christopher_Columbus,point,,,oklch(98.7% 0.026 102.212)
-period:africa-paleolithic,periods-africa,-3300000,-11700,Paléolithique,Paleolithic,Préhistoire_de_l%27Afrique_du_Nord,Prehistoric_North_Africa,,oklch(78.9% 0.154 211.53),,
-period:africa-mesolithic,periods-africa,-11700,-8500,Mésolithique,Mesolithic,Préhistoire_de_l%27Afrique_du_Nord,Prehistoric_North_Africa,,oklch(76.5% 0.177 163.223),,
-period:africa-neolithic,periods-africa,-8500,-3300,Néolithique,Neolithic,Préhistoire_de_l%27Afrique_du_Nord,Prehistoric_North_Africa,,oklch(84.1% 0.238 128.85),,
-period:africa-bronze_age,periods-africa,-3300,-1200,Âge du bronze,Bronze Age,Âge_du_bronze,Bronze_Age,,oklch(85.2% 0.199 91.936),,
-period:africa-iron_age,periods-africa,-1200,-50,Âge du fer,Iron Age,Métallurgie_en_Afrique_ancienne,History_of_metallurgy_in_Africa,,oklch(82.8% 0.189 84.429),,
-period:africa-antiquity,periods-africa,-50,476,Antiquité,Antiquity,Antiquité,Ancient_history,,oklch(75% 0.183 55.934),,
-period:africa-medieval,periods-africa,476,1450,Période médiévale,Medieval and early modern period,Histoire_de_l%27Afrique,Medieval_and_early_modern_Africa,,oklch(70.4% 0.191 22.216),,
-period:africa-colonial,periods-africa,1450,1950,Période coloniale,Colonial period,Histoire_de_l%27Afrique,Colonial_Africa,,oklch(71.8% 0.202 349.761),,
+",https://fr.wikipedia.org/wiki/Ère_de_l%27information,https://en.wikipedia.org/wiki/Information_Age,,oklch(70.2% 0.183 293.541),,""
+period:out_of_africa,periods,-2000000,,Première sortie d'Afrique,First out of Africa,,,point,,,"oklch(98.7% 0.026 102.212)"
+period:fire,periods,-1700000,,Domestication du feu,Control of fire,https://fr.wikipedia.org/wiki/Domestication_du_feu,https://en.wikipedia.org/wiki/Control_of_fire_by_early_humans,point,,,"oklch(98.7% 0.026 102.212)"
+period:out_of_africa_homo,periods,-100000,,Sortie d'Afrique,Out of Africa,https://fr.wikipedia.org/wiki/Origine_africaine_de_l%27Homme_moderne,https://en.wikipedia.org/wiki/Recent_African_origin_of_modern_humans,point,,,"oklch(82.8% 0.111 230.318)"
+period:america_arrival,periods,-20000,,Peuplement de l'Amérique,Peopling of the Americas,https://fr.wikipedia.org/wiki/Premier_peuplement_de_l'Amérique,https://en.wikipedia.org/wiki/Peopling_of_the_Americas,point,,,"oklch(82.8% 0.111 230.318)"
+period:wheel,periods,-3500,,Invention de la roue,Invention of the wheel,https://fr.wikipedia.org/wiki/Roue,https://en.wikipedia.org/wiki/Wheel,point,,,"oklch(98.7% 0.026 102.212)"
+period:writing,periods,-3400,,Inventions de l'écriture,Invention of writing,https://fr.wikipedia.org/wiki/Histoire_de_l%27écriture,https://en.wikipedia.org/wiki/History_of_writing,point,,,"oklch(98.7% 0.026 102.212)"
+period:america_discovery,periods,1492,,Débarquement en Amérique,Landing in America,https://fr.wikipedia.org/wiki/écouverte_et_exploration_de_l%27Amérique,https://en.wikipedia.org/wiki/Voyages_of_Christopher_Columbus,point,,,"oklch(98.7% 0.026 102.212)"
+period:africa-paleolithic,periods-africa,-3300000,-11700,Paléolithique,Paleolithic,https://fr.wikipedia.org/wiki/Préhistoire_de_l%27Afrique_du_Nord,https://en.wikipedia.org/wiki/Prehistoric_North_Africa,,oklch(78.9% 0.154 211.53),,""
+period:africa-mesolithic,periods-africa,-11700,-8500,Mésolithique,Mesolithic,https://fr.wikipedia.org/wiki/Préhistoire_de_l%27Afrique_du_Nord,https://en.wikipedia.org/wiki/Prehistoric_North_Africa,,oklch(76.5% 0.177 163.223),,""
+period:africa-neolithic,periods-africa,-8500,-3300,Néolithique,Neolithic,https://fr.wikipedia.org/wiki/Préhistoire_de_l%27Afrique_du_Nord,https://en.wikipedia.org/wiki/Prehistoric_North_Africa,,oklch(84.1% 0.238 128.85),,""
+period:africa-bronze_age,periods-africa,-3300,-1200,Âge du bronze,Bronze Age,https://fr.wikipedia.org/wiki/Âge_du_bronze,https://en.wikipedia.org/wiki/Bronze_Age,,oklch(85.2% 0.199 91.936),,""
+period:africa-iron_age,periods-africa,-1200,-50,Âge du fer,Iron Age,https://fr.wikipedia.org/wiki/Métallurgie_en_Afrique_ancienne,https://en.wikipedia.org/wiki/History_of_metallurgy_in_Africa,,oklch(82.8% 0.189 84.429),,""
+period:africa-antiquity,periods-africa,-50,476,Antiquité,Antiquity,https://fr.wikipedia.org/wiki/Antiquité,https://en.wikipedia.org/wiki/Ancient_history,,oklch(75% 0.183 55.934),,""
+period:africa-medieval,periods-africa,476,1450,Période médiévale,Medieval and early modern period,https://fr.wikipedia.org/wiki/Histoire_de_l%27Afrique,https://en.wikipedia.org/wiki/Medieval_and_early_modern_Africa,,oklch(70.4% 0.191 22.216),,""
+period:africa-colonial,periods-africa,1450,1950,Période coloniale,Colonial period,https://fr.wikipedia.org/wiki/Histoire_de_l%27Afrique,https://en.wikipedia.org/wiki/Colonial_Africa,,oklch(71.8% 0.202 349.761),,""
 period:africa-information_age,periods-africa,1950,2025,Ère de l'information,"Information Age
-",Ère_de_l%27information,Information_Age,,oklch(70.2% 0.183 293.541),,
-period:middle-east-paleolithic,periods-middle-east,-1850000,-14500,Paléolithique,Paleolithic,Préhistoire_du_Levant,Prehistory_of_the_Levant,,oklch(78.9% 0.154 211.53),,
-period:middle-east-mesolithic,periods-middle-east,-14500,-11500,Mésolithique,Mesolithic,Natoufien,Natufian_culture,,oklch(76.5% 0.177 163.223),,
-period:middle-east-neolithic,periods-middle-east,-11500,-3300,Néolithique,Neolithic,Néolithique_du_Proche-Orient,Neolithic_in_the_Near_East,,oklch(84.1% 0.238 128.85),,
-period:middle-east-bronze_age,periods-middle-east,-3300,-1200,Âge du bronze,Bronze Age,Âge_du_bronze,Bronze_Age,,oklch(85.2% 0.199 91.936),,
-period:middle-east-iron_age,periods-middle-east,-1200,-50,Âge du fer,Iron Age,Proche-Orient_ancien,Ancient_Near_East,,oklch(82.8% 0.189 84.429),,
-period:middle-east-antiquity,periods-middle-east,-50,476,Antiquité,Antiquity,Antiquité,Ancient_history,,oklch(75% 0.183 55.934),,
-period:middle-east-middle-ages,periods-middle-east,476,1453,Moyen Âge,Middle Ages,Histoire_du_Moyen-Orient,History_of_the_Middle_East,,oklch(70.4% 0.191 22.216),,
-period:middle-east-colonial,periods-middle-east,1453,1970,Période coloniale,Colonial period,Histoire_de_l%27Afrique,Colonial_Africa,,oklch(71.8% 0.202 349.761),,
+",https://fr.wikipedia.org/wiki/Ère_de_l%27information,https://en.wikipedia.org/wiki/Information_Age,,oklch(70.2% 0.183 293.541),,""
+period:middle-east-paleolithic,periods-middle-east,-1850000,-14500,Paléolithique,Paleolithic,https://fr.wikipedia.org/wiki/Préhistoire_du_Levant,https://en.wikipedia.org/wiki/Prehistory_of_the_Levant,,oklch(78.9% 0.154 211.53),,""
+period:middle-east-mesolithic,periods-middle-east,-14500,-11500,Mésolithique,Mesolithic,https://fr.wikipedia.org/wiki/Natoufien,https://en.wikipedia.org/wiki/Natufian_culture,,oklch(76.5% 0.177 163.223),,""
+period:middle-east-neolithic,periods-middle-east,-11500,-3300,Néolithique,Neolithic,https://fr.wikipedia.org/wiki/Néolithique_du_Proche-Orient,https://en.wikipedia.org/wiki/Neolithic_in_the_Near_East,,oklch(84.1% 0.238 128.85),,""
+period:middle-east-bronze_age,periods-middle-east,-3300,-1200,Âge du bronze,Bronze Age,https://fr.wikipedia.org/wiki/Âge_du_bronze,https://en.wikipedia.org/wiki/Bronze_Age,,oklch(85.2% 0.199 91.936),,""
+period:middle-east-iron_age,periods-middle-east,-1200,-50,Âge du fer,Iron Age,https://fr.wikipedia.org/wiki/Proche-Orient_ancien,https://en.wikipedia.org/wiki/Ancient_Near_East,,oklch(82.8% 0.189 84.429),,""
+period:middle-east-antiquity,periods-middle-east,-50,476,Antiquité,Antiquity,https://fr.wikipedia.org/wiki/Antiquité,https://en.wikipedia.org/wiki/Ancient_history,,oklch(75% 0.183 55.934),,""
+period:middle-east-middle-ages,periods-middle-east,476,1453,Moyen Âge,Middle Ages,https://fr.wikipedia.org/wiki/Histoire_du_Moyen-Orient,https://en.wikipedia.org/wiki/History_of_the_Middle_East,,oklch(70.4% 0.191 22.216),,""
+period:middle-east-colonial,periods-middle-east,1453,1970,Période coloniale,Colonial period,https://fr.wikipedia.org/wiki/Histoire_de_l%27Afrique,https://en.wikipedia.org/wiki/Colonial_Africa,,oklch(71.8% 0.202 349.761),,""
 period:middle-east-information_age,periods-middle-east,1970,2025,Ère de l'information,"Information Age
-",Ère_de_l%27information,Information_Age,,oklch(70.2% 0.183 293.541),,
-period:asia-paleolithic,periods-asia,-2100000,-16000,Paléolithique,Paleolithic,Paléolithique_en_Chine,Prehistoric_Asia,,oklch(78.9% 0.154 211.53),,
-period:asia-mesolithic,periods-asia,-16000,-7000,Mésolithique,Mesolithic,Mésolithique,Mesolithic,,oklch(76.5% 0.177 163.223),,
-period:asia-neolithic,periods-asia,-7000,-3200,Néolithique,Neolithic,Néolithique_en_Chine,Neolithic_in_China,,oklch(84.1% 0.238 128.85),,
-period:asia-bronze_age,periods-asia,-3200,-1200,Âge du bronze,Bronze Age,Âge_du_bronze,Bronze_Age,,oklch(85.2% 0.199 91.936),,
-period:asia-iron_age,periods-asia,-1200,-200,Âge du fer,Iron Age,Âge_du_fer,Iron_Age_in_India,,oklch(82.8% 0.189 84.429),,
-period:asia-antiquity,periods-asia,-200,476,Antiquité,Antiquity,Antiquité,Ancient_history,,oklch(75% 0.183 55.934),,
-period:asia-medieval,periods-asia,476,1800,Période médiévale,Medieval period,Histoire_de_l%27Asie,History_of_Asia,,oklch(70.4% 0.191 22.216),,
-period:asia-industrial_revolution,periods-asia,1800,1970,Révolution industrielle,Industrial Revolution,Révolution_industrielle,Industrial_Revolution,,oklch(74% 0.238 322.16),,
+",https://fr.wikipedia.org/wiki/Ère_de_l%27information,https://en.wikipedia.org/wiki/Information_Age,,oklch(70.2% 0.183 293.541),,""
+period:asia-paleolithic,periods-asia,-2100000,-16000,Paléolithique,Paleolithic,https://fr.wikipedia.org/wiki/Paléolithique_en_Chine,https://en.wikipedia.org/wiki/Prehistoric_Asia,,oklch(78.9% 0.154 211.53),,""
+period:asia-mesolithic,periods-asia,-16000,-7000,Mésolithique,Mesolithic,https://fr.wikipedia.org/wiki/Mésolithique,https://en.wikipedia.org/wiki/Mesolithic,,oklch(76.5% 0.177 163.223),,""
+period:asia-neolithic,periods-asia,-7000,-3200,Néolithique,Neolithic,https://fr.wikipedia.org/wiki/Néolithique_en_Chine,https://en.wikipedia.org/wiki/Neolithic_in_China,,oklch(84.1% 0.238 128.85),,""
+period:asia-bronze_age,periods-asia,-3200,-1200,Âge du bronze,Bronze Age,https://fr.wikipedia.org/wiki/Âge_du_bronze,https://en.wikipedia.org/wiki/Bronze_Age,,oklch(85.2% 0.199 91.936),,""
+period:asia-iron_age,periods-asia,-1200,-200,Âge du fer,Iron Age,https://fr.wikipedia.org/wiki/Âge_du_fer,https://en.wikipedia.org/wiki/Iron_Age_in_India,,oklch(82.8% 0.189 84.429),,""
+period:asia-antiquity,periods-asia,-200,476,Antiquité,Antiquity,https://fr.wikipedia.org/wiki/Antiquité,https://en.wikipedia.org/wiki/Ancient_history,,oklch(75% 0.183 55.934),,""
+period:asia-medieval,periods-asia,476,1800,Période médiévale,Medieval period,https://fr.wikipedia.org/wiki/Histoire_de_l%27Asie,https://en.wikipedia.org/wiki/History_of_Asia,,oklch(70.4% 0.191 22.216),,""
+period:asia-industrial_revolution,periods-asia,1800,1970,Révolution industrielle,Industrial Revolution,https://fr.wikipedia.org/wiki/Révolution_industrielle,https://en.wikipedia.org/wiki/Industrial_Revolution,,oklch(74% 0.238 322.16),,""
 period:asia-information_age,periods-asia,1970,2025,Ère de l'information,"Information Age
-",Ère_de_l%27information,Information_Age,,oklch(70.2% 0.183 293.541),,
-period:europe-paleolithic,periods-europe,-1600000,-12000,Paléolithique,Paleolithic,Paléolithique_en_Europe,Paleolithic_Europe,,oklch(78.9% 0.154 211.53),,
-period:europe-mesolithic,periods-europe,-12000,-6400,Mésolithique,Mesolithic,Mésolithique,Mesolithic,,oklch(76.5% 0.177 163.223),,
-period:europe-neolithic,periods-europe,-6400,-3200,Néolithique,Neolithic,Europe_néolithique,Neolithic_Europe,,oklch(84.1% 0.238 128.85),,
-period:europe-bronze_age,periods-europe,-3200,-1200,Âge du bronze,Bronze Age,Âge_du_bronze_en_Europe,Bronze_Age_Europe,,oklch(85.2% 0.199 91.936),,
-period:europe-iron_age,periods-europe,-1200,-50,Âge du fer,Iron Age,Âge_du_fer,Iron_Age_Europe,,oklch(82.8% 0.189 84.429),,
-period:europe-antiquity,periods-europe,-50,476,Antiquité,Antiquity,Antiquité,Ancient_history,,oklch(75% 0.183 55.934),,
-period:europe-middle-ages,periods-europe,476,1453,Moyen Âge,Middle Ages,Moyen_Âge,Middle_Ages,,oklch(70.4% 0.191 22.216),,
-period:europe-early_modern_period,periods-europe,1453,1760,Époque moderne,Early modern period,Époque_moderne,Early_modern_period,,oklch(71.8% 0.202 349.761),,
-period:europe-industrial_revolution,periods-europe,1760,1970,Révolution industrielle,Industrial Revolution,Révolution_industrielle,Industrial_Revolution,,oklch(74% 0.238 322.16),,
+",https://fr.wikipedia.org/wiki/Ère_de_l%27information,https://en.wikipedia.org/wiki/Information_Age,,oklch(70.2% 0.183 293.541),,""
+period:europe-paleolithic,periods-europe,-1600000,-12000,Paléolithique,Paleolithic,https://fr.wikipedia.org/wiki/Paléolithique_en_Europe,https://en.wikipedia.org/wiki/Paleolithic_Europe,,oklch(78.9% 0.154 211.53),,""
+period:europe-mesolithic,periods-europe,-12000,-6400,Mésolithique,Mesolithic,https://fr.wikipedia.org/wiki/Mésolithique,https://en.wikipedia.org/wiki/Mesolithic,,oklch(76.5% 0.177 163.223),,""
+period:europe-neolithic,periods-europe,-6400,-3200,Néolithique,Neolithic,https://fr.wikipedia.org/wiki/Europe_néolithique,https://en.wikipedia.org/wiki/Neolithic_Europe,,oklch(84.1% 0.238 128.85),,""
+period:europe-bronze_age,periods-europe,-3200,-1200,Âge du bronze,Bronze Age,https://fr.wikipedia.org/wiki/Âge_du_bronze_en_Europe,https://en.wikipedia.org/wiki/Bronze_Age_Europe,,oklch(85.2% 0.199 91.936),,""
+period:europe-iron_age,periods-europe,-1200,-50,Âge du fer,Iron Age,https://fr.wikipedia.org/wiki/Âge_du_fer,https://en.wikipedia.org/wiki/Iron_Age_Europe,,oklch(82.8% 0.189 84.429),,""
+period:europe-antiquity,periods-europe,-50,476,Antiquité,Antiquity,https://fr.wikipedia.org/wiki/Antiquité,https://en.wikipedia.org/wiki/Ancient_history,,oklch(75% 0.183 55.934),,""
+period:europe-middle-ages,periods-europe,476,1453,Moyen Âge,Middle Ages,https://fr.wikipedia.org/wiki/Moyen_Âge,https://en.wikipedia.org/wiki/Middle_Ages,,oklch(70.4% 0.191 22.216),,""
+period:europe-early_modern_period,periods-europe,1453,1760,Époque moderne,Early modern period,https://fr.wikipedia.org/wiki/Époque_moderne,https://en.wikipedia.org/wiki/Early_modern_period,,oklch(71.8% 0.202 349.761),,""
+period:europe-industrial_revolution,periods-europe,1760,1970,Révolution industrielle,Industrial Revolution,https://fr.wikipedia.org/wiki/Révolution_industrielle,https://en.wikipedia.org/wiki/Industrial_Revolution,,oklch(74% 0.238 322.16),,""
 period:europe-information_age,periods-europe,1970,2025,Ère de l'information,"Information Age
-",Ère_de_l%27information,Information_Age,,oklch(70.2% 0.183 293.541),,
-period:america-paleolithic,periods-america,-20000,-10000,Paléolithique,Paleolithic,Premier_peuplement_de_l'Amérique,Peopling_of_the_Americas,,oklch(78.9% 0.154 211.53),,
-period:america-neolithic,periods-america,-10000,-1000,Néolithique,Neolithic,Néolithique,Neolithic,,oklch(84.1% 0.238 128.85),,
-period:america-bronze_age,periods-america,-1000,1492,Âge du bronze,Bronze Age,Métallurgie_dans_l%27Amérique_précolombienne,Metallurgy_in_pre-Columbian_America,,oklch(85.2% 0.199 91.936),,
-period:america-early_modern_period,periods-america,1492,1760,Époque moderne,Early modern period,Époque_moderne,Early_modern_period,,oklch(71.8% 0.202 349.761),,
-period:america-industrial_revolution,periods-america,1760,1970,Révolution industrielle,Industrial Revolution,Révolution_industrielle,Industrial_Revolution,,oklch(74% 0.238 322.16),,
+",https://fr.wikipedia.org/wiki/Ère_de_l%27information,https://en.wikipedia.org/wiki/Information_Age,,oklch(70.2% 0.183 293.541),,""
+period:america-paleolithic,periods-america,-20000,-10000,Paléolithique,Paleolithic,https://fr.wikipedia.org/wiki/Premier_peuplement_de_l'Amérique,https://en.wikipedia.org/wiki/Peopling_of_the_Americas,,oklch(78.9% 0.154 211.53),,""
+period:america-neolithic,periods-america,-10000,-1000,Néolithique,Neolithic,https://fr.wikipedia.org/wiki/Néolithique,https://en.wikipedia.org/wiki/Neolithic,,oklch(84.1% 0.238 128.85),,""
+period:america-bronze_age,periods-america,-1000,1492,Âge du bronze,Bronze Age,https://fr.wikipedia.org/wiki/Métallurgie_dans_l%27Amérique_précolombienne,https://en.wikipedia.org/wiki/Metallurgy_in_pre-Columbian_America,,oklch(85.2% 0.199 91.936),,""
+period:america-early_modern_period,periods-america,1492,1760,Époque moderne,Early modern period,https://fr.wikipedia.org/wiki/Époque_moderne,https://en.wikipedia.org/wiki/Early_modern_period,,oklch(71.8% 0.202 349.761),,""
+period:america-industrial_revolution,periods-america,1760,1970,Révolution industrielle,Industrial Revolution,https://fr.wikipedia.org/wiki/Révolution_industrielle,https://en.wikipedia.org/wiki/Industrial_Revolution,,oklch(74% 0.238 322.16),,""
 period:america-information_age,periods-america,1970,2025,Ère de l'information,"Information Age
-",Ère_de_l%27information,Information_Age,,oklch(70.2% 0.183 293.541),,
+",https://fr.wikipedia.org/wiki/Ère_de_l%27information,https://en.wikipedia.org/wiki/Information_Age,,oklch(70.2% 0.183 293.541),,"
+"

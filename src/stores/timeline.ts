@@ -61,7 +61,11 @@ const timelineStore = {
         },
       },
       groupTemplate: group => {
-        if (group.nestedGroups?.length === undefined) return group.content;
+        if (
+          group.nestedGroups?.length === undefined ||
+          group.nestedInGroup !== undefined
+        )
+          return group.content;
         const parentsAmount = this.groups.filter(
           g => g.nestedGroups !== undefined && g.previousPosition === undefined
         ).length;
@@ -171,7 +175,6 @@ const timelineStore = {
   },
 
   async onItemClick(id: string) {
-    const lng = getLng();
     this.toggleSidebar(true);
     this.searchOpen = false;
     const item = data.items.find(i => i.id === id);
@@ -180,7 +183,7 @@ const timelineStore = {
       if (isNotNil(item.properties?.wikiName)) {
         try {
           const data: WikiSummary = await fetch(
-            `https://${lng ?? 'fr'}.wikipedia.org/api/rest_v1/page/summary/${item.properties?.wikiName ?? item.content}`
+            `https://${item.properties?.wikiLng ?? 'fr'}.wikipedia.org/api/rest_v1/page/summary/${item.properties?.wikiName ?? item.content}`
           ).then(res => res.json());
           if (isNotNil(data)) {
             result.properties!.description = data.extract_html;

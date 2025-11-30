@@ -7,6 +7,7 @@ type Properties = {
   cover?: string;
   wikiUrl?: string;
   wikiName?: string;
+  wikiLng?: string;
   credits?: {
     attribution: string;
     url: string;
