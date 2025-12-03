@@ -1,23 +1,22 @@
 {
   "a11y": {
-    "timeline": "Timeline",
     "about": "About",
+    "close-search": "Close the search",
+    "exit-full-screen": "Exit full screen mode",
+    "full-screen": "Enter full screen mode",
+    "languages": "Select a language",
     "move-left": "Move the timeline to the left",
     "move-right": "Move the timeline to the right",
-    "zoom-in": "Zoom in",
-    "zoom-out": "Zoom out",
-    "full-screen": "Enter full screen mode",
-    "exit-full-screen": "Exit full screen mode",
-    "search": "Open the search",
-    "close-search": "Close the search",
     "scales": "Select a scale",
-    "languages": "Select a language",
+    "search": "Open the search",
     "search-input": "Search input",
-    "toggle-sidebar": "Open/Close the sidebar"
+    "timeline": "Timeline",
+    "toggle-sidebar": "Open/Close the sidebar",
+    "zoom-in": "Zoom in",
+    "zoom-out": "Zoom out"
   },
   "groups": {
     "cultures": {
-      "label": "Cultures",
       "groups": {
         "africa": "Africa",
         "asia": "Asia",
@@ -27,7 +26,8 @@
         "north-america": "North America",
         "oceania": "Oceania",
         "south-america": "South America"
-      }
+      },
+      "label": "Cultures"
     },
     "geology": {
       "description": "The geological time scale is a time scale that divides the Earth into eons, eras, periods, epochs and ages.",
@@ -54,10 +54,10 @@
     "periods": {
       "groups": {
         "africa": "Africa",
-        "europe": "Europe",
-        "middle-east": "Middle East",
+        "america": "America",
         "asia": "Asia",
-        "america": "America"
+        "europe": "Europe",
+        "middle-east": "Middle East"
       },
       "label": "Periods"
     }
@@ -67,19 +67,19 @@
     "title": "Welcome to Temporus"
   },
   "scales": {
+    "cultures": "Cultures",
     "earth": "Planet Earth",
     "homo": "Human origins",
-    "sapiens": "Homo sapiens",
-    "cultures": "Cultures"
-  },
-  "settings": {
-    "languages": "Languages",
-    "scales": "Scales",
-    "data": "Data",
-    "add-parent": "Add a dataset"
+    "sapiens": "Homo sapiens"
   },
   "search": {
     "warning": "With a lot of data on screen, you may have to vertically scroll to see the selected item."
+  },
+  "settings": {
+    "add-parent": "Add a dataset",
+    "data": "Data",
+    "languages": "Languages",
+    "scales": "Scales"
   },
   "ui": {
     "select": "Select something...",

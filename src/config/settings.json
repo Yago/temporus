@@ -7,12 +7,12 @@
     "earth": {
       "start": -4600000000,
       "end": 2025,
-      "groups": ["geology", "periods", "homo"]
+      "groups": ["geology"]
     },
     "homo": {
       "start": -7200000,
       "end": 2025,
-      "groups": ["periods", "homo", "geology"]
+      "groups": ["geology", "periods", "homo"]
     },
     "sapiens": {
       "start": -300000,
@@ -22,7 +22,7 @@
     "cultures": {
       "start": -10000,
       "end": 2025,
-      "groups": ["cultures"]
+      "groups": ["periods", "cultures"]
     }
   }
 }

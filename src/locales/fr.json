@@ -1,23 +1,22 @@
 {
   "a11y": {
-    "timeline": "Timeline",
     "about": "À propos",
+    "close-search": "Fermer la recherche",
+    "exit-full-screen": "Quitter le mode plein écran",
+    "full-screen": "Activer le mode plein écran",
+    "languages": "Sélectionner une langue",
     "move-left": "Déplacer la timeline vers la gauche",
     "move-right": "Déplacer la timeline vers la droite",
-    "zoom-in": "Zoomer",
-    "zoom-out": "Dézoomer",
-    "full-screen": "Activer le mode plein écran",
-    "exit-full-screen": "Quitter le mode plein écran",
-    "search": "Ouvrir la recherche",
-    "close-search": "Fermer la recherche",
     "scales": "Sélectionner une échelle",
-    "languages": "Sélectionner une langue",
+    "search": "Ouvrir la recherche",
     "search-input": "Champs de recherche",
-    "toggle-sidebar": "Ouvrir/Fermer la sidebar"
+    "timeline": "Timeline",
+    "toggle-sidebar": "Ouvrir/Fermer la sidebar",
+    "zoom-in": "Zoomer",
+    "zoom-out": "Dézoomer"
   },
   "groups": {
     "cultures": {
-      "label": "Cultures",
       "groups": {
         "africa": "Afrique",
         "asia": "Asie",
@@ -27,7 +26,8 @@
         "north-america": "Amérique du Nord",
         "oceania": "Océanie",
         "south-america": "Amérique du Sud"
-      }
+      },
+      "label": "Cultures"
     },
     "geology": {
       "description": "L'échelle des temps géologiques est une échelle de temps qui divise la Terre en époques, périodes, époques et âges.",
@@ -54,10 +54,10 @@
     "periods": {
       "groups": {
         "africa": "Afrique",
-        "europe": "Europe",
-        "middle-east": "Moyen-Orient",
+        "america": "Amérique",
         "asia": "Asie",
-        "america": "Amérique"
+        "europe": "Europe",
+        "middle-east": "Moyen-Orient"
       },
       "label": "Périodes"
     }
@@ -67,19 +67,19 @@
     "title": "Bienvenue dans Temporus"
   },
   "scales": {
+    "cultures": "Cultures",
     "earth": "Planète Terre",
     "homo": "Origines humaines",
-    "sapiens": "Homo sapiens",
-    "cultures": "Cultures"
-  },
-  "settings": {
-    "languages": "Langues",
-    "scales": "Échelles",
-    "data": "Données",
-    "add-parent": "Ajouter un jeu de données"
+    "sapiens": "Homo sapiens"
   },
   "search": {
     "warning": "Avec beaucoup de données à l'écran, vous devrez peut-être scroller verticalement pour voir l'élément sélectionné."
+  },
+  "settings": {
+    "add-parent": "Ajouter un jeu de données",
+    "data": "Données",
+    "languages": "Langues",
+    "scales": "Échelles"
   },
   "ui": {
     "select": "Sélectionnez quelque chose...",
