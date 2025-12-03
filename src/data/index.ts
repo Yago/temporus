@@ -37,8 +37,10 @@ const spacingGroups = [
 const data: {
   items: Item[];
   groups: Group[];
+  parents: Group[];
 } = {
   items,
+  parents,
   groups: window.innerWidth < 1024 ? [...groups, ...spacingGroups] : groups,
 };
 

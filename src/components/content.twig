@@ -1,0 +1,56 @@
+
+<div class="p-4! lg:p-5! flex flex-col">
+  <h1
+    class="text-lg lg:text-2xl font-bold"
+    x-html="currentItem?.content ?? $store.utils.t('intro.title')"
+  ></h1>
+
+  <h2
+    class="text-sm"
+    x-show="currentItem?.start && currentItem?.end"
+    x-cloak
+    x-text="`${$store.utils.formatNumber(currentItem?.start)} ${$store.utils.t('ui.to')} ${$store.utils.formatNumber(currentItem?.end)}`"
+  ></h2>
+
+  <img
+    :src="currentItem?.properties?.cover"
+    :alt="currentItem?.content ?? $store.utils.t('intro.title')"
+    class="my-4 grayscale rounded"
+    x-show="currentItem?.properties?.cover"
+    x-cloak
+  />
+
+  <div
+    class="max-lg:text-sm text-neutral-200 mt-3 content"
+    x-html="currentItem !== null ? currentItem?.properties?.description ?? '' : $store.utils.t('intro.description')"
+  ></div>
+
+  <a
+    x-show="currentItem?.properties?.wikiUrl"
+    x-cloak
+    :href="currentItem?.properties?.wikiUrl"
+    class="inline-block mt-3"
+    target="_blank"
+  >
+    Wikipedia
+    <svg class="icon text-xs">
+      <use href="/public/icons.svg?v1#external"></use>
+    </svg>
+  </a>
+
+  <div
+    x-show="currentItem?.properties?.credits"
+    x-cloak
+    class="text-neutral-500 pt-3 mt-auto text-sm"
+  >
+    <a :href="currentItem?.properties?.credits?.url" target="_blank">
+      <span class="text-base">©</span>
+      <span
+        x-text="currentItem?.properties?.credits?.attribution"
+      ></span>
+      <svg class="icon text-xs">
+        <use href="/public/icons.svg?v1#external"></use>
+      </svg>
+    </a>
+  </div>
+</div>

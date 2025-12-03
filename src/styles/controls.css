@@ -1,3 +1,5 @@
+@reference "./tailwind.css";
+
 .controls select {
   @apply w-full h-12 bg-no-repeat bg-center text-[0px] bg-size-[18px] focus:z-9999 relative marker:pr-10 cursor-pointer hover:bg-neutral-900 border-r border-neutral-800 appearance-none focus:outline-2 outline-neutral-700 outline-offset-1 transition-colors;
 }

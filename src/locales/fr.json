@@ -59,7 +59,7 @@
         "asia": "Asie",
         "america": "Amérique"
       },
-      "label": "Histoire"
+      "label": "Périodes"
     }
   },
   "intro": {
@@ -74,7 +74,12 @@
   },
   "settings": {
     "languages": "Langues",
-    "scales": "Échelles"
+    "scales": "Échelles",
+    "data": "Données",
+    "add-parent": "Ajouter un jeu de données"
+  },
+  "search": {
+    "warning": "Avec beaucoup de données à l'écran, vous devrez peut-être scroller verticalement pour voir l'élément sélectionné."
   },
   "ui": {
     "select": "Sélectionnez quelque chose...",

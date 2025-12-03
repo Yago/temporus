@@ -4,4 +4,5 @@ export type Group = DataGroup & Properties;
 
 type Properties = {
   previousPosition?: number;
+  nestedInGroup?: string;
 };

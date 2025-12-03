@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>temporus</title>
+    <link href="/src/styles/base.css" rel="stylesheet" />
+  </head>
+  <body
+    class="font-mono antialiased bg-black text-neutral-100 text-base"
+    x-data="{
+      get currentItem() { return $store.timeline.currentItem },
+      mobile: window.innerWidth < 1024,
+    }"
+    x-init="
+      $store.timeline.create();
+      if ($store.utils.getLng() === null) $store.utils.setLng('fr');
+      window.addEventListener('resize', () => mobile = window.innerWidth < 1024)
+    "
+  >
+    <!-- Timeline -->
+    {% include '../components/timeline.twig' %}
+
+    <!-- Sidebar -->
+    <div
+      class="fixed right-2 lg:right-0 bottom-0 max-lg:h-[92svh] lg:inset-y-0 w-[calc(100%-16px)] md:w-[400px] lg:w-[450px] lg:max-w-[30vw] bg-black shadow-[-10px_0_50px_-2px_rgba(0,0,0,0.8)] border-l max-lg:border-x border-neutral-800 transition-transform duration-500 max-lg:rounded-t-lg"
+      :class="!$store.timeline.sidebarOpen && mobile && 'translate-y-[calc(100%-50px)]'"
+    >
+      <div class="grid grid-rows-[auto_1fr] h-full">
+        <!-- Options bar -->
+        {% include '../components/controls.twig' %}
+
+        <!-- Content -->
+        <div class="h-full overflow-y-auto" x-show="!$store.timeline.searchOpen && !$store.timeline.settingsOpen">
+          {% include '../components/content.twig' %}
+        </div>
+
+        <!-- Search -->
+        <div class="h-full overflow-y-auto" x-show="$store.timeline.searchOpen" x-cloak>
+          {% include '../components/search.twig' %}
+        </div>
+
+        <!-- Settings -->
+        <div class="h-full overflow-y-auto" x-show="$store.timeline.settingsOpen" x-cloak>
+          {% include '../components/settings.twig' %}
+        </div>
+      </div>
+
+      {% include '../components/sidebar-toggle.twig' %}
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

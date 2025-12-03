@@ -1,0 +1,66 @@
+<div class="flex flex-col p-4 gap-6">
+  <fieldset class="border border-neutral-800 rounded-sm p-4 pt-2">
+    <legend
+      class="font-bold pl-1"
+      x-text="$store.utils.t('settings.languages')"
+    ></legend>
+    <select
+      id="language"
+      @input="$store.utils.setLng($event.target.value);"
+      :value="$store.utils.getLng()"
+      x-ref="languages"
+      :title="$store.utils.t('settings.languages')"
+      :aria-label="$store.utils.t('a11y.languages')"
+      class="w-full"
+    >
+      <template x-for="lngKey in Object.keys(settings.languages)">
+        <option
+          :value="lngKey"
+          x-text="settings.languages[lngKey]"
+          :selected="lngKey === $store.utils.getLng()"
+        ></option>
+      </template>
+    </select>
+  </fieldset>
+
+  <fieldset class="border border-neutral-800 rounded-sm p-4 pt-2">
+    <legend
+      class="font-bold pl-1"
+      x-text="$store.utils.t('settings.data')"
+    ></legend>
+    <ul x-sort="$store.timeline.moveParent($item, $position)">
+      <template x-for="item in $store.timeline.defaultParents" :key="item.id">
+        <li
+          x-sort:item="item.id"
+          class="cursor-grabbing [body:not(.sorting)_&]:hover:cursor-grab flex gap-2 items-center"
+        >
+          <svg class="icon size-4">
+            <use href="/public/icons.svg?v1#grip"></use>
+          </svg>
+          <span x-text="item.content"></span>
+          <button
+            class="ml-auto size-4 border border-neutral-800 rounded-xs cursor-pointer leading-0"
+            @click="$store.timeline.removeParent(item.id)"
+          >
+            &times;
+          </button>
+        </li>
+      </template>
+    </ul>
+
+    <select
+      x-show="$store.timeline.parents.filter(i => !$store.timeline.sortedParents.some(j => j.id === i.id)).length > 0"
+      @change="$store.timeline.addParent($event.target.value)"
+      :value="$store.timeline.defaultParents.find(p => !$store.timeline.sortedParents.includes(p))?.id"
+      class="w-full mt-4 border border-neutral-800 rounded-sm p-2 marker:mr-10"
+    >
+      <option value="" disabled selected x-text="$store.utils.t('settings.add-parent')"></option>
+      <template x-for="item in $store.timeline.parents.filter(i => !$store.timeline.sortedParents.some(j => j.id === i.id)).sort((a, b) => a.content.localeCompare(b.content))">
+        <option
+          :value="item.id"
+          x-text="item.content"
+        ></option>
+      </template>
+    </select>
+  </fieldset>
+</div>

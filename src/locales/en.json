@@ -74,7 +74,12 @@
   },
   "settings": {
     "languages": "Languages",
-    "scales": "Scales"
+    "scales": "Scales",
+    "data": "Data",
+    "add-parent": "Add a dataset"
+  },
+  "search": {
+    "warning": "With a lot of data on screen, you may have to vertically scroll to see the selected item."
   },
   "ui": {
     "select": "Select something...",

@@ -1,0 +1,115 @@
+<div class="flex border-y border-neutral-800 items-center controls max-lg:rounded-t-lg">
+  <button @click="$store.timeline.move(0.5)">
+    <span class="sr-only" x-text="$store.utils.t('a11y.move-left')"></span>
+    <svg class="icon size-4">
+      <use href="/public/icons.svg?v1#chevron-left"></use>
+    </svg>
+  </button>
+  <button @click="$store.timeline.move(-0.5)">
+    <span class="sr-only" x-text="$store.utils.t('a11y.move-right')"></span>
+    <svg class="icon size-4">
+      <use href="/public/icons.svg?v1#chevron-right"></use>
+    </svg>
+  </button>
+  <button @click="$store.timeline.zoomOut(1)">
+    <span class="sr-only" x-text="$store.utils.t('a11y.zoom-out')"></span>
+    <svg class="icon size-4">
+      <use href="/public/icons.svg?v1#zoom-out"></use>
+    </svg>
+  </button>
+  <button @click="$store.timeline.zoomIn(1)">
+    <span class="sr-only" x-text="$store.utils.t('a11y.zoom-in')"></span>
+    <svg class="icon size-4">
+      <use href="/public/icons.svg?v1#zoom-in"></use>
+    </svg>
+  </button>
+  <button
+    class="size-6 hover:bg-neutral-200 rounded-sm cursor-pointer"
+    @click="$store.timeline.launchFullscreen(); $store.timeline.fullscreen = true;"
+    x-show="!$store.timeline.fullscreen"
+  >
+    <span class="sr-only" x-text="$store.utils.t('a11y.full-screen')"></span>
+    <svg class="icon size-4">
+      <use href="/public/icons.svg?v1#fullscreen-in"></use>
+    </svg>
+  </button>
+  <button
+    class="size-6 hover:bg-neutral-200 rounded-sm cursor-pointer"
+    @click="$store.timeline.exitFullscreen(); $store.timeline.fullscreen = false;"
+    x-show="$store.timeline.fullscreen"
+    x-cloak
+  >
+    <span class="sr-only" x-text="$store.utils.t('a11y.exit-full-screen')"></span>
+    <svg class="icon size-4">
+      <use href="/public/icons.svg?v1#fullscreen-out"></use>
+    </svg>
+  </button>
+  <select
+    x-ref="scales"
+    @input="
+      $store.timeline.updateScale($event.target.value);
+      setTimeout(() => $refs.scales.value = null, 0);
+      $event.target.blur();
+    "
+    class="bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1ydWxlci1kaW1lbnNpb24tbGluZS1pY29uIGx1Y2lkZS1ydWxlci1kaW1lbnNpb24tbGluZSI+PHBhdGggZD0iTTEyIDE1di0zLjAxNCIvPjxwYXRoIGQ9Ik0xNiAxNXYtMy4wMTQiLz48cGF0aCBkPSJNMjAgNkg0Ii8+PHBhdGggZD0iTTIwIDhWNCIvPjxwYXRoIGQ9Ik00IDhWNCIvPjxwYXRoIGQ9Ik04IDE1di0zLjAxNCIvPjxyZWN0IHg9IjMiIHk9IjEyIiB3aWR0aD0iMTgiIGhlaWdodD0iNyIgcng9IjEiLz48L3N2Zz4=')]"
+    :title="$store.utils.t('settings.scales')"
+    :aria-label="$store.utils.t('a11y.scales')"
+  >
+    <option
+      value=""
+      disabled
+      selected
+      x-text="$store.utils.t('ui.select')"
+    ></option>
+    <template x-for="scale in Object.keys(settings.scales)">
+      <option
+        :value="scale"
+        x-text="$store.utils.t(`scales.${scale}`)"
+      ></option>
+    </template>
+  </select>
+  <button @click="
+    $store.timeline.searchOpen = !$store.timeline.searchOpen;
+    $store.timeline.settingsOpen = false;
+    $store.timeline.toggleSidebar($store.timeline.searchOpen);
+    if ($store.timeline.searchOpen) setTimeout(() => $refs.searchInput.focus(), 0);
+  ">
+    <span class="sr-only" x-text="$store.timeline.searchOpen ? $store.utils.t('a11y.close-search') : $store.utils.t('a11y.search')"></span>
+    <svg class="icon size-4" x-show="!$store.timeline.searchOpen">
+      <use href="/public/icons.svg?v1#search"></use>
+    </svg>
+    <svg class="icon size-4" x-show="$store.timeline.searchOpen" x-cloak>
+      <use href="/public/icons.svg?v1#close"></use>
+    </svg>
+  </button>
+  <button @click="
+    $store.timeline.settingsOpen = !$store.timeline.settingsOpen;
+    $store.timeline.searchOpen = false;
+    $store.timeline.toggleSidebar($store.timeline.settingsOpen);
+    if ($store.timeline.settingsOpen) setTimeout(() => $refs.settingsInput.focus(), 0);
+  ">
+    <span class="sr-only" x-text="$store.timeline.settingsOpen ? $store.utils.t('a11y.close-settings') : $store.utils.t('a11y.settings')"></span>
+    <svg class="icon size-4" x-show="!$store.timeline.settingsOpen">
+      <use href="/public/icons.svg?v1#settings"></use>
+    </svg>
+    <svg class="icon size-4" x-show="$store.timeline.settingsOpen" x-cloak>
+      <use href="/public/icons.svg?v1#close"></use>
+    </svg>
+  </button>
+  {# <select
+    @input="$store.utils.setLng($event.target.value);"
+    :value="$store.utils.getLng()"
+    x-ref="languages"
+    class="bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1sYW5ndWFnZXMtaWNvbiBsdWNpZGUtbGFuZ3VhZ2VzIj48cGF0aCBkPSJtNSA4IDYgNiIvPjxwYXRoIGQ9Im00IDE0IDYtNiAyLTMiLz48cGF0aCBkPSJNMiA1aDEyIi8+PHBhdGggZD0iTTcgMmgxIi8+PHBhdGggZD0ibTIyIDIyLTUtMTAtNSAxMCIvPjxwYXRoIGQ9Ik0xNCAxOGg2Ii8+PC9zdmc+')] border-r-0!"
+    :title="$store.utils.t('settings.languages')"
+    :aria-label="$store.utils.t('a11y.languages')"
+  >
+    <template x-for="lngKey in Object.keys(settings.languages)">
+      <option
+        :value="lngKey"
+        x-text="settings.languages[lngKey]"
+        :selected="lngKey === $store.utils.getLng()"
+      ></option>
+    </template>
+  </select> #}
+</div>

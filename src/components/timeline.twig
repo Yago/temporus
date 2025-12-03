@@ -1,0 +1,18 @@
+<div
+  class="relative h-screen w-full lg:w-[calc(100vw-450px)] lg:min-w-[70vw]"
+>
+  <div
+    id="visualization"
+    class="h-screen w-full lg:w-[calc(100vw-450px)] lg:min-w-[70vw]"
+    :aria-label="$store.utils.t('a11y.timeline')"
+  ></div>
+
+  <button
+    class="absolute max-md:top-1 md:bottom-9 max-lg:left-3 lg:right-3 size-4 md:size-6 border border-neutral-200 rounded-full lg:z-10 text-xs md:text-sm font-bold cursor-pointer bg-black hover:bg-neutral-800 transition-all opacity-0"
+    :class="currentItem !== null && 'opacity-100'"
+    @click="$store.timeline.currentItem = null;$store.timeline.toggleSidebar(true);"
+  >
+    <span class="sr-only" x-text="$store.utils.t('a11y.about')"></span>
+    ?
+  </button>
+</div>

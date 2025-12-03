@@ -18,7 +18,7 @@ const parent: Group = {
     'periods-europe',
     'periods-america',
   ],
-  // showNested: false,
+  showNested: false,
 };
 
 const groups: Group[] = [

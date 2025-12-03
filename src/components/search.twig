@@ -1,0 +1,33 @@
+<div class="flex flex-col">
+  <div class="w-full px-4 lg:px-5 pt-4 lg:pt-5 pb-3 sticky top-0 bg-black z-10">
+    <input
+      x-ref="searchInput"
+      id="searchInput"
+      type="search"
+      class="w-full border border-neutral-800 text-base text-white px-3 py-2 rounded-xs focus:outline-0 focus:border-neutral-200 transition-colors hover:bg-neutral-900"
+      placeholder="Recherche..."
+      :aria-label="$store.utils.t('a11y.search-input')"
+      @input="$store.timeline.search($event.target.value)"
+    />
+    <p class="text-xs italic mt-2 text-gray-500">⚠︎ <span x-text="$store.utils.t('search.warning')"></span></p>
+  </div>
+  <ul class="flex flex-col divide-y divide-neutral-800 text-sm px-4 lg:px-5 pb-4 pt-3">
+    <template x-for="result in $store.timeline.searchResults">
+      <li>
+        <button
+          class="w-full py-3 hover:text-green-400 focus:text-green-400 transition-colors flex justify-between items-center cursor-pointer outline-neutral-700 outline-offset-4 focus:outline-solid rounded-sm"
+          @click="
+            $store.timeline.select([result.id]);
+            $store.timeline.toggleSidebar(false);
+            $store.timeline.highlightItems([result.id]);
+          "
+        >
+          <span x-html="result.content"></span>
+          <svg class="icon">
+            <use href="/public/icons.svg?v1#chevron-right"></use>
+          </svg>
+        </button>
+      </li>
+    </template>
+  </ul>
+</div>

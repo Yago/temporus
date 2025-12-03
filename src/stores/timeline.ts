@@ -1,12 +1,12 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import type { Moment } from 'moment';
-import { equals, isNotNil, move } from 'ramda';
+import { isNil, isNotNil, move } from 'ramda';
 import { DataSet } from 'vis-data';
 import { Timeline } from 'vis-timeline';
 import type { TimelineOptions } from 'vis-timeline';
 
 import data from '../data';
-import type { Group, Item, WikiSummary } from '../types';
+import type { Item, WikiSummary } from '../types';
 import { formatNumber, getQuery, setQuery } from '../utils';
 
 import 'vis-timeline/styles/vis-timeline-graph2d.css';
@@ -19,10 +19,14 @@ const getScale = () =>
 const timelineStore = {
   items: new DataSet(data.items),
   groups: data.groups,
+  parents: data.parents,
+  defaultParents: data.parents,
+  sortedParents: data.parents,
   timeline: null as Timeline | null,
   currentItem: null as Item | null,
   sidebarOpen: true,
-  searchOpen: false,
+  searchOpen: true,
+  settingsOpen: false,
   fullscreen: false,
   searchResults: [] as Item[],
 
@@ -60,45 +64,9 @@ const timelineStore = {
           return String(formatNumber(+(date as unknown as Moment).format('x')));
         },
       },
-      groupTemplate: group => {
-        if (
-          group.nestedGroups?.length === undefined ||
-          group.nestedInGroup !== undefined
-        )
-          return group.content;
-        const parentsAmount = this.groups.filter(
-          g => g.nestedGroups !== undefined && g.previousPosition === undefined
-        ).length;
-        const id = this.groups.findIndex(g => g.id === group.id);
-        const isHidden = group.previousPosition !== undefined;
-        const container = document.createElement('div');
-        // Strange fix to avoid huge height on click
-        container.addEventListener('click', e => e.stopPropagation());
-        container.classList.add('flex', 'w-full', 'gap-1', 'items-center');
-
-        const label = document.createElement('span');
-        label.innerHTML = group.content + ' ';
-        label.classList.add('pr-2');
-        label.classList.add('mr-auto');
-        container.append(label);
-
-        const up = document.createElement('button');
-        up.innerHTML = '↑';
-        up.addEventListener('click', () => this.moveGroup(group, 'up'));
-        if (id > 0 && !isHidden) container.append(up);
-
-        const down = document.createElement('button');
-        down.innerHTML = '↓';
-        down.addEventListener('click', () => this.moveGroup(group, 'down'));
-        if (id < parentsAmount - 1 && !isHidden) container.append(down);
-
-        const hide = document.createElement('button');
-        hide.innerHTML = isHidden ? '+' : '×';
-        hide.style.fontSize = '18px';
-        hide.addEventListener('click', () => this.toggleGroupVisibility(group));
-        container.append(hide);
-
-        return container;
+      template: (item: Item, element: HTMLElement) => {
+        element.id = (item.id as string).replace(/[^a-zA-Z0-9]/g, '_');
+        return `${item.content}`;
       },
     };
 
@@ -109,10 +77,21 @@ const timelineStore = {
       options
     );
 
-    this.setScaleGroupVisibility();
+    if (isNotNil(getScale())) {
+      const groups = getScale()!.groups!;
+      this.defaultParents = this.defaultParents
+        .filter(p => groups.includes(p.id as string))
+        .sort(
+          (a, b) =>
+            groups.indexOf(a.id as string) - groups.indexOf(b.id as string)
+        );
+      this.sortedParents = this.defaultParents;
+    }
+
+    this.updateGroups();
     this.refresh();
 
-    this.timeline.on('rangechange', range => this.onRangeChange(range));
+    this.timeline.on('rangechanged', range => this.updateItems(range));
     this.timeline.on('click', e => {
       if (e?.item) this.onItemClick(e.item);
       this.highlightItems([e?.item]);
@@ -156,22 +135,22 @@ const timelineStore = {
   refresh() {
     if (isNotNil(this.timeline)) {
       const initialRange = this.timeline.getWindow();
-      this.onRangeChange({
+      this.updateItems({
         end: +initialRange.end,
         start: +initialRange.start,
       });
     }
   },
 
-  onRangeChange(range: { end: number; start: number }) {
-    if (isNotNil(this.timeline)) {
-      const viewport = range.end - range.start;
-      const filteredItems = data.items.filter(item => {
-        const itemRange = +item.end! - +item.start!;
-        return item.type === 'point' || itemRange > viewport / 1000;
-      });
-      this.timeline.setItems(new DataSet(filteredItems));
-    }
+  updateItems(range: { end: number; start: number }) {
+    if (isNil(this.timeline)) return;
+
+    const viewport = range.end - range.start;
+    const filteredItems = data.items.filter(item => {
+      const itemRange = +item.end! - +item.start!;
+      return item.type === 'point' || itemRange > viewport / 1000;
+    });
+    this.timeline.setItems(new DataSet(filteredItems));
   },
 
   async onItemClick(id: string) {
@@ -212,81 +191,70 @@ const timelineStore = {
     }
   },
 
-  moveGroup(group: Group, direction: 'up' | 'down') {
-    if (isNotNil(this.timeline)) {
-      const id = this.groups.findIndex(g => g.id === group.id);
-      this.groups = move(id, id + (direction === 'up' ? -1 : 1), this.groups);
-      // Dirty hack to avoid nested groups being toggle
-      this.timeline.setGroups([]);
-      setTimeout(() => {
-        this.timeline!.setGroups(new DataSet(this.groups));
-        this.refresh();
-      }, 10);
-    }
+  moveParent(id: string, index: number) {
+    const previousIndex = this.sortedParents.findIndex(p => p.id === id);
+    this.sortedParents = move(previousIndex, index, this.sortedParents);
+    this.updateGroups();
   },
 
-  toggleGroupVisibility(group: Group) {
-    if (isNotNil(this.timeline)) {
-      const isHidden = group.previousPosition !== undefined;
-      const parentsAmount = this.groups.filter(
-        g => g.nestedGroups !== undefined && g.previousPosition === undefined
-      ).length;
-      const id = this.groups.findIndex(g => g.id === group.id);
-      this.groups = move(
-        id,
-        isHidden ? group.previousPosition! : parentsAmount - 1,
-        this.groups
-      ).map(g => {
-        if (g.id === group.id) {
-          return {
-            ...g,
-            showNested: false,
-            style: isHidden ? undefined : 'opacity: 0.4;',
-            previousPosition: isHidden ? undefined : id,
-          };
+  removeParent(id: string) {
+    this.sortedParents = this.sortedParents.filter(p => p.id !== id);
+    this.defaultParents = this.sortedParents;
+    this.updateGroups();
+  },
+
+  addParent(id: string) {
+    this.sortedParents = [
+      ...this.sortedParents,
+      this.parents.find(p => p.id === id)!,
+    ];
+    this.defaultParents = this.sortedParents;
+    this.updateGroups();
+  },
+
+  updateGroups() {
+    if (isNil(this.timeline)) return;
+
+    const updatedGroups = this.groups
+      .filter(g => {
+        // If is parent
+        if (isNil(g.nestedInGroup)) {
+          return this.sortedParents.some(p => p.id === g.id);
+        } else {
+          return this.sortedParents.some(p =>
+            p.nestedGroups?.includes(g.id as string)
+          );
         }
-        return g;
-      });
-      // Dirty hack to avoid nested groups being toggle
-      this.timeline.setGroups([]);
-      setTimeout(() => {
-        this.timeline!.setGroups(new DataSet(this.groups));
-        this.refresh();
-      }, 0);
-    }
+      })
+      .sort(
+        (a, b) =>
+          this.sortedParents.findIndex(p => p.id === a.id) -
+          this.sortedParents.findIndex(p => p.id === b.id)
+      );
+
+    this.timeline.setGroups([]);
+    setTimeout(() => {
+      this.timeline!.setGroups(new DataSet(updatedGroups));
+      this.refresh();
+    }, 10);
   },
 
-  setScaleGroupVisibility() {
+  updateScale(slug: string) {
     if (isNotNil(this.timeline)) {
-      const parents = this.groups.filter(g => g.nestedGroups !== undefined);
-      parents?.forEach(group => {
-        const isVisible = getScale()?.groups?.includes(group.id as string);
-        const currentIndex = this.groups.findIndex(g => g.id === group.id);
-        const originalIndex = data.groups.findIndex(g => g.id === group.id);
-        const visibleIndex = getScale()?.groups?.indexOf(group.id as string);
-        const lastIndex = parents.length - 1;
-        this.groups = move(
-          currentIndex,
-          isVisible ? visibleIndex! : lastIndex,
-          this.groups
-        ).map(g => {
-          if (g.id === group.id) {
-            return {
-              ...g,
-              showNested: isVisible,
-              style: isVisible ? undefined : 'opacity: 0.4;',
-              previousPosition: isVisible ? undefined : originalIndex,
-            };
-          }
-          return g;
-        });
-      });
-      // Dirty hack to avoid nested groups being toggle
-      this.timeline.setGroups([]);
-      setTimeout(() => {
-        this.timeline!.setGroups(new DataSet(this.groups));
-        this.refresh();
-      }, 0);
+      const scale = window.settings.scales[slug];
+      if (isNotNil(scale)) {
+        setQuery('scale', slug);
+        this.timeline.setWindow(scale.start, scale.end);
+        this.defaultParents = this.groups
+          .filter(p => scale?.groups?.includes(p.id as string))
+          .sort(
+            (a, b) =>
+              scale!.groups!.indexOf(a.id as string) -
+              scale!.groups!.indexOf(b.id as string)
+          );
+        this.sortedParents = this.defaultParents;
+        this.updateGroups();
+      }
     }
   },
 
@@ -300,21 +268,6 @@ const timelineStore = {
     }
   },
 
-  goToScale(slug: string) {
-    if (isNotNil(this.timeline)) {
-      const previousScale = getScale();
-      const scale = window.settings.scales[slug];
-      if (isNotNil(scale)) {
-        setQuery('scale', slug);
-        this.timeline.setWindow(scale.start, scale.end);
-
-        if (!equals(previousScale.groups, scale.groups)) {
-          this.setScaleGroupVisibility();
-        }
-      }
-    }
-  },
-
   focus(elements: string[]) {
     if (isNotNil(this.timeline)) {
       this.timeline.focus(elements);
@@ -323,7 +276,9 @@ const timelineStore = {
 
   select(elements: string[]) {
     if (isNotNil(this.timeline)) {
-      this.timeline.setSelection(elements);
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-ignore
+      this.timeline.setSelection(elements, { focus: true });
     }
   },
 
@@ -389,8 +344,14 @@ const timelineStore = {
 
   search(keyword: string) {
     if (keyword.length > 2) {
-      const results = data.items.filter((item: Item) =>
-        item.content.toLowerCase().includes(keyword.toLowerCase())
+      const results = data.items.filter(
+        (item: Item) =>
+          item.content.toLowerCase().includes(keyword.toLowerCase()) &&
+          this.sortedParents.some(
+            p =>
+              p.id === item.group ||
+              p.nestedGroups?.includes(item.group as string)
+          )
       );
       this.searchResults = results;
     } else {

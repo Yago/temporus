@@ -1,0 +1,12 @@
+<button
+  class="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-6 bg-neutral-200 text-black rounded-t-full"
+  @click="$store.timeline.toggleSidebar()"
+>
+  <span class="sr-only" x-text="$store.utils.t('a11y.toggle-sidebar')"></span>
+  <svg
+    class="icon top-0 size-5"
+    :class="$store.timeline.sidebarOpen && 'rotate-180'"
+  >
+    <use href="/public/icons.svg?v1#chevron-up"></use>
+  </svg>
+</button>

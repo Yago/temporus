@@ -4,7 +4,10 @@
 @import "./icon.css";
 @import "./typography.css";
 @import "./controls.css";
-@import "./scrollbar.css";
+
+:root {
+  color-scheme: dark;
+}
 
 [x-cloak] {
   display: none;
