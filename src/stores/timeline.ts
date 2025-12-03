@@ -25,7 +25,7 @@ const timelineStore = {
   timeline: null as Timeline | null,
   currentItem: null as Item | null,
   sidebarOpen: true,
-  searchOpen: true,
+  searchOpen: false,
   settingsOpen: false,
   fullscreen: false,
   searchResults: [] as Item[],
@@ -133,13 +133,13 @@ const timelineStore = {
   },
 
   refresh() {
-    if (isNotNil(this.timeline)) {
-      const initialRange = this.timeline.getWindow();
-      this.updateItems({
-        end: +initialRange.end,
-        start: +initialRange.start,
-      });
-    }
+    if (isNil(this.timeline)) return;
+
+    const initialRange = this.timeline.getWindow();
+    this.updateItems({
+      end: +initialRange.end,
+      start: +initialRange.start,
+    });
   },
 
   updateItems(range: { end: number; start: number }) {
@@ -156,6 +156,7 @@ const timelineStore = {
   async onItemClick(id: string) {
     this.toggleSidebar(true);
     this.searchOpen = false;
+    this.settingsOpen = false;
     const item = data.items.find(i => i.id === id);
     if (isNotNil(item)) {
       const result: Item = item;
@@ -179,16 +180,15 @@ const timelineStore = {
   },
 
   highlightItems(ids: string[]) {
-    if (isNotNil(this.timeline)) {
-      const styledItems = data.items.map(i => {
-        i.className = ids.includes(i.id as string)
-          ? `bg-white! text-black! border-black! outline-2 outline-dashed outline-offset-4 outline-white z-10!`
-          : undefined;
-        return i;
-      });
-      this.timeline.setItems(new DataSet(styledItems));
-      this.refresh();
-    }
+    if (isNil(this.timeline)) return;
+    const styledItems = data.items.map(i => {
+      i.className = ids.includes(i.id as string)
+        ? `bg-white! text-black! border-black! outline-2 outline-dashed outline-offset-4 outline-white z-10!`
+        : undefined;
+      return i;
+    });
+    this.timeline.setItems(new DataSet(styledItems));
+    this.refresh();
   },
 
   moveParent(id: string, index: number) {
@@ -240,21 +240,20 @@ const timelineStore = {
   },
 
   updateScale(slug: string) {
-    if (isNotNil(this.timeline)) {
-      const scale = window.settings.scales[slug];
-      if (isNotNil(scale)) {
-        setQuery('scale', slug);
-        this.timeline.setWindow(scale.start, scale.end);
-        this.defaultParents = this.groups
-          .filter(p => scale?.groups?.includes(p.id as string))
-          .sort(
-            (a, b) =>
-              scale!.groups!.indexOf(a.id as string) -
-              scale!.groups!.indexOf(b.id as string)
-          );
-        this.sortedParents = this.defaultParents;
-        this.updateGroups();
-      }
+    if (isNil(this.timeline)) return;
+    const scale = window.settings.scales[slug];
+    if (isNotNil(scale)) {
+      setQuery('scale', slug);
+      this.timeline.setWindow(scale.start, scale.end);
+      this.defaultParents = this.groups
+        .filter(p => scale?.groups?.includes(p.id as string))
+        .sort(
+          (a, b) =>
+            scale!.groups!.indexOf(a.id as string) -
+            scale!.groups!.indexOf(b.id as string)
+        );
+      this.sortedParents = this.defaultParents;
+      this.updateGroups();
     }
   },
 
@@ -263,23 +262,20 @@ const timelineStore = {
   },
 
   goTo(start: number, end: number) {
-    if (isNotNil(this.timeline)) {
-      this.timeline.setWindow(start, end);
-    }
+    if (isNil(this.timeline)) return;
+    this.timeline.setWindow(start, end);
   },
 
   focus(elements: string[]) {
-    if (isNotNil(this.timeline)) {
-      this.timeline.focus(elements);
-    }
+    if (isNil(this.timeline)) return;
+    this.timeline.focus(elements);
   },
 
   select(elements: string[]) {
-    if (isNotNil(this.timeline)) {
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      // @ts-ignore
-      this.timeline.setSelection(elements, { focus: true });
-    }
+    if (isNil(this.timeline)) return;
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
+    this.timeline.setSelection(elements, { focus: true });
   },
 
   toggleSidebar(state?: boolean) {
@@ -287,27 +283,24 @@ const timelineStore = {
   },
 
   move(percentage: number) {
-    if (isNotNil(this.timeline)) {
-      const range = this.timeline.getWindow();
-      const interval = Number(range.end) - Number(range.start);
+    if (isNil(this.timeline)) return;
+    const range = this.timeline.getWindow();
+    const interval = Number(range.end) - Number(range.start);
 
-      this.timeline?.setWindow(
-        Number(range.start) - interval * percentage,
-        Number(range.end) - interval * percentage
-      );
-    }
+    this.timeline?.setWindow(
+      Number(range.start) - interval * percentage,
+      Number(range.end) - interval * percentage
+    );
   },
 
   zoomIn(percentage: number) {
-    if (isNotNil(this.timeline)) {
-      this.timeline.zoomIn(percentage);
-    }
+    if (isNil(this.timeline)) return;
+    this.timeline.zoomIn(percentage);
   },
 
   zoomOut(percentage: number) {
-    if (isNotNil(this.timeline)) {
-      this.timeline.zoomOut(percentage);
-    }
+    if (isNil(this.timeline)) return;
+    this.timeline.zoomOut(percentage);
   },
 
   launchFullscreen() {
