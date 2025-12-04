@@ -3,15 +3,15 @@ import vituum from 'vituum';
 
 import dsv from '@rollup/plugin-dsv';
 import tailwindcss from '@tailwindcss/vite';
-import twig from '@vituum/vite-plugin-twig';
+import posthtml from '@vituum/vite-plugin-posthtml';
 
 export default defineConfig({
   plugins: [
-    tailwindcss(),
-    dsv(),
     vituum(),
-    twig({
+    posthtml({
       root: './src',
     }),
+    tailwindcss(),
+    dsv(),
   ],
 });

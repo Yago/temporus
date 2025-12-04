@@ -20,7 +20,7 @@
     "
   >
     <!-- Timeline -->
-    {% include '../components/timeline.twig' %}
+    <include src="components/timeline.html"></include>
 
     <!-- Sidebar -->
     <div
@@ -29,25 +29,25 @@
     >
       <div class="grid grid-rows-[auto_1fr] h-full">
         <!-- Options bar -->
-        {% include '../components/controls.twig' %}
+        <include src="components/controls.html"></include>
 
         <!-- Content -->
         <div class="h-full overflow-y-auto" x-show="!$store.timeline.searchOpen && !$store.timeline.settingsOpen">
-          {% include '../components/content.twig' %}
+          <include src="components/content.html"></include>
         </div>
 
         <!-- Search -->
         <div class="h-full overflow-y-auto" x-show="$store.timeline.searchOpen" x-cloak>
-          {% include '../components/search.twig' %}
+          <include src="components/search.html"></include>
         </div>
 
         <!-- Settings -->
         <div class="h-full overflow-y-auto" x-show="$store.timeline.settingsOpen" x-cloak>
-          {% include '../components/settings.twig' %}
+          <include src="components/settings.html"></include>
         </div>
       </div>
 
-      {% include '../components/sidebar-toggle.twig' %}
+      <include src="components/sidebar-toggle.html"></include>
     </div>
 
     <script type="module" src="/src/main.ts"></script>
