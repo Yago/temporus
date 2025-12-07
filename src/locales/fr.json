@@ -71,8 +71,65 @@
     }
   },
   "intro": {
-    "description": "Temporus est un outil <a href=\"https://github.com/Yago/temporus\" target=\"_blank\">open-source</a> de visualisation des événements historiques et géologiques à différentes échelles temporelles pour apprécier la complexité et l'évolution de la planète Terre et de l'humanité (aussi courte soit elle en comparaison).<h2>Pour controler la <i>timeline</i></h2><table><tr><th>Action</th><th>Clavier</th><th>Souris</th></tr><tr><td>Déplacer la timeline vers la gauche</td><td>←</td><td>⇧ + mollette</td></tr><tr><td>Déplacer la timeline vers la droite</td><td>→</td><td>⇧ + mollette</td></tr><tr><td>Aller au présent</td><td>0</td><td></td></tr><tr><td>Zoomer</td><td>↑</td><td>ctrl + mollette</td></tr><tr><td>Dézoomer</td><td>↓</td><td>ctrl + mollette</td></tr><tr><td>Activer le mode plein écran</td><td>f</td><td></td></tr><tr><td>Ouvrir la recherche</td><td>s</td><td></td></tr></table>",
-    "title": "Bienvenue dans Temporus"
+    "description": "Temporus est un outil <a href=\"https://github.com/Yago/temporus\" target=\"_blank\">open-source</a> de visualisation des événements historiques et géologiques à différentes échelles temporelles pour apprécier la complexité et l'évolution de la planète Terre et de l'humanité (aussi courte soit elle en comparaison).<h2>Pour controler la <i>timeline</i></h2>",
+    "title": "Bienvenue dans Temporus",
+    "contribute": "Contribuez à Temporus",
+    "commands": [
+      {
+        "icon": "",
+        "action": "Actions",
+        "keyboard": "Clavier",
+        "mouse": "Souris"
+      },
+      {
+        "icon": "chevron-left",
+        "action": "Déplacer la timeline vers la gauche",
+        "keyboard": "←",
+        "mouse": "⇧ + mollette"
+      },
+      {
+        "icon": "chevron-right",
+        "action": "Déplacer la timeline vers la droite",
+        "keyboard": "→",
+        "mouse": "⇧ + mollette"
+      },
+      {
+        "icon": "",
+        "action": "Aller au présent",
+        "keyboard": "0",
+        "mouse": ""
+      },
+      {
+        "icon": "zoom-in",
+        "action": "Zoomer",
+        "keyboard": "↑",
+        "mouse": "ctrl + mollette"
+      },
+      {
+        "icon": "zoom-out",
+        "action": "Dézoomer",
+        "keyboard": "↓",
+        "mouse": "ctrl + mollette"
+      },
+      {
+        "icon": "fullscreen-in",
+        "action": "Activer le mode plein écran",
+        "keyboard": "f",
+        "mouse": ""
+      },
+      {
+        "icon": "search",
+        "action": "Ouvrir la recherche",
+        "keyboard": "s",
+        "mouse": ""
+      },
+      {
+        "icon": "settings",
+        "action": "Gérer la langue et les jeux de données",
+        "keyboard": "",
+        "mouse": ""
+      }
+    ]
   },
   "scales": {
     "cultures": "Cultures",

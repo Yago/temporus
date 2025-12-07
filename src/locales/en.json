@@ -71,8 +71,65 @@
     }
   },
   "intro": {
-    "description": "Temporus is an <a href=\"https://github.com/Yago/temporus\" target=\"_blank\">open-source</a> tool for visualizing historical and geological events at different time scales to appreciate the complexity and evolution of the Earth and humanity (also short as it is in comparison).<h2>To control the <i>timeline</i></h2><table><tr><th>Action</th><th>Keyboard</th><th>Mouse</th></tr><tr><td>Move the timeline to the left</td><td>←</td><td>⇧ + mouse wheel</td></tr><tr><td>Move the timeline to the right</td><td>→</td><td>⇧ + mouse wheel</td></tr><tr><td>Go to the present</td><td>0</td><td></td></tr><tr><td>Zoom in</td><td>↑</td><td>ctrl + mouse wheel</td></tr><tr><td>Zoom out</td><td>↓</td><td>ctrl + mouse wheel</td></tr><tr><td>Enter full screen mode</td><td>f</td><td></td></tr><tr><td>Open the search</td><td>s</td><td></td></tr></table>",
-    "title": "Welcome to Temporus"
+    "description": "Temporus is an <a href=\"https://github.com/Yago/temporus\" target=\"_blank\">open-source</a> tool for visualizing historical and geological events at different time scales to appreciate the complexity and evolution of the Earth and humanity (also short as it is in comparison).<h2>To control the <i>timeline</i></h2>",
+    "title": "Welcome to Temporus",
+    "contribute": "Contribute to Temporus",
+    "commands": [
+      {
+        "icon": "",
+        "action": "Actions",
+        "keyboard": "Keyboard",
+        "mouse": "Mouse"
+      },
+      {
+        "icon": "chevron-left",
+        "action": "Move the timeline to the left",
+        "keyboard": "←",
+        "mouse": "⇧ + mouse wheel"
+      },
+      {
+        "icon": "chevron-right",
+        "action": "Move the timeline to the right",
+        "keyboard": "→",
+        "mouse": "⇧ + mouse wheel"
+      },
+      {
+        "icon": "",
+        "action": "Go to the present",
+        "keyboard": "0",
+        "mouse": ""
+      },
+      {
+        "icon": "zoom-in",
+        "action": "Zoom in",
+        "keyboard": "↑",
+        "mouse": "ctrl + mouse wheel"
+      },
+      {
+        "icon": "zoom-out",
+        "action": "Zoom out",
+        "keyboard": "↓",
+        "mouse": "ctrl + mouse wheel"
+      },
+      {
+        "icon": "fullscreen-in",
+        "action": "Enter full screen mode",
+        "keyboard": "f",
+        "mouse": ""
+      },
+      {
+        "icon": "search",
+        "action": "Open the search",
+        "keyboard": "s",
+        "mouse": ""
+      },
+      {
+        "icon": "settings",
+        "action": "Manage languages and datasets",
+        "keyboard": "",
+        "mouse": ""
+      }
+    ]
   },
   "scales": {
     "cultures": "Cultures",

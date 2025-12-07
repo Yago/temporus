@@ -32,6 +32,38 @@
     x-html="currentItem !== null ? currentItem?.properties?.description ?? '' : $store.utils.t('intro.description')"
   ></div>
 
+  <div x-show="currentItem === null" x-cloak class="content">
+    <table>
+      <tr>
+        <th x-text="$store.utils.t('intro.commands')[0].icon"></th>
+        <th x-text="$store.utils.t('intro.commands')[0].action" class="text-left!"></th>
+        <th x-text="$store.utils.t('intro.commands')[0].keyboard"></th>
+        <th x-text="$store.utils.t('intro.commands')[0].mouse"></th>
+      </tr>
+      <template x-for="command in $store.utils.t('intro.commands').slice(1)">
+        <tr>
+          <td>
+            <svg class="icon">
+              <use :href="`/public/icons.svg?v1#${command.icon}`"></use>
+            </svg>
+          </td>
+          <td x-text="command.action" class="text-left!"></td>
+          <td x-text="command.keyboard"></td>
+          <td x-text="command.mouse"></td>
+        </tr>
+      </template>
+    </table>
+
+    <div class="flex items-end gap-2 mt-4">
+      <svg class="icon size-3 translate-y-1">
+        <use href="/public/icons.svg?v1#github"></use>
+      </svg>
+      <a href="https://github.com/Yago/temporus" target="_blank" class="text-sm">
+        <span x-text="$store.utils.t('intro.contribute')"></span>
+      </a>
+    </div>
+  </div>
+
   <a
     x-show="currentItem?.properties?.wikiUrl"
     x-cloak
@@ -46,7 +78,7 @@
   </a>
 
   <div
-    x-show="currentItem?.properties?.credits"
+    x-show="currentItem?.properties?.credits?.url && currentItem?.properties?.credits?.attribution"
     x-cloak
     class="text-neutral-500 pt-3 mt-auto text-sm"
   >

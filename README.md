@@ -2,7 +2,11 @@
 
 Temporus is an open-source tool for visualizing historical and geological events at different time scales to appreciate the complexity and evolution of the Earth and humanity (also short as it is in comparison). It's built with Vite, Tailwind CSS, Alpine.js and TypeScript.
 
-## Requirements
+## 🗃️ Data Contributions
+
+Every contribution is welcome! You can contribute to the data by adding or editing the CSV files in the `src/data/sources` directory. If you don't know how to contribute on Github, here is a [guide](https://docs.github.com/en/get-started/exploring-projects-on-github/contributing-to-a-project). Also, feel free to open a [discussion](https://github.com/Yago/temporus/discussions) or an [issue](https://github.com/Yago/temporus/issues), but know that a contribution will be more taken into account than a simple discussion or issue.
+
+## 👨‍💻 Dev requirements
 - [🥟 bun](https://bun.com/)
 
 ## 🚀 Getting Started

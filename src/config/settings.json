@@ -7,7 +7,7 @@
     "earth": {
       "start": -4600000000,
       "end": 2025,
-      "groups": ["geology", "dinosaurs"]
+      "groups": ["geology"]
     },
     "dinosaurs": {
       "start": -230000000,
