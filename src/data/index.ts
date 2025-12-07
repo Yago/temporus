@@ -14,18 +14,18 @@ const items: Item[] = [
 ];
 const parents: Group[] = [
   stratigraphy.parent,
+  dinosaurs.parent,
   periods.parent,
   homo.parent,
   cultures.parent,
-  dinosaurs.parent,
 ];
 const groups: Group[] = [
   ...parents,
   ...stratigraphy.groups,
+  ...dinosaurs.groups,
   ...periods.groups,
   ...homo.groups,
   ...cultures.groups,
-  ...dinosaurs.groups,
 ];
 const spacingGroups = [
   {

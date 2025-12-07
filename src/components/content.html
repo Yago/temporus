@@ -12,6 +12,13 @@
     x-text="`${$store.utils.formatNumber(currentItem?.start)} ${$store.utils.t('ui.to')} ${$store.utils.formatNumber(currentItem?.end)}`"
   ></h2>
 
+  <h2
+    class="text-sm"
+    x-show="currentItem?.start && !currentItem?.end"
+    x-cloak
+    x-text="`${$store.utils.formatNumber(currentItem?.start)}`"
+  ></h2>
+
   <img
     :src="currentItem?.properties?.cover"
     :alt="currentItem?.content ?? $store.utils.t('intro.title')"
