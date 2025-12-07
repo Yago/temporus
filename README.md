@@ -52,19 +52,20 @@ bun run preview
 │   ├── images          👈 Images
 │   └── index.html      👈 HTML file
 ├── eslint.config.mjs   👈 ESLint configuration
-├── index.html          👈 HTML file
 ├── package.json        👈 Package.json
 ├── public              👈 Public assets
 │   ├── fonts           👈 Fonts
 │   ├── icons.svg       👈 SVG sprite
 │   └── images          👈 Images
 ├── src                 👈 Source code
+│   ├── components      👈 Components
 │   ├── config          👈 Configuration
 │   ├── data            👈 Data
 │   ├── global.d.ts     👈 Global types
 │   ├── icons           👈 Icons
 │   ├── locales         👈 Locales
 │   ├── main.ts         👈 Main entry point
+│   ├── pages           👈 Pages
 │   ├── stores          👈 Stores
 │   ├── styles          👈 Styles
 │   ├── types           👈 Types
