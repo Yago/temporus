@@ -29,6 +29,10 @@ const formatCsvItem = (item: CSVItem, lng: string): Item => ({
         : undefined,
     description:
       (item[`description_${lng}` as keyof CSVItem] as string) ?? undefined,
+    credits: {
+      attribution: item.credits_attribution ?? undefined,
+      url: item.credits_url ?? undefined,
+    },
   },
 });
 

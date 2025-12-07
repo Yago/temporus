@@ -9,7 +9,7 @@ type Properties = {
   wikiName?: string;
   wikiLng?: string;
   credits?: {
-    attribution: string;
-    url: string;
+    attribution?: string;
+    url?: string;
   };
 };

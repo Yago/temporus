@@ -60,6 +60,14 @@
         "middle-east": "Moyen-Orient"
       },
       "label": "Périodes"
+    },
+    "dinosaurs": {
+      "groups": {
+        "carnivorous": "Carnivores",
+        "omnivorous": "Omnivores",
+        "herbivorous": "Herbivores"
+      },
+      "label": "Dinosaures"
     }
   },
   "intro": {
@@ -69,6 +77,7 @@
   "scales": {
     "cultures": "Cultures",
     "earth": "Planète Terre",
+    "dinosaurs": "Dinosaures",
     "homo": "Origines humaines",
     "sapiens": "Homo sapiens"
   },
