@@ -3,10 +3,13 @@ import { formatCsvItem, getLng, t } from '../utils';
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import dinosaurs from './sources/dinosaurs.csv';
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+import pterosaurs from './sources/pterosaurs.csv';
 
 const lng = getLng();
 
-const items: Item[] = dinosaurs.map((item: CSVItem) =>
+const items: Item[] = [...dinosaurs, ...pterosaurs].map((item: CSVItem) =>
   formatCsvItem(item, lng)
 );
 
@@ -17,6 +20,7 @@ const parent: Group = {
     'dinosaurs-carnivorous',
     'dinosaurs-omnivorous',
     'dinosaurs-herbivorous',
+    'pterosaurs',
   ],
 };
 
@@ -38,6 +42,13 @@ const groups: Group[] = [
   {
     id: 'dinosaurs-herbivorous',
     content: t('groups.dinosaurs.groups.herbivorous'),
+    subgroupOrder(a, b) {
+      return a.start! - b.start!;
+    },
+  },
+  {
+    id: 'pterosaurs',
+    content: t('groups.dinosaurs.groups.pterosaurs'),
     subgroupOrder(a, b) {
       return a.start! - b.start!;
     },

@@ -65,7 +65,8 @@
       "groups": {
         "carnivorous": "Carnivorous",
         "omnivorous": "Omnivorous",
-        "herbivorous": "Herbivorous"
+        "herbivorous": "Herbivorous",
+        "pterosaurs": "Pterosaurs"
       },
       "label": "Dinosaurs"
     }
