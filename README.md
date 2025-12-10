@@ -1,6 +1,8 @@
-# 📈 Temporus
+# temporus
 
-Temporus is an open-source tool for visualizing historical and geological events at different time scales to appreciate the complexity and evolution of the Earth and humanity (also short as it is in comparison). It's built with Vite, Tailwind CSS, Alpine.js and TypeScript.
+![temporus](screenshot.png)
+
+temporus is an open-source tool for visualizing historical and geological events at different time scales to appreciate the complexity and evolution of the Earth and humanity (also short as it is in comparison). It's built with Vite, Tailwind CSS, Alpine.js and TypeScript.
 
 ## 🗃️ Data Contributions
 

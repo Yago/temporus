@@ -5,11 +5,11 @@ import { json2csv } from 'json-2-csv';
 import type { CSVItem, WikiSummary } from '../src/types';
 
 const lng: string = 'en';
-const prefix: string = 'cultures:oceania:';
-const group: string = 'cultures-oceania';
+const prefix: string = 'egypt:pharaohs:';
+const group: string = 'egypt-pharaohs';
 
 const wikiScraper = async () => {
-  const file = Bun.file('./wiki-oceania.txt');
+  const file = Bun.file('./wiki.txt');
   const urlsText: string = await file.text();
 
   const urls: string[] = urlsText.split('\n').filter(url => url.trim() !== '');

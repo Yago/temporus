@@ -16,4 +16,5 @@ export type CSVItem = {
   group: string;
   credits_url?: string;
   credits_attribution?: string;
+  circa?: string;
 };

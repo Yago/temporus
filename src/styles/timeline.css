@@ -22,6 +22,9 @@
 
 .vis-item.vis-background { @apply bg-neutral-800/50! text-neutral-100!;}
 .vis-item { @apply bg-neutral-950 border-neutral-900 hover:outline-2 outline-white outline-offset-1 hover:z-9999 cursor-pointer active:opacity-80 rounded-sm!;}
+.vis-item.circa:after {
+  @apply content-[''] absolute inset-0 border-l-2 border-r-2 border-dotted border-black rounded-xs;
+}
 .vis-item-content { @apply px-2!;}
 .vis-item-content span { @apply hidden!;}
 

@@ -6,7 +6,7 @@ import { isNotEmpty, isNotNil } from 'ramda';
 import type { CSVItem } from '../src/types';
 
 const processCsv = async () => {
-  const path = './src/data/sources/pterosaurs.csv';
+  const path = './src/data/sources/egypt.csv';
   const file = Bun.file(path);
   const csv: string = await file.text();
   
@@ -29,10 +29,10 @@ const processCsv = async () => {
   //   });
   // }
 
-  const processedData = data.map(item => ({
+  const processedData = data
+  .filter(item => item.date !== 'Unknown' && !item.date.includes('Naqada'))
+  .map(item => ({
     ...item,
-    wiki_fr: `https://fr.wikipedia.org/wiki/${item.name_fr}`,
-    wiki_en: `https://en.wikipedia.org/wiki/${item.name_en}`,
   }));
 
   await Bun.write(path, json2csv(processedData));

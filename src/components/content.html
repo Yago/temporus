@@ -9,14 +9,14 @@
     class="text-sm"
     x-show="currentItem?.start && currentItem?.end"
     x-cloak
-    x-text="`${$store.utils.formatNumber(currentItem?.start)} ${$store.utils.t('ui.to')} ${$store.utils.formatNumber(currentItem?.end)}`"
+    x-text="`${currentItem?.className.includes('circa') ? $store.utils.t('ui.circa') + ' ' : ''} ${$store.utils.formatNumber(currentItem?.start)} ${$store.utils.t('ui.to')} ${$store.utils.formatNumber(currentItem?.end)}`"
   ></h2>
 
   <h2
     class="text-sm"
     x-show="currentItem?.start && !currentItem?.end"
     x-cloak
-    x-text="`${$store.utils.formatNumber(currentItem?.start)}`"
+    x-text="`${currentItem?.className.includes('circa') ? $store.utils.t('ui.circa') + ' ' : ''} ${$store.utils.formatNumber(currentItem?.start)}`"
   ></h2>
 
   <img
@@ -43,8 +43,32 @@
       <template x-for="command in $store.utils.t('intro.commands').slice(1)">
         <tr>
           <td>
-            <svg class="icon">
-              <use :href="`/public/icons.svg?v1#${command.icon}`"></use>
+            <svg class="icon" x-show="command.icon === 'chevron-left'">
+              <use href="/public/icons.svg?v1#chevron-left"></use>
+            </svg>
+            <svg class="icon" x-show="command.icon === 'chevron-right'">
+              <use href="/public/icons.svg?v1#chevron-right"></use>
+            </svg>
+            <svg class="icon" x-show="command.icon === 'zoom-in'">
+              <use href="/public/icons.svg?v1#zoom-in"></use>
+            </svg>
+            <svg class="icon" x-show="command.icon === 'zoom-out'">
+              <use href="/public/icons.svg?v1#zoom-out"></use>
+            </svg>
+            <svg class="icon" x-show="command.icon === 'fullscreen-in'">
+              <use href="/public/icons.svg?v1#fullscreen-in"></use>
+            </svg>
+            <svg class="icon" x-show="command.icon === 'fullscreen-out'">
+              <use href="/public/icons.svg?v1#fullscreen-out"></use>
+            </svg>
+            <svg class="icon" x-show="command.icon === 'search'">
+              <use href="/public/icons.svg?v1#search"></use>
+            </svg>
+            <svg class="icon" x-show="command.icon === 'settings'">
+              <use href="/public/icons.svg?v1#settings"></use>
+            </svg>
+            <svg class="icon" x-show="command.icon === 'scales'">
+              <use href="/public/icons.svg?v1#scales"></use>
             </svg>
           </td>
           <td x-text="command.action" class="text-left!"></td>

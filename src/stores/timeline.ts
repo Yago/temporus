@@ -183,8 +183,10 @@ const timelineStore = {
     if (isNil(this.timeline)) return;
     const styledItems = data.items.map(i => {
       i.className = ids.includes(i.id as string)
-        ? `bg-white! text-black! border-black! outline-2 outline-dashed outline-offset-4 outline-white z-10!`
-        : undefined;
+        ? `bg-white! text-black! border-black! outline-2 outline-dashed outline-offset-4 outline-white z-10! ${i.className?.includes('circa') ? 'circa' : ''}`
+        : i.className?.includes('circa')
+          ? 'circa'
+          : undefined;
       return i;
     });
     this.timeline.setItems(new DataSet(styledItems));

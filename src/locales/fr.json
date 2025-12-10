@@ -72,9 +72,9 @@
     }
   },
   "intro": {
-    "description": "Temporus est un outil <a href=\"https://github.com/Yago/temporus\" target=\"_blank\">open-source</a> de visualisation des événements historiques et géologiques à différentes échelles temporelles pour apprécier la complexité et l'évolution de la planète Terre et de l'humanité (aussi courte soit elle en comparaison).<h2>Pour controler la <i>timeline</i></h2>",
-    "title": "Bienvenue dans Temporus",
-    "contribute": "Contribuez à Temporus",
+    "description": "temporus est un outil <a href=\"https://github.com/Yago/temporus\" target=\"_blank\">open-source</a> de visualisation des événements historiques et géologiques à différentes échelles temporelles pour apprécier la complexité et l'évolution de la planète Terre et de l'humanité (aussi courte soit elle en comparaison).<h2>Pour controler la <i>timeline</i></h2>",
+    "title": "Bienvenue dans temporus",
+    "contribute": "Contribuez à temporus",
     "commands": [
       {
         "icon": "",
@@ -119,6 +119,12 @@
         "mouse": ""
       },
       {
+        "icon": "scales",
+        "action": "Sélectionner une échelle",
+        "keyboard": "",
+        "mouse": ""
+      },
+      {
         "icon": "search",
         "action": "Ouvrir la recherche",
         "keyboard": "s",
@@ -150,6 +156,7 @@
   },
   "ui": {
     "select": "Sélectionnez quelque chose...",
-    "to": "à"
+    "to": "à",
+    "circa": "Autour de"
   }
 }

@@ -15,6 +15,7 @@ const formatCsvItem = (item: CSVItem, lng: string): Item => ({
   subgroup: item.id,
   type: item.type ?? 'range',
   style: `background-color: ${isNotNil(item.background) && isNotEmpty(item.background) ? item.background : '#fff'};color: ${isNotNil(item.foreground) && isNotEmpty(item.foreground) ? item.foreground : item.type !== 'point' ? '#000' : '#fff'};border-color: ${isNotNil(item.border) && isNotEmpty(item.border) ? item.border : item.type !== 'point' ? '#000' : '#fff'};`,
+  className: item.circa === 'true' ? 'circa' : '',
   properties: {
     wikiName:
       isNotNil(item.wiki_fr) || isNotNil(item.wiki_en)
