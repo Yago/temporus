@@ -10,34 +10,34 @@ import stratigraphy from './stratigraphy';
 
 const items: Item[] = [
   ...stratigraphy.items,
-  ...innovations.items,
-  ...egypt.items,
-  ...rome.items,
   ...periods.items,
+  ...innovations.items,
   ...homo.items,
   ...cultures.items,
   ...dinosaurs.items,
+  ...egypt.items,
+  ...rome.items,
 ];
 const parents: Group[] = [
   stratigraphy.parent,
-  innovations.parent,
-  egypt.parent,
-  rome.parent,
   dinosaurs.parent,
   periods.parent,
+  innovations.parent,
   homo.parent,
   cultures.parent,
+  egypt.parent,
+  rome.parent,
 ];
 const groups: Group[] = [
   ...parents,
   ...stratigraphy.groups,
-  ...innovations.groups,
   ...dinosaurs.groups,
-  ...egypt.groups,
-  ...rome.groups,
   ...periods.groups,
+  ...innovations.groups,
   ...homo.groups,
   ...cultures.groups,
+  ...egypt.groups,
+  ...rome.groups,
 ];
 const spacingGroups = [
   {

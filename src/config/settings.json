@@ -32,12 +32,12 @@
     "egypt": {
       "start": -3200,
       "end": 200,
-      "groups": ["egypt"]
+      "groups": ["periods", "egypt"]
     },
     "rome": {
       "start": -800,
       "end": 1500,
-      "groups": ["rome"]
+      "groups": ["periods", "rome"]
     }
   }
 }
