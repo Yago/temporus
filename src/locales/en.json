@@ -18,12 +18,20 @@
   "groups": {
     "egypt": {
       "groups": {
-        "periods": "Periods",
         "dynasties": "Dynasties",
         "buildings": "Buildings",
         "pharaohs": "Pharaohs"
       },
       "label": "Egypt"
+    },
+    "rome": {
+      "groups": {
+        "periods": "Periods",
+        "kings": "Kings",
+        "emperors": "Emperors",
+        "campaigns": "Campaigns & conquests"
+      },
+      "label": "Rome"
     },
     "cultures": {
       "groups": {
@@ -156,7 +164,8 @@
     "dinosaurs": "Dinosaurs",
     "homo": "Human origins",
     "sapiens": "Homo sapiens",
-    "egypt": "Egypt"
+    "egypt": "Egypt",
+    "rome": "Rome"
   },
   "search": {
     "warning": "With a lot of data on screen, you may have to vertically scroll to see the selected item."

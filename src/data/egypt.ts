@@ -11,20 +11,11 @@ const items: Item[] = egypt.map((item: CSVItem) => formatCsvItem(item, lng));
 const parent: Group = {
   id: 'egypt',
   content: t('groups.egypt.label'),
-  nestedGroups: [
-    'egypt-periods',
-    'egypt-dynasties',
-    'egypt-pharaohs',
-    'egypt-buildings',
-  ],
+  nestedGroups: ['egypt-dynasties', 'egypt-pharaohs', 'egypt-buildings'],
   showNested: true,
 };
 
 const groups: Group[] = [
-  {
-    id: 'egypt-periods',
-    content: t('groups.egypt.groups.periods'),
-  },
   {
     id: 'egypt-dynasties',
     content: t('groups.egypt.groups.dynasties'),
