@@ -28,6 +28,11 @@
       "start": -10000,
       "end": 2025,
       "groups": ["periods", "cultures"]
+    },
+    "egypt": {
+      "start": -3200,
+      "end": 200,
+      "groups": ["egypt"]
     }
   }
 }

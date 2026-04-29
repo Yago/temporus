@@ -1,6 +1,7 @@
 export type CSVItem = {
   id: string;
   type?: string;
+  icon?: string;
   name_fr?: string;
   name_en?: string;
   name_latin?: string;

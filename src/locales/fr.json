@@ -16,6 +16,15 @@
     "zoom-out": "Dézoomer"
   },
   "groups": {
+    "egypt": {
+      "groups": {
+        "periods": "Périodes",
+        "dynasties": "Dynasties",
+        "buildings": "Édifices",
+        "pharaohs": "Pharaons"
+      },
+      "label": "Égypte"
+    },
     "cultures": {
       "groups": {
         "africa": "Afrique",
@@ -69,6 +78,9 @@
         "pterosaurs": "Pterosaures"
       },
       "label": "Dinosaures"
+    },
+    "innovations": {
+      "label": "innovations"
     }
   },
   "intro": {
@@ -143,7 +155,8 @@
     "earth": "Planète Terre",
     "dinosaurs": "Dinosaures",
     "homo": "Origines humaines",
-    "sapiens": "Homo sapiens"
+    "sapiens": "Homo sapiens",
+    "egypt": "Égypte"
   },
   "search": {
     "warning": "Avec beaucoup de données à l'écran, vous devrez peut-être scroller verticalement pour voir l'élément sélectionné."

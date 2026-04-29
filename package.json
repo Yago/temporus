@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "icons:build": "svg-sprite -s --symbol-inline --symbol-dest public --symbol-sprite icons.svg src/icons/*.svg",
+    "icons:build": "svg-sprite -S --stack-dest public --stack-sprite icons.svg src/icons/*.svg",
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",

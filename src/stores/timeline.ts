@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import type { Moment } from 'moment';
-import { isNil, isNotNil, move } from 'ramda';
+import { isNil, isNotEmpty, isNotNil, move } from 'ramda';
 import { DataSet } from 'vis-data';
 import { Timeline } from 'vis-timeline';
 import type { TimelineOptions } from 'vis-timeline';
@@ -66,6 +66,16 @@ const timelineStore = {
       },
       template: (item: Item, element: HTMLElement) => {
         element.id = (item.id as string).replace(/[^a-zA-Z0-9]/g, '_');
+        if (
+          isNotNil(item.properties?.icon) &&
+          isNotEmpty(item.properties?.icon)
+        ) {
+          element.classList.add('vis-item-icon' as string);
+          element.style.setProperty(
+            '--icon',
+            `url('/public/icons.svg#${item.properties?.icon}')`
+          );
+        }
         return `${item.content}`;
       },
     };

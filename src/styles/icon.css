@@ -14,4 +14,16 @@
       fill: currentcolor;
     }
   }
+
+  .vis-item-icon {
+    @apply flex items-center justify-center gap-1;
+  }
+
+  .vis-item-icon:before {
+    @apply block size-4.5 bg-[currentColor];
+    content: '';
+    vertical-align: top;
+    mask-image: var(--icon);
+    mask-repeat: no-repeat;
+  }
 }

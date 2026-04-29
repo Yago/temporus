@@ -1,12 +1,16 @@
 import type { Group, Item } from '../types';
 import cultures from './cultures';
 import dinosaurs from './dinosaurs';
+import egypt from './egypt';
 import homo from './homo';
+import innovations from './innovations';
 import periods from './periods';
 import stratigraphy from './stratigraphy';
 
 const items: Item[] = [
   ...stratigraphy.items,
+  ...innovations.items,
+  ...egypt.items,
   ...periods.items,
   ...homo.items,
   ...cultures.items,
@@ -14,6 +18,8 @@ const items: Item[] = [
 ];
 const parents: Group[] = [
   stratigraphy.parent,
+  innovations.parent,
+  egypt.parent,
   dinosaurs.parent,
   periods.parent,
   homo.parent,
@@ -22,7 +28,9 @@ const parents: Group[] = [
 const groups: Group[] = [
   ...parents,
   ...stratigraphy.groups,
+  ...innovations.groups,
   ...dinosaurs.groups,
+  ...egypt.groups,
   ...periods.groups,
   ...homo.groups,
   ...cultures.groups,
