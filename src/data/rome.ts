@@ -11,20 +11,11 @@ const items: Item[] = rome.map((item: CSVItem) => formatCsvItem(item, lng));
 const parent: Group = {
   id: 'rome',
   content: t('groups.rome.label'),
-  nestedGroups: [
-    'rome-periods',
-    'rome-kings',
-    'rome-emperors',
-    'rome-campaigns',
-  ],
+  nestedGroups: ['rome-kings', 'rome-emperors', 'rome-campaigns'],
   showNested: true,
 };
 
 const groups: Group[] = [
-  {
-    id: 'rome-periods',
-    content: t('groups.rome.groups.periods'),
-  },
   {
     id: 'rome-kings',
     content: t('groups.rome.groups.kings'),
