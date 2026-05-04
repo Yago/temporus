@@ -1,11 +1,85 @@
-id,group,start,end,icon,name_fr,name_en,wiki_fr,wiki_en,type,background,foreground,border
-innovations:stoneTooel,innovations,-3300000,,silex,Pierre taillée,Stone tool,https://fr.wikipedia.org/wiki/Pierre_taill%C3%A9e,https://en.wikipedia.org/wiki/Stone_tool,point,,,oklch(98.7% 0.026 102.212)
-innovations:fire,innovations,-1700000,,fire,Domestication du feu,Control of fire,https://fr.wikipedia.org/wiki/Domestication_du_feu,https://en.wikipedia.org/wiki/Control_of_fire_by_early_humans,point,,,oklch(98.7% 0.026 102.212)
-innovations:wheel,innovations,-3500,,wheel,Roue,Wheel,https://fr.wikipedia.org/wiki/Roue,https://en.wikipedia.org/wiki/Wheel,point,,,oklch(98.7% 0.026 102.212)
-innovations:writing,innovations,-3400,,pen,Écriture,Writing,https://fr.wikipedia.org/wiki/Histoire_de_l%27écriture,https://en.wikipedia.org/wiki/History_of_writing,point,,,oklch(98.7% 0.026 102.212)
-innovations:cities,innovations,-6000,,city,Premières villes,First cities,https://fr.wikipedia.org/wiki/Histoire_urbaine,https://en.wikipedia.org/wiki/History_of_cities,point,,,oklch(98.7% 0.026 102.212)
-innovations:boat,innovations,-50000,,boat,Bateau,Boat,https://fr.wikipedia.org/wiki/Bateau,https://en.wikipedia.org/wiki/Boat,point,,,oklch(98.7% 0.026 102.212)
-innovations:painting,innovations,-67500,,painting,Art pariétal,Cave painting,https://fr.wikipedia.org/wiki/Art_pari%C3%A9tal,https://en.wikipedia.org/wiki/Cave_painting,point,,,oklch(98.7% 0.026 102.212)
-innovations:ceramic,innovations,-26000,,ceramic,Céramique,Ceramic,https://fr.wikipedia.org/wiki/C%C3%A9ramique,https://en.wikipedia.org/wiki/Ceramic,point,,,oklch(98.7% 0.026 102.212)
-innovations:dog,innovations,-30000,,dog,Domestication du chien,Domestication of the dog,https://fr.wikipedia.org/wiki/Domestication_du_chien,https://en.wikipedia.org/wiki/Domestication_of_the_dog,point,,,oklch(98.7% 0.026 102.212)
-innovations:bread,innovations,-30000,,bread,Pain,Bread,https://fr.wikipedia.org/wiki/Pain,https://en.wikipedia.org/wiki/Bread,point,,,oklch(98.7% 0.026 102.212)
+id,group,start,end,icon,name_fr,name_en,wiki_fr,wiki_en,type,background,foreground,"border
+"
+innovations:stoneTooel,innovations,-3300000,,silex,Pierre taillée,Stone tool,https://fr.wikipedia.org/wiki/Pierre_taill%C3%A9e,https://en.wikipedia.org/wiki/Stone_tool,point,,,"oklch(98.7% 0.026 102.212)
+"
+innovations:fire,innovations,-1700000,,fire,Domestication du feu,Control of fire,https://fr.wikipedia.org/wiki/Domestication_du_feu,https://en.wikipedia.org/wiki/Control_of_fire_by_early_humans,point,,,"oklch(98.7% 0.026 102.212)
+"
+innovations:wheel,innovations,-3500,,wheel,Roue,Wheel,https://fr.wikipedia.org/wiki/Roue,https://en.wikipedia.org/wiki/Wheel,point,,,"oklch(98.7% 0.026 102.212)
+"
+innovations:writing,innovations,-3400,,pen,Écriture,Writing,https://fr.wikipedia.org/wiki/Histoire_de_l%27écriture,https://en.wikipedia.org/wiki/History_of_writing,point,,,"oklch(98.7% 0.026 102.212)
+"
+innovations:cities,innovations,-6000,,city,Premières villes,First cities,https://fr.wikipedia.org/wiki/Histoire_urbaine,https://en.wikipedia.org/wiki/History_of_cities,point,,,"oklch(98.7% 0.026 102.212)
+"
+innovations:boat,innovations,-50000,,boat,Bateau,Boat,https://fr.wikipedia.org/wiki/Bateau,https://en.wikipedia.org/wiki/Boat,point,,,"oklch(98.7% 0.026 102.212)
+"
+innovations:painting,innovations,-67500,,painting,Art pariétal,Cave painting,https://fr.wikipedia.org/wiki/Art_pari%C3%A9tal,https://en.wikipedia.org/wiki/Cave_painting,point,,,"oklch(98.7% 0.026 102.212)
+"
+innovations:ceramic,innovations,-26000,,ceramic,Céramique,Ceramic,https://fr.wikipedia.org/wiki/C%C3%A9ramique,https://en.wikipedia.org/wiki/Ceramic,point,,,"oklch(98.7% 0.026 102.212)
+"
+innovations:dog,innovations,-30000,,dog,Domestication du chien,Domestication of the dog,https://fr.wikipedia.org/wiki/Domestication_du_chien,https://en.wikipedia.org/wiki/Domestication_of_the_dog,point,,,"oklch(98.7% 0.026 102.212)
+"
+innovations:bread,innovations,-30000,,bread,Pain,Bread,https://fr.wikipedia.org/wiki/Pain,https://en.wikipedia.org/wiki/Bread,point,,,"oklch(98.7% 0.026 102.212)
+"
+innovations:agriculture,innovations,-10000,,agriculture,Agriculture,Agriculture,https://fr.wikipedia.org/wiki/R%C3%A9volution_n%C3%A9olithique,https://en.wikipedia.org/wiki/Neolithic_Revolution,point,,,"oklch(98.7% 0.026 102.212)
+"
+innovations:irrigation,innovations,-6000,,irrigation,Irrigation,Irrigation,https://fr.wikipedia.org/wiki/Irrigation,https://en.wikipedia.org/wiki/Irrigation,point,,,"oklch(98.7% 0.026 102.212)
+"
+innovations:plow,innovations,-6000,,plow,Charrue,Plough,https://fr.wikipedia.org/wiki/Charrue,https://en.wikipedia.org/wiki/Plough,point,,,"oklch(98.7% 0.026 102.212)
+"
+innovations:pottersWheel,innovations,-3500,,pottersWheel,Tour de potier,Potter's wheel,https://fr.wikipedia.org/wiki/Tour_de_potier,https://en.wikipedia.org/wiki/Potter%27s_wheel,point,,,"oklch(98.7% 0.026 102.212)
+"
+innovations:bronze,innovations,-3300,,bronze,Âge du bronze,Bronze Age,https://fr.wikipedia.org/wiki/%C3%82ge_du_bronze,https://en.wikipedia.org/wiki/Bronze_Age,point,,,"oklch(98.7% 0.026 102.212)
+"
+innovations:iron,innovations,-1200,,iron,Âge du fer,Iron Age,https://fr.wikipedia.org/wiki/%C3%82ge_du_fer,https://en.wikipedia.org/wiki/Iron_Age,point,,,"oklch(98.7% 0.026 102.212)
+"
+innovations:coinage,innovations,-600,,coinage,Monnaie,Coinage,https://fr.wikipedia.org/wiki/Monnaie,https://en.wikipedia.org/wiki/Money,point,,,"oklch(98.7% 0.026 102.212)
+"
+innovations:paper,innovations,105,,paper,Papier,Paper,https://fr.wikipedia.org/wiki/Papier,https://en.wikipedia.org/wiki/Paper,point,,,"oklch(98.7% 0.026 102.212)
+"
+innovations:gunpowder,innovations,900,,gunpowder,Poudre à canon,Gunpowder,https://fr.wikipedia.org/wiki/Poudre_%C3%A0_canon,https://en.wikipedia.org/wiki/Gunpowder,point,,,"oklch(98.7% 0.026 102.212)
+"
+innovations:compass,innovations,1040,,compass,Boussole,Compass,https://fr.wikipedia.org/wiki/Boussole,https://en.wikipedia.org/wiki/Compass,point,,,"oklch(98.7% 0.026 102.212)
+"
+innovations:mechanicalClock,innovations,1300,,mechanicalClock,Horloge mécanique,Mechanical clock,https://fr.wikipedia.org/wiki/Horloge_m%C3%A9canique,https://en.wikipedia.org/wiki/Mechanical_clock,point,,,"oklch(98.7% 0.026 102.212)
+"
+innovations:printing,innovations,1450,,printing,Imprimerie,Printing press,https://fr.wikipedia.org/wiki/Histoire_de_l%27imprimerie,https://en.wikipedia.org/wiki/History_of_printing,point,,,"oklch(98.7% 0.026 102.212)
+"
+innovations:scientificMethod,innovations,1620,,scientificMethod,Méthode scientifique,Scientific method,https://fr.wikipedia.org/wiki/M%C3%A9thode_scientifique,https://en.wikipedia.org/wiki/Scientific_method,point,,,"oklch(98.7% 0.026 102.212)
+"
+innovations:steamEngine,innovations,1769,,steamEngine,Machine à vapeur,Steam engine,https://fr.wikipedia.org/wiki/Machine_%C3%A0_vapeur,https://en.wikipedia.org/wiki/Steam_engine,point,,,"oklch(98.7% 0.026 102.212)
+"
+innovations:smallpoxVaccine,innovations,1796,,smallpoxVaccine,Vaccination (variole),Smallpox vaccine,https://fr.wikipedia.org/wiki/Vaccin,https://en.wikipedia.org/wiki/Smallpox_vaccine,point,,,"oklch(98.7% 0.026 102.212)
+"
+innovations:telegraph,innovations,1837,,telegraph,Télégraphe,Telegraphy,https://fr.wikipedia.org/wiki/T%C3%A9l%C3%A9graphe,https://en.wikipedia.org/wiki/Telegraphy,point,,,"oklch(98.7% 0.026 102.212)
+"
+innovations:anesthesia,innovations,1846,,anesthesia,Anesthésie,Anesthesia,https://fr.wikipedia.org/wiki/Anesth%C3%A9sie,https://en.wikipedia.org/wiki/Anesthesia,point,,,"oklch(98.7% 0.026 102.212)
+"
+innovations:telephone,innovations,1876,,telephone,Téléphone,Telephone,https://fr.wikipedia.org/wiki/T%C3%A9l%C3%A9phone,https://en.wikipedia.org/wiki/Telephone,point,,,"oklch(98.7% 0.026 102.212)
+"
+innovations:lightBulb,innovations,1879,,lightBulb,Lampe à incandescence,Incandescent light bulb,https://fr.wikipedia.org/wiki/Lampe_%C3%A0_incandescence,https://en.wikipedia.org/wiki/Incandescent_light_bulb,point,,,"oklch(98.7% 0.026 102.212)
+"
+innovations:radio,innovations,1895,,radio,Radio,Radio,https://fr.wikipedia.org/wiki/Radio,https://en.wikipedia.org/wiki/Radio,point,,,"oklch(98.7% 0.026 102.212)
+"
+innovations:airplane,innovations,1903,,airplane,Avion,Airplane,https://fr.wikipedia.org/wiki/Avion,https://en.wikipedia.org/wiki/Airplane,point,,,"oklch(98.7% 0.026 102.212)
+"
+innovations:penicillin,innovations,1928,,penicillin,Pénicilline,Penicillin,https://fr.wikipedia.org/wiki/P%C3%A9nicilline,https://en.wikipedia.org/wiki/Penicillin,point,,,"oklch(98.7% 0.026 102.212)
+"
+innovations:transistor,innovations,1947,,transistor,Transistor,Transistor,https://fr.wikipedia.org/wiki/Transistor,https://en.wikipedia.org/wiki/Transistor,point,,,"oklch(98.7% 0.026 102.212)
+"
+innovations:integratedCircuit,innovations,1958,,integratedCircuit,Circuit intégré,Integrated circuit,https://fr.wikipedia.org/wiki/Circuit_int%C3%A9gr%C3%A9,https://en.wikipedia.org/wiki/Integrated_circuit,point,,,"oklch(98.7% 0.026 102.212)
+"
+innovations:computer,innovations,1945,,computer,Ordinateur,Computer,https://fr.wikipedia.org/wiki/Ordinateur,https://en.wikipedia.org/wiki/Computer,point,,,"oklch(98.7% 0.026 102.212)
+"
+innovations:spaceflight,innovations,1957,,spaceflight,Vol spatial,Spaceflight,https://fr.wikipedia.org/wiki/Vol_spatial,https://en.wikipedia.org/wiki/Spaceflight,point,,,"oklch(98.7% 0.026 102.212)
+"
+innovations:internet,innovations,1969,,internet,Internet,Internet,https://fr.wikipedia.org/wiki/Internet,https://en.wikipedia.org/wiki/Internet,point,,,"oklch(98.7% 0.026 102.212)
+"
+innovations:mobilePhone,innovations,1973,,mobilePhone,Téléphone mobile,Mobile phone,https://fr.wikipedia.org/wiki/T%C3%A9l%C3%A9phone_mobile,https://en.wikipedia.org/wiki/Mobile_phone,point,,,"oklch(98.7% 0.026 102.212)
+"
+innovations:gps,innovations,1978,,gps,GPS,Global Positioning System,https://fr.wikipedia.org/wiki/Syst%C3%A8me_de_positionnement_par_satellites,https://en.wikipedia.org/wiki/Global_Positioning_System,point,,,"oklch(98.7% 0.026 102.212)
+"
+innovations:mri,innovations,1977,,mri,IRM,Magnetic resonance imaging,https://fr.wikipedia.org/wiki/Imagerie_par_r%C3%A9sonance_magn%C3%A9tique,https://en.wikipedia.org/wiki/Magnetic_resonance_imaging,point,,,"oklch(98.7% 0.026 102.212)
+"
+innovations:worldWideWeb,innovations,1989,,worldWideWeb,World Wide Web,World Wide Web,https://fr.wikipedia.org/wiki/World_Wide_Web,https://en.wikipedia.org/wiki/World_Wide_Web,point,,,"oklch(98.7% 0.026 102.212)
+"
+innovations:deepLearning,innovations,2012,,deepLearning,Apprentissage profond,Deep learning,https://fr.wikipedia.org/wiki/Apprentissage_profond,https://en.wikipedia.org/wiki/Deep_learning,point,,,oklch(98.7% 0.026 102.212)

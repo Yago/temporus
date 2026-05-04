@@ -4,6 +4,7 @@ import dinosaurs from './dinosaurs';
 import egypt from './egypt';
 import homo from './homo';
 import innovations from './innovations';
+import megaliths from './megaliths';
 import periods from './periods';
 import rome from './rome';
 import stratigraphy from './stratigraphy';
@@ -17,6 +18,7 @@ const items: Item[] = [
   ...dinosaurs.items,
   ...egypt.items,
   ...rome.items,
+  ...megaliths.items,
 ];
 const parents: Group[] = [
   stratigraphy.parent,
@@ -27,6 +29,7 @@ const parents: Group[] = [
   cultures.parent,
   egypt.parent,
   rome.parent,
+  megaliths.parent,
 ];
 const groups: Group[] = [
   ...parents,
@@ -38,6 +41,7 @@ const groups: Group[] = [
   ...cultures.groups,
   ...egypt.groups,
   ...rome.groups,
+  ...megaliths.groups,
 ];
 const spacingGroups = [
   {

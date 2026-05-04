@@ -28,7 +28,8 @@
       "groups": {
         "kings": "Kings",
         "emperors": "Emperors",
-        "campaigns": "Campaigns & conquests"
+        "campaigns": "Campaigns & conquests",
+        "invasions": "Invasions"
       },
       "label": "Rome"
     },
@@ -88,6 +89,18 @@
     },
     "innovations": {
       "label": "innovations"
+    },
+    "megaliths": {
+      "groups": {
+        "africa": "Africa",
+        "asia": "Asia",
+        "europe": "Europe",
+        "middle-east": "Middle East",
+        "north-america": "North America",
+        "oceania": "Oceania",
+        "south-america": "South America"
+      },
+      "label": "Megaliths"
     }
   },
   "intro": {
@@ -164,7 +177,8 @@
     "homo": "Human origins",
     "sapiens": "Homo sapiens",
     "egypt": "Egypt",
-    "rome": "Rome"
+    "rome": "Rome",
+    "megaliths": "Megaliths"
   },
   "search": {
     "warning": "With a lot of data on screen, you may have to vertically scroll to see the selected item."

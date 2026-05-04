@@ -22,12 +22,17 @@
     "sapiens": {
       "start": -300000,
       "end": 2025,
-      "groups": ["geology", "periods", "homo"]
+      "groups": ["geology", "periods", "homo", "innovations"]
     },
     "cultures": {
       "start": -10000,
       "end": 2025,
       "groups": ["periods", "cultures"]
+    },
+    "megaliths": {
+      "start": -10000,
+      "end": 2025,
+      "groups": ["periods", "megaliths"]
     },
     "egypt": {
       "start": -3200,
