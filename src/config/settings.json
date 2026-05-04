@@ -6,7 +6,7 @@
   "scales": {
     "earth": {
       "start": -4600000000,
-      "end": 2025,
+      "end": 2026,
       "groups": ["geology"]
     },
     "dinosaurs": {
@@ -16,22 +16,22 @@
     },
     "homo": {
       "start": -7200000,
-      "end": 2025,
+      "end": 2026,
       "groups": ["geology", "periods", "homo"]
     },
     "sapiens": {
       "start": -300000,
-      "end": 2025,
+      "end": 2026,
       "groups": ["geology", "periods", "homo", "innovations"]
     },
     "cultures": {
       "start": -10000,
-      "end": 2025,
+      "end": 2026,
       "groups": ["periods", "cultures"]
     },
     "megaliths": {
       "start": -10000,
-      "end": 2025,
+      "end": 2026,
       "groups": ["periods", "megaliths"]
     },
     "egypt": {
