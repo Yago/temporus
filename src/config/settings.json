@@ -43,6 +43,11 @@
       "start": -800,
       "end": 1500,
       "groups": ["periods", "rome"]
+    },
+    "greece": {
+      "start": -2700,
+      "end": 395,
+      "groups": ["periods", "greece"]
     }
   }
 }

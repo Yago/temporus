@@ -24,6 +24,15 @@
       },
       "label": "Egypt"
     },
+    "greece": {
+      "groups": {
+        "cityStates": "City-states & leagues",
+        "monuments": "Monuments",
+        "people": "People",
+        "wars": "Wars"
+      },
+      "label": "Greece"
+    },
     "rome": {
       "groups": {
         "kings": "Kings",
@@ -177,6 +186,7 @@
     "homo": "Human origins",
     "sapiens": "Homo sapiens",
     "egypt": "Egypt",
+    "greece": "Ancient Greece",
     "rome": "Rome",
     "megaliths": "Megaliths"
   },

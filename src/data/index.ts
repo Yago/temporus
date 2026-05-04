@@ -2,6 +2,7 @@ import type { Group, Item } from '../types';
 import cultures from './cultures';
 import dinosaurs from './dinosaurs';
 import egypt from './egypt';
+import greece from './greece';
 import homo from './homo';
 import innovations from './innovations';
 import megaliths from './megaliths';
@@ -17,6 +18,7 @@ const items: Item[] = [
   ...cultures.items,
   ...dinosaurs.items,
   ...egypt.items,
+  ...greece.items,
   ...rome.items,
   ...megaliths.items,
 ];
@@ -28,6 +30,7 @@ const parents: Group[] = [
   homo.parent,
   cultures.parent,
   egypt.parent,
+  greece.parent,
   rome.parent,
   megaliths.parent,
 ];
@@ -40,6 +43,7 @@ const groups: Group[] = [
   ...homo.groups,
   ...cultures.groups,
   ...egypt.groups,
+  ...greece.groups,
   ...rome.groups,
   ...megaliths.groups,
 ];
