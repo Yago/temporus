@@ -73,7 +73,7 @@ const timelineStore = {
           element.classList.add('vis-item-icon' as string);
           element.style.setProperty(
             '--icon',
-            `url('/public/icons.svg#${item.properties?.icon}')`
+            `url('/icons.svg#${item.properties?.icon}')`
           );
         }
         return `${item.content}`;
