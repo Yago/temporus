@@ -42,6 +42,15 @@
       },
       "label": "Rome"
     },
+    "monarchs": {
+      "groups": {
+        "franceHouses": "French dynasties",
+        "france": "French monarchs",
+        "englandHouses": "English dynasties",
+        "england": "English monarchs"
+      },
+      "label": "France & England"
+    },
     "cultures": {
       "groups": {
         "africa": "Africa",
@@ -188,7 +197,8 @@
     "egypt": "Egypt",
     "greece": "Ancient Greece",
     "rome": "Rome",
-    "megaliths": "Megaliths"
+    "megaliths": "Megaliths",
+    "monarchs": "France & England"
   },
   "search": {
     "warning": "With a lot of data on screen, you may have to vertically scroll to see the selected item."

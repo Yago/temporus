@@ -48,6 +48,11 @@
       "start": -800,
       "end": 1500,
       "groups": ["periods", "rome"]
+    },
+    "monarchs": {
+      "start": 470,
+      "end": 2026,
+      "groups": ["periods", "monarchs"]
     }
   }
 }
